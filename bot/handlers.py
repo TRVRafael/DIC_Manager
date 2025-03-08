@@ -11,12 +11,27 @@ from bot.database import Database
 db_controller = Database()
 
 
-async def handle_new_user(update : Update, context : CallbackContext) -> None:
+async def handle_new_user(update : Update) -> None:
+    """
+    Armazena um novo usuário na base de dados.
+    
+    Args:
+        update (Update): Objeto de Update do pacote 'telegram'.
+    
+    """
     for new_member in update.message.new_chat_members:
         db_controller.create_new_user(new_member.id, new_member.username)
         
 
 async def apelidar(update: Update, context: CallbackContext) -> None:
+    """
+    Dá o administrador com nome personalizado ao usuário especificado.
+    
+    Args:
+        update (Update): Objeto de Update do pacote 'telegram'.
+        context (CallbackContext): Objeto de CallbackContext do pacote 'telegram'.
+
+    """
     if not await user_is_group_admin(update):
         await update.message.reply_text(f"Você não possui permissão para utilizar esse comando.\n\n<i>Caso isso seja um erro, contate a Equipe de Desenvolvedores, através da liderança da divisão.</i>", parse_mode="HTML")
         logging.info(f"Usuário {update.effective_user.username} utilizou, sem permissão, o comando /apelidar | Chat: {format_chat_object(update)}")

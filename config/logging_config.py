@@ -22,7 +22,7 @@ def setup_logging() -> None:
     if not exists('logs'):
         makedirs('logs')
     
-    # Ajuda o logger do pacote 'telegram' para capturar apenas WARNINGS e erros mais graves
+    # Ajusta o logger do pacote 'telegram' para capturar apenas WARNINGS e erros mais graves
     logging.getLogger('telegram').setLevel(logging.WARNING)
     
     # Definição de um manipulador de arquivo rotacionado

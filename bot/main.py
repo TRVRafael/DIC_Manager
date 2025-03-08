@@ -10,6 +10,9 @@ setup_logging()
         
 
 def start_bot() -> None:
+    """
+    Ponto de execução principal do bot.
+    """
     app = Application.builder().token(BOT_TOKEN).build()
     
     app.add_handler(CommandHandler("set", apelidar))
