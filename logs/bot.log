@@ -19,3 +19,14 @@
 2025-03-08 01:28:08,858 - INFO - Logging do bot iniciado.
 2025-03-08 01:28:12,219 - INFO - Apelido lav!n atribuido ao usuário @@trvcontrol_bot > Responsável: @torvi_hb | Chat: testedic1 (-1002249630541)
 2025-03-08 01:37:47,202 - INFO - Usuário ism4rck utilizou, sem permissão, o comando /apelidar | Chat: testedic1 (-1002249630541)
+2025-03-08 01:54:07,696 - INFO - Logging do bot iniciado.
+2025-03-08 01:54:26,936 - INFO - Logging do bot iniciado.
+2025-03-08 01:55:25,743 - INFO - Logging do bot iniciado.
+2025-03-08 01:55:30,833 - INFO - Logging do bot iniciado.
+2025-03-08 01:55:55,236 - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "c:\Users\rafae\OneDrive\Desktop\dev\amaer\venv\lib\site-packages\telegram\ext\_application.py", line 1343, in process_update
+    await coroutine
+  File "c:\Users\rafae\OneDrive\Desktop\dev\amaer\venv\lib\site-packages\telegram\ext\_handlers\basehandler.py", line 158, in handle_update
+    return await self.callback(update, context)
+TypeError: handle_new_user() takes 1 positional argument but 2 were given

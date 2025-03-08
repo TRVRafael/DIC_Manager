@@ -4,14 +4,14 @@ from telegram import Update
 from telegram.ext import CallbackContext
 
 from bot.utils import user_is_group_admin, format_chat_object
-from bot.database import Database
+from data.database import Database
 
 
 # Configuração do controlador da base de dados
 db_controller = Database()
 
 
-async def handle_new_user(update : Update) -> None:
+async def handle_new_user(update : Update, context : CallbackContext) -> None:
     """
     Armazena um novo usuário na base de dados.
     
