@@ -79,5 +79,5 @@ async def apelidar(update: Update, context: CallbackContext) -> None:
     )
     
     await update.message.reply_text(f"✏️ Apelido <b>{custom_title}</b> atribuido ao usuário <b>{username}</b>.", parse_mode="HTML")
-    logging.info(f"Apelido {custom_title} atribuido ao usuário @{username} > Responsável: @{update.effective_user.username} | Chat: {format_chat_object(update)}")
+    logging.info(f"Apelido {custom_title} atribuido ao usuário {username} > Responsável: @{update.effective_user.username} | Chat: {format_chat_object(update)}")
     
