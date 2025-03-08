@@ -1,0 +1,20 @@
+2025-03-08 01:13:01,684 - INFO - Logging do bot iniciado.
+2025-03-08 01:13:02,487 - INFO - HTTP Request: POST https://api.telegram.org/bot7843899651:AAGMnEzJ9cAhzzgizgMsiKdjMD8i8Ae6VF0/getMe "HTTP/1.1 200 OK"
+2025-03-08 01:13:02,706 - INFO - HTTP Request: POST https://api.telegram.org/bot7843899651:AAGMnEzJ9cAhzzgizgMsiKdjMD8i8Ae6VF0/deleteWebhook "HTTP/1.1 200 OK"
+2025-03-08 01:13:13,351 - INFO - HTTP Request: POST https://api.telegram.org/bot7843899651:AAGMnEzJ9cAhzzgizgMsiKdjMD8i8Ae6VF0/getUpdates "HTTP/1.1 200 OK"
+2025-03-08 01:13:23,587 - INFO - HTTP Request: POST https://api.telegram.org/bot7843899651:AAGMnEzJ9cAhzzgizgMsiKdjMD8i8Ae6VF0/getUpdates "HTTP/1.1 200 OK"
+2025-03-08 01:13:33,807 - INFO - HTTP Request: POST https://api.telegram.org/bot7843899651:AAGMnEzJ9cAhzzgizgMsiKdjMD8i8Ae6VF0/getUpdates "HTTP/1.1 200 OK"
+2025-03-08 01:13:35,759 - INFO - HTTP Request: POST https://api.telegram.org/bot7843899651:AAGMnEzJ9cAhzzgizgMsiKdjMD8i8Ae6VF0/getUpdates "HTTP/1.1 200 OK"
+2025-03-08 01:13:36,564 - INFO - HTTP Request: POST https://api.telegram.org/bot7843899651:AAGMnEzJ9cAhzzgizgMsiKdjMD8i8Ae6VF0/getChatAdministrators "HTTP/1.1 200 OK"
+2025-03-08 01:13:36,924 - INFO - HTTP Request: POST https://api.telegram.org/bot7843899651:AAGMnEzJ9cAhzzgizgMsiKdjMD8i8Ae6VF0/promoteChatMember "HTTP/1.1 200 OK"
+2025-03-08 01:13:37,295 - INFO - HTTP Request: POST https://api.telegram.org/bot7843899651:AAGMnEzJ9cAhzzgizgMsiKdjMD8i8Ae6VF0/setChatAdministratorCustomTitle "HTTP/1.1 200 OK"
+2025-03-08 01:13:37,653 - INFO - HTTP Request: POST https://api.telegram.org/bot7843899651:AAGMnEzJ9cAhzzgizgMsiKdjMD8i8Ae6VF0/sendMessage "HTTP/1.1 200 OK"
+2025-03-08 01:13:37,655 - INFO - Apelido lav!n atribuido ao usu�rio @trvcontrol_bot > Respons�vel: User(first_name='torvi', id=1761647464, is_bot=False, language_code='pt-br', username='torvi_hb') | Chat: testedic1 (-1002249630541)
+2025-03-08 01:15:59,324 - INFO - Apelido lav!n atribuido ao usu�rio @trvcontrol_bot > Respons�vel: User(first_name='torvi', id=1761647464, is_bot=False, language_code='pt-br', username='torvi_hb') | Chat: testedic1 (-1002249630541)
+2025-03-08 01:24:58,886 - INFO - Logging do bot iniciado.
+2025-03-08 01:25:24,429 - INFO - Apelido lav!n atribuido ao usu�rio @trvcontrol_bot > Respons�vel: User(first_name='torvi', id=1761647464, is_bot=False, language_code='pt-br', username='torvi_hb') | Chat: testedic1 (-1002249630541)
+2025-03-08 01:26:20,466 - INFO - Logging do bot iniciado.
+2025-03-08 01:26:41,142 - INFO - Logging do bot iniciado.
+2025-03-08 01:26:46,460 - INFO - Apelido lav!n atribuido ao usuário @trvcontrol_bot > Responsável: torvi_hb | Chat: testedic1 (-1002249630541)
+2025-03-08 01:28:08,858 - INFO - Logging do bot iniciado.
+2025-03-08 01:28:12,219 - INFO - Apelido lav!n atribuido ao usuário @@trvcontrol_bot > Responsável: @torvi_hb | Chat: testedic1 (-1002249630541)
