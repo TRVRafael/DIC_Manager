@@ -47,6 +47,3 @@ class Database:
                 return None 
         except Exception as err:
             print(f"Error getting user ->\n{err}")
-            
-    def close(self):
-        self.conn.close()

@@ -30,3 +30,35 @@ Traceback (most recent call last):
   File "c:\Users\rafae\OneDrive\Desktop\dev\amaer\venv\lib\site-packages\telegram\ext\_handlers\basehandler.py", line 158, in handle_update
     return await self.callback(update, context)
 TypeError: handle_new_user() takes 1 positional argument but 2 were given
+2025-03-08 01:57:17,315 - INFO - Logging do bot iniciado.
+2025-03-08 02:34:05,013 - INFO - Logging do bot iniciado.
+2025-03-08 02:34:19,054 - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "c:\Users\rafae\OneDrive\Desktop\dev\amaer\venv\lib\site-packages\telegram\ext\_application.py", line 1343, in process_update
+    await coroutine
+  File "c:\Users\rafae\OneDrive\Desktop\dev\amaer\venv\lib\site-packages\telegram\ext\_handlers\basehandler.py", line 158, in handle_update
+    return await self.callback(update, context)
+  File "C:\Users\rafae\OneDrive\Desktop\dev\amaer\bot\handlers.py", line 105, in teste
+    await bot.promote_chat_member(
+  File "c:\Users\rafae\OneDrive\Desktop\dev\amaer\venv\lib\site-packages\telegram\ext\_extbot.py", line 2338, in promote_chat_member
+    return await super().promote_chat_member(
+  File "c:\Users\rafae\OneDrive\Desktop\dev\amaer\venv\lib\site-packages\telegram\_bot.py", line 5763, in promote_chat_member
+    return await self._post(
+  File "c:\Users\rafae\OneDrive\Desktop\dev\amaer\venv\lib\site-packages\telegram\_bot.py", line 691, in _post
+    return await self._do_post(
+  File "c:\Users\rafae\OneDrive\Desktop\dev\amaer\venv\lib\site-packages\telegram\ext\_extbot.py", line 362, in _do_post
+    return await super()._do_post(
+  File "c:\Users\rafae\OneDrive\Desktop\dev\amaer\venv\lib\site-packages\telegram\_bot.py", line 720, in _do_post
+    result = await request.post(
+  File "c:\Users\rafae\OneDrive\Desktop\dev\amaer\venv\lib\site-packages\telegram\request\_baserequest.py", line 202, in post
+    result = await self._request_wrapper(
+  File "c:\Users\rafae\OneDrive\Desktop\dev\amaer\venv\lib\site-packages\telegram\request\_baserequest.py", line 383, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Invalid user_id specified
+2025-03-08 03:05:05,140 - INFO - Logging do bot iniciado.
+2025-03-08 03:05:34,311 - INFO - Logging do bot iniciado.
+2025-03-08 03:12:38,394 - INFO - Logging do bot iniciado.
+2025-03-08 03:14:36,143 - INFO - Logging do bot iniciado.
+2025-03-08 03:14:54,358 - INFO - Logging do bot iniciado.
+2025-03-08 03:15:03,545 - INFO - Logging do bot iniciado.
+2025-03-08 03:15:16,356 - INFO - Logging do bot iniciado.
