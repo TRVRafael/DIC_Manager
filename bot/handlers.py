@@ -3,12 +3,12 @@ import logging
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import CallbackContext, CallbackQueryHandler
 
+from bot.config import PERMISSIONED_GROUP_ID
 from bot.utils import user_is_group_admin, format_chat_object
 from data.database import Database
 
 # Configuração do controlador da base de dados
 db_controller = Database()
-
 
 async def handle_new_user(update : Update, context : CallbackContext) -> None:
     """
@@ -65,12 +65,17 @@ async def apelidar(update: Update, context: CallbackContext) -> None:
         context (CallbackContext): Objeto de CallbackContext do pacote 'telegram'.
 
     """
+    CHAT_ID = update.effective_chat.id
+
+    if not message_is_on_group(CHAT_ID):
+        await update.message.reply_text(f"Comandos só podem ser usados em grupos autorizados.\n\n<i>Caso isso seja um erro, contate a Equipe de Desenvolvedores, através da liderança da divisão.</i>", parse_mode="HTML")
+        logging.info(f"Usuário {update.effective_user.username} tentou utilizar o comando /apelidar fora de um grupo autorizado | Chat: {format_chat_object(update)}")
+        return
+
     if not await user_is_group_admin(update):
         await update.message.reply_text(f"Você não possui permissão para utilizar esse comando.\n\n<i>Caso isso seja um erro, contate a Equipe de Desenvolvedores, através da liderança da divisão.</i>", parse_mode="HTML")
         logging.info(f"Usuário {update.effective_user.username} utilizou, sem permissão, o comando /apelidar | Chat: {format_chat_object(update)}")
         return
-        
-    CHAT_ID = update.effective_chat.id
         
     bot = context.bot
         
@@ -116,8 +121,11 @@ async def apelidar(update: Update, context: CallbackContext) -> None:
     
 
 async def cargo(update : Update, context : CallbackContext):
-    
     CHAT_ID = update.effective_chat.id
+    if not message_is_on_group(CHAT_ID):
+        await update.message.reply_text(f"Comandos só podem ser usados em grupos autorizados.\n\n<i>Caso isso seja um erro, contate a Equipe de Desenvolvedores, através da liderança da divisão.</i>", parse_mode="HTML")
+        logging.info(f"Usuário {update.effective_user.username} tentou utilizar o comando /cargo fora de um grupo autorizado | Chat: {format_chat_object(update)}")
+        return
     username = context.args[0]
     role_name = " ".join(context.args[1:])
     
@@ -125,7 +133,7 @@ async def cargo(update : Update, context : CallbackContext):
     
     if not username.startswith("@"):
         await update.message.reply_text("Por favor, mencione o usuário com @.")
-        logging.info(f"Usuário {update.effective_user.username} utilizou o comando /apelidar sem @ no username ({update.message.text}) | Chat: {format_chat_object(update)}")
+        logging.info(f"Usuário {update.effective_user.username} utilizou o comando /cargo sem @ no username ({update.message.text}) | Chat: {format_chat_object(update)}")
         return
         
     user_id = db_controller.get_user_id_by_username(username=username[1:])
@@ -151,3 +159,15 @@ async def cargo(update : Update, context : CallbackContext):
         user_id=user_id,
         custom_title=role_name
     )
+
+def message_is_on_group(chatId: float) -> bool:
+    """
+    Verifica se a mensagem foi enviada em um grupo permitido.
+    
+    Args:
+        chatId (float): ID do chat atual.
+        
+    Returns:
+        bool: True se a mensagem foi enviada em um grupo autorizado, False se não.
+    """
+    return chatId == int(PERMISSIONED_GROUP_ID)
