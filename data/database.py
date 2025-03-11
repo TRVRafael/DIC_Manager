@@ -7,16 +7,17 @@ class Database:
 
         self._init_user_table()
         self._init_chats_table()
+        self._init_division_database()
         
     def _init_division_database(self):
         """
         Inicilização e configuração inicial de tabelas básicas para testes.
         """
-        self._create_division_table("em")
-        db.create_role('auxiliar', 1, 0, 1, 0, 1, 0)
-        db.create_role('sublider', 1, 1, 1, 0, 1, 0)
-        db.create_role('vicelider', 1, 1, 1, 1, 1, 1)
-        db.create_role('lider', 1, 1, 1, 1, 1, 1)
+        self._init_division_table("em_roles")
+        self.create_role('auxiliar', 1, 0, 1, 0, 1, 0)
+        self.create_role('sublider', 1, 1, 1, 0, 1, 0)
+        self.create_role('vicelider', 1, 1, 1, 1, 1, 1)
+        self.create_role('lider', 1, 1, 1, 1, 1, 1)
         
     def _init_user_table(self):
         try:
@@ -96,7 +97,7 @@ class Database:
             print(f"Error fetching all chats ->\n{err}")
             return []
         
-    def _create_division_table(self, table_name : str) -> None:
+    def _init_division_table(self, table_name : str) -> None:
         try:
             self.cursor.execute(f"""
                 CREATE TABLE IF NOT EXISTS {table_name} (
@@ -137,7 +138,7 @@ class Database:
             
     def get_role_permissions(self, role_name):
         try:
-            self.cursor.execute("SELECT can_change_info, can_delete_messages, can_invite_users, can_restrict_members, can_pin_messages, can_promote_members FROM guias_roles WHERE role_name=?", (role_name,))
+            self.cursor.execute("SELECT can_change_info, can_delete_messages, can_invite_users, can_restrict_members, can_pin_messages, can_promote_members FROM em_roles WHERE role_name=?", (role_name,))
             result = self.cursor.fetchall()
 
             if result:

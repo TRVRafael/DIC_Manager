@@ -133,7 +133,7 @@ async def cargo(update : Update, context : CallbackContext):
     username = context.args[0]
     role_name_input = " ".join(context.args[1:])
     role_name = sanitize_role_name(role_name_input)
-    
+
     bot = context.bot
     
     if not username.startswith("@"):
@@ -147,6 +147,7 @@ async def cargo(update : Update, context : CallbackContext):
         await update.message.reply_text("O usuário especificado não existe. (Tratar erro: nome passado errado ou nome correto, mas bot não reconheceu.)")
 
     role_permissions = db_controller.get_role_permissions(role_name)
+
     try:
         await bot.promote_chat_member(
             chat_id=CHAT_ID,
@@ -167,9 +168,11 @@ async def cargo(update : Update, context : CallbackContext):
         
         db_controller.update_member_role(username, db_controller.get_role_id(role_name))
         
+        await update.message.reply_text(f"<b>✅ Cargo {role_name} atribuido ao usuário {username} com sucesso.</b>")
         logging.info(f"Cargo {role_name} atribuído a {username} > Responsável: @{update.effective_user.username} | Chat: {format_chat_object(update)}")
-    except Exception:
+    except Exception as err:
         await update.message.reply_text(f"<b>❌ Cargo inserido é inválido. Tente novamente.</b>\n<i>Caso isso seja um erro, contate a Equipe de Desenvolvedores, através da liderança da divisão.</i>", parse_mode="HTML")
+        logging.info(f"EXCEPTION: {err}")
         logging.info(f"@{update.effective_user.username} utilizou um nome de cargo inválido ({role_name_input} > {role_name})| Chat: {format_chat_object(update)}")
 
 def message_is_on_group(chatId: float) -> bool:
@@ -181,5 +184,7 @@ def message_is_on_group(chatId: float) -> bool:
         
     Returns:
         bool: True se a mensagem foi enviada em um grupo autorizado, False se não.
+
+        chatId == int(PERMISSIONED_GROUP_ID)
     """
-    return chatId == int(PERMISSIONED_GROUP_ID)
+    return chatId == int(PERMISSIONED_GROUP_ID);
