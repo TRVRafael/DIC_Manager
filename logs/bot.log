@@ -62,3 +62,83 @@ telegram.error.BadRequest: Invalid user_id specified
 2025-03-08 03:14:54,358 - INFO - Logging do bot iniciado.
 2025-03-08 03:15:03,545 - INFO - Logging do bot iniciado.
 2025-03-08 03:15:16,356 - INFO - Logging do bot iniciado.
+2025-03-10 23:04:56,798 - INFO - Logging do bot iniciado.
+2025-03-10 23:05:42,704 - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "c:\Users\rafae\OneDrive\Desktop\dev\amaer\venv\lib\site-packages\telegram\ext\_application.py", line 1343, in process_update
+    await coroutine
+  File "c:\Users\rafae\OneDrive\Desktop\dev\amaer\venv\lib\site-packages\telegram\ext\_handlers\basehandler.py", line 158, in handle_update
+    return await self.callback(update, context)
+  File "C:\Users\rafae\OneDrive\Desktop\dev\amaer\bot\handlers.py", line 125, in cargo
+    if not message_is_on_group(CHAT_ID):
+  File "C:\Users\rafae\OneDrive\Desktop\dev\amaer\bot\handlers.py", line 176, in message_is_on_group
+    return chatId == int(PERMISSIONED_GROUP_ID)
+TypeError: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+2025-03-10 23:06:41,806 - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "c:\Users\rafae\OneDrive\Desktop\dev\amaer\venv\lib\site-packages\telegram\ext\_application.py", line 1343, in process_update
+    await coroutine
+  File "c:\Users\rafae\OneDrive\Desktop\dev\amaer\venv\lib\site-packages\telegram\ext\_handlers\basehandler.py", line 158, in handle_update
+    return await self.callback(update, context)
+  File "C:\Users\rafae\OneDrive\Desktop\dev\amaer\bot\handlers.py", line 125, in cargo
+    if not message_is_on_group(CHAT_ID):
+  File "C:\Users\rafae\OneDrive\Desktop\dev\amaer\bot\handlers.py", line 176, in message_is_on_group
+    return chatId == int(PERMISSIONED_GROUP_ID)
+TypeError: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+2025-03-10 23:07:07,138 - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "c:\Users\rafae\OneDrive\Desktop\dev\amaer\venv\lib\site-packages\telegram\ext\_application.py", line 1343, in process_update
+    await coroutine
+  File "c:\Users\rafae\OneDrive\Desktop\dev\amaer\venv\lib\site-packages\telegram\ext\_handlers\basehandler.py", line 158, in handle_update
+    return await self.callback(update, context)
+  File "C:\Users\rafae\OneDrive\Desktop\dev\amaer\bot\handlers.py", line 70, in apelidar
+    if not message_is_on_group(CHAT_ID):
+  File "C:\Users\rafae\OneDrive\Desktop\dev\amaer\bot\handlers.py", line 176, in message_is_on_group
+    return chatId == int(PERMISSIONED_GROUP_ID)
+TypeError: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+2025-03-10 23:09:33,178 - INFO - Logging do bot iniciado.
+2025-03-10 23:09:37,733 - INFO - Apelido lavin atribuido ao usuário @trvcontrol_bot > Responsável: @torvi_hb | Chat: testedic1 (-1002249630541)
+2025-03-10 23:09:58,416 - INFO - Cargo auxiliar atribuído a @trvcontrol_bot > Responsável: @torvi_hb | Chat: testedic1 (-1002249630541)
+2025-03-10 23:11:05,582 - INFO - Cargo auxiliar atribuído a @ysetheus > Responsável: @torvi_hb | Chat: testedic1 (-1002249630541)
+2025-03-10 23:18:53,554 - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "c:\Users\rafae\OneDrive\Desktop\dev\amaer\venv\lib\site-packages\telegram\ext\_application.py", line 1343, in process_update
+    await coroutine
+  File "c:\Users\rafae\OneDrive\Desktop\dev\amaer\venv\lib\site-packages\telegram\ext\_handlers\basehandler.py", line 158, in handle_update
+    return await self.callback(update, context)
+  File "C:\Users\rafae\OneDrive\Desktop\dev\amaer\bot\handlers.py", line 150, in cargo
+    can_change_info=role_permissions['can_change_info'],
+TypeError: 'NoneType' object is not subscriptable
+2025-03-10 23:22:51,934 - INFO - Logging do bot iniciado.
+2025-03-10 23:23:03,223 - INFO - @torvi_hb utilizou um nome de cargo inválido | Chat: testedic1 (-1002249630541)
+2025-03-10 23:23:19,799 - INFO - Logging do bot iniciado.
+2025-03-10 23:23:22,012 - INFO - Cargo auxiliar atribuído a @trvcontrol_bot > Responsável: @torvi_hb | Chat: testedic1 (-1002249630541)
+2025-03-10 23:23:26,958 - INFO - Cargo auxiliar atribuído a @trvcontrol_bot > Responsável: @torvi_hb | Chat: testedic1 (-1002249630541)
+2025-03-10 23:23:36,902 - INFO - @torvi_hb utilizou um nome de cargo inválido | Chat: testedic1 (-1002249630541)
+2025-03-10 23:24:27,915 - INFO - Logging do bot iniciado.
+2025-03-10 23:24:38,550 - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\rafae\OneDrive\Desktop\dev\amaer\bot\handlers.py", line 150, in cargo
+    can_change_info=role_permissions['can_change_info'],
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\rafae\OneDrive\Desktop\dev\amaer\venv\lib\site-packages\telegram\ext\_application.py", line 1343, in process_update
+    await coroutine
+  File "c:\Users\rafae\OneDrive\Desktop\dev\amaer\venv\lib\site-packages\telegram\ext\_handlers\basehandler.py", line 158, in handle_update
+    return await self.callback(update, context)
+  File "C:\Users\rafae\OneDrive\Desktop\dev\amaer\bot\handlers.py", line 167, in cargo
+    logging.info(f"@{update.effective_user.username} utilizou um nome de cargo inválido ({role_name_input > {role_name}}| Chat: {format_chat_object(update)}")
+TypeError: '>' not supported between instances of 'str' and 'set'
+2025-03-10 23:25:04,316 - INFO - Logging do bot iniciado.
+2025-03-10 23:25:08,023 - INFO - @torvi_hb utilizou um nome de cargo inválido (Vic-Líder > viclider)| Chat: testedic1 (-1002249630541)
+2025-03-10 23:37:31,029 - INFO - Logging do bot iniciado.
+2025-03-10 23:37:52,858 - INFO - Apelido teste atribuido ao usuário @trvcontrol_bot > Responsável: @torvi_hb | Chat: testedic1 (-1002249630541)
+2025-03-10 23:38:34,183 - INFO - Logging do bot iniciado.
+2025-03-10 23:38:39,881 - INFO - Apelido teste atribuido ao usuário @trvcontrol_bot > Responsável: @torvi_hb | Chat: testedic1 (-1002249630541)
+2025-03-10 23:52:03,549 - INFO - Logging do bot iniciado.
+2025-03-10 23:52:21,415 - INFO - Cargo auxiliar atribuído a @trvcontrol_bot > Responsável: @torvi_hb | Chat: testedic1 (-1002249630541)
+2025-03-10 23:52:30,677 - INFO - @torvi_hb utilizou um nome de cargo inválido (Líder > lider)| Chat: testedic1 (-1002249630541)
+2025-03-10 23:53:25,060 - INFO - @torvi_hb utilizou um nome de cargo inválido (Sub-Líder > sublider)| Chat: testedic1 (-1002249630541)
