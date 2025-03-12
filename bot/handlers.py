@@ -146,8 +146,8 @@ async def listar_integrantes(update: Update, context: CallbackContext) -> None:
     CHAT_ID = update.effective_chat.id
 
     if not message_is_on_group(CHAT_ID):
-    await update.message.reply_text(f"Comandos só podem ser usados em grupos autorizados.\n\n<i>Caso isso seja um erro, contate a Equipe de Desenvolvedores, através da liderança da divisão.</i>", parse_mode="HTML")
-    logging.info(f"Usuário @{update.effective_user.username} tentou utilizar o comando /cargo fora de um grupo autorizado | Chat: {format_chat_object(update)}")
+        await update.message.reply_text(f"Comandos só podem ser usados em grupos autorizados.\n\n<i>Caso isso seja um erro, contate a Equipe de Desenvolvedores, através da liderança da divisão.</i>", parse_mode="HTML")
+        logging.info(f"Usuário @{update.effective_user.username} tentou utilizar o comando /cargo fora de um grupo autorizado | Chat: {format_chat_object(update)}")
     return
 
 # Adicionando a checagem de admin da versão "main"
@@ -245,7 +245,7 @@ def is_core_user(update: Update) -> bool:
         return False
     return True
   
- def obter_integrantes():
+def obter_integrantes():
     """
     Obter o dicionário de integrantes e seus cargos.
 
