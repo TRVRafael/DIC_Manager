@@ -3,6 +3,7 @@ import logging
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import CallbackContext, CallbackQueryHandler
 
+from bot.config import ACCOUNTS_CORE
 from bot.utils import user_is_group_admin, format_chat_object, sanitize_role_name
 from data.database import Database
 
@@ -68,19 +69,19 @@ async def apelidar(update: Update, context: CallbackContext) -> None:
 
     if not message_is_on_group(CHAT_ID):
         await update.message.reply_text(f"Comandos só podem ser usados em grupos autorizados.\n\n<i>Caso isso seja um erro, contate a Equipe de Desenvolvedores, através da liderança da divisão.</i>", parse_mode="HTML")
-        logging.info(f"Usuário {update.effective_user.username} tentou utilizar o comando /apelidar fora de um grupo autorizado | Chat: {format_chat_object(update)}")
+        logging.info(f"Usuário @{update.effective_user.username} tentou utilizar o comando /apelidar fora de um grupo autorizado | Chat: {format_chat_object(update)}")
         return
 
     if not await user_is_group_admin(update):
         await update.message.reply_text(f"Você não possui permissão para utilizar esse comando.\n\n<i>Caso isso seja um erro, contate a Equipe de Desenvolvedores, através da liderança da divisão.</i>", parse_mode="HTML")
-        logging.info(f"Usuário {update.effective_user.username} utilizou, sem permissão, o comando /apelidar | Chat: {format_chat_object(update)}")
+        logging.info(f"Usuário @{update.effective_user.username} utilizou, sem permissão, o comando /apelidar | Chat: {format_chat_object(update)}")
         return
         
     bot = context.bot
         
     if len(context.args) < 2:
         await update.message.reply_text("Uso correto: /set @usuario nickname")
-        logging.info(f"Usuário {update.effective_user.username} utilizou o comando /apelidar sem todos argumentos ({update.message.text}) | Chat: {format_chat_object(update)}")
+        logging.info(f"Usuário @{update.effective_user.username} utilizou o comando /apelidar sem todos argumentos ({update.message.text}) | Chat: {format_chat_object(update)}")
         return
         
     username = context.args[0]
@@ -90,7 +91,7 @@ async def apelidar(update: Update, context: CallbackContext) -> None:
     
     if not username.startswith("@"):
         await update.message.reply_text("Por favor, mencione o usuário com @.")
-        logging.info(f"Usuário {update.effective_user.username} utilizou o comando /apelidar sem @ no username ({update.message.text}) | Chat: {format_chat_object(update)}")
+        logging.info(f"Usuário @{update.effective_user.username} utilizou o comando /apelidar sem @ no username ({update.message.text}) | Chat: {format_chat_object(update)}")
         return
         
     user_id = db_controller.get_user_id_by_username(username=username[1:])
@@ -120,14 +121,20 @@ async def apelidar(update: Update, context: CallbackContext) -> None:
     
     db_controller.insert_member_in_division(user_id, username, custom_title)
     await update.message.reply_text(f"✏️ Apelido <b>{custom_title}</b> atribuido ao usuário <b>{username}</b>.", parse_mode="HTML")
-    logging.info(f"Apelido {custom_title} atribuido ao usuário {username} > Responsável: @{update.effective_user.username} | Chat: {format_chat_object(update)}")   
+    logging.info(f"Apelido {custom_title} atribuido ao usuário @{username} > Responsável: @{update.effective_user.username} | Chat: {format_chat_object(update)}")   
 
 async def cargo(update : Update, context : CallbackContext):
     CHAT_ID = update.effective_chat.id
     if not message_is_on_group(CHAT_ID):
         await update.message.reply_text(f"Comandos só podem ser usados em grupos autorizados.\n\n<i>Caso isso seja um erro, contate a Equipe de Desenvolvedores, através da liderança da divisão.</i>", parse_mode="HTML")
-        logging.info(f"Usuário {update.effective_user.username} tentou utilizar o comando /cargo fora de um grupo autorizado | Chat: {format_chat_object(update)}")
+        logging.info(f"Usuário @{update.effective_user.username} tentou utilizar o comando /cargo fora de um grupo autorizado | Chat: {format_chat_object(update)}")
         return
+    
+    if not await user_is_group_admin(update):
+        await update.message.reply_text(f"Você não possui permissão para utilizar esse comando.\n\n<i>Caso isso seja um erro, contate a Equipe de Desenvolvedores, através da liderança da divisão.</i>", parse_mode="HTML")
+        logging.info(f"Usuário @{update.effective_user.username} utilizou, sem permissão, o comando /cargo | Chat: {format_chat_object(update)}")
+        return
+
     username = context.args[0]
     role_name_input = " ".join(context.args[1:])
     role_name = sanitize_role_name(role_name_input)
@@ -136,7 +143,7 @@ async def cargo(update : Update, context : CallbackContext):
     
     if not username.startswith("@"):
         await update.message.reply_text("Por favor, mencione o usuário com @.")
-        logging.info(f"Usuário {update.effective_user.username} utilizou o comando /cargo sem @ no username ({update.message.text}) | Chat: {format_chat_object(update)}")
+        logging.info(f"Usuário @{update.effective_user.username} utilizou o comando /cargo sem @ no username ({update.message.text}) | Chat: {format_chat_object(update)}")
         return
         
     user_id = db_controller.get_user_id_by_username(username=username[1:])
@@ -166,7 +173,7 @@ async def cargo(update : Update, context : CallbackContext):
         
         db_controller.update_member_role(username, db_controller.get_role_id(role_name))
         
-        await update.message.reply_text(f"<b>✅ Cargo {role_name} atribuido ao usuário {username} com sucesso.</b>")
+        await update.message.reply_text(f"<b>✅ Cargo {role_name} atribuido ao usuário @{username} com sucesso.</b>")
         logging.info(f"Cargo {role_name} atribuído a {username} > Responsável: @{update.effective_user.username} | Chat: {format_chat_object(update)}")
     except Exception as err:
         await update.message.reply_text(f"<b>❌ Cargo inserido é inválido. Tente novamente.</b>\n<i>Caso isso seja um erro, contate a Equipe de Desenvolvedores, através da liderança da divisão.</i>", parse_mode="HTML")
@@ -174,6 +181,11 @@ async def cargo(update : Update, context : CallbackContext):
         logging.info(f"@{update.effective_user.username} utilizou um nome de cargo inválido ({role_name_input} > {role_name})| Chat: {format_chat_object(update)}")
 
 async def oficializar(update : Update, context: CallbackContext):
+    if not is_core_user(update):
+        await update.message.reply_text(f"Você não possui permissão para utilizar esse comando.\n\n<i>Caso isso seja um erro, contate a Equipe de Desenvolvedores, através da liderança da divisão.</i>", parse_mode="HTML")
+        logging.info(f"Usuário @{update.effective_user.username} utilizou, sem permissão, o comando /oficializar | Chat: {format_chat_object(update)}")
+        return
+
     CHAT_ID = update.effective_chat.id
     current_chat = db_controller.get_chat_by_id(str(CHAT_ID))
     is_chat_official = current_chat[2]
@@ -183,7 +195,7 @@ async def oficializar(update : Update, context: CallbackContext):
         await update.message.reply_text(f"⭐ <b>Chat {current_chat[1]} definido como oficial.</b>", parse_mode="HTML")
         logging.info(f"Chat {current_chat[1]} : {current_chat[0]} definido como oficial. > Responsável: @{update.effective_user.username}")
     else:
-        await update.message.reply_text(f"<b>Esse chat já é oficial.</b>\n\n<i>Caso isso seja um erro, contate a Equipe de Desenvolvedores, através da liderança da divisão.</i>", parse_mode="HTML")
+        await update.message.reply_text(f"Esse chat já é oficial.\n\n<i>Caso isso seja um erro, contate a Equipe de Desenvolvedores, através da liderança da divisão.</i>", parse_mode="HTML")
 
 def message_is_on_group(chatId: float) -> bool:
     all_chats = db_controller.get_all_chats()
@@ -193,3 +205,10 @@ def message_is_on_group(chatId: float) -> bool:
         if float(chat[0]) == chatId and chat[2] == 1:
             return True
     return False
+
+def is_core_user(update: Update) -> bool:
+    username = update.message.from_user.username
+
+    if not username in ACCOUNTS_CORE:
+        return False
+    return True
