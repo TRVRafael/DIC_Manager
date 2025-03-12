@@ -3,7 +3,6 @@ import logging
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import CallbackContext, CallbackQueryHandler
 
-from bot.config import PERMISSIONED_GROUP_ID
 from bot.utils import user_is_group_admin, format_chat_object, sanitize_role_name
 from data.database import Database
 
@@ -121,8 +120,7 @@ async def apelidar(update: Update, context: CallbackContext) -> None:
     
     db_controller.insert_member_in_division(user_id, username, custom_title)
     await update.message.reply_text(f"✏️ Apelido <b>{custom_title}</b> atribuido ao usuário <b>{username}</b>.", parse_mode="HTML")
-    logging.info(f"Apelido {custom_title} atribuido ao usuário {username} > Responsável: @{update.effective_user.username} | Chat: {format_chat_object(update)}")
-    
+    logging.info(f"Apelido {custom_title} atribuido ao usuário {username} > Responsável: @{update.effective_user.username} | Chat: {format_chat_object(update)}")   
 
 async def cargo(update : Update, context : CallbackContext):
     CHAT_ID = update.effective_chat.id
@@ -175,16 +173,23 @@ async def cargo(update : Update, context : CallbackContext):
         logging.info(f"EXCEPTION: {err}")
         logging.info(f"@{update.effective_user.username} utilizou um nome de cargo inválido ({role_name_input} > {role_name})| Chat: {format_chat_object(update)}")
 
-def message_is_on_group(chatId: float) -> bool:
-    """
-    Verifica se a mensagem foi enviada em um grupo permitido.
-    
-    Args:
-        chatId (float): ID do chat atual.
-        
-    Returns:
-        bool: True se a mensagem foi enviada em um grupo autorizado, False se não.
+async def oficializar(update : Update, context: CallbackContext):
+    CHAT_ID = update.effective_chat.id
+    current_chat = db_controller.get_chat_by_id(str(CHAT_ID))
+    is_chat_official = current_chat[2]
 
-        chatId == int(PERMISSIONED_GROUP_ID)
-    """
-    return chatId == int(PERMISSIONED_GROUP_ID);
+    if is_chat_official == 0:
+        db_controller.set_chat_as_official(str(CHAT_ID))
+        await update.message.reply_text(f"⭐ <b>Chat {current_chat[1]} definido como oficial.</b>", parse_mode="HTML")
+        logging.info(f"Chat {current_chat[1]} : {current_chat[0]} definido como oficial. > Responsável: @{update.effective_user.username}")
+    else:
+        await update.message.reply_text(f"<b>Esse chat já é oficial.</b>\n\n<i>Caso isso seja um erro, contate a Equipe de Desenvolvedores, através da liderança da divisão.</i>", parse_mode="HTML")
+
+def message_is_on_group(chatId: float) -> bool:
+    all_chats = db_controller.get_all_chats()
+    official_chats = [chat for chat in all_chats if chat[2] == 1]
+
+    for chat in official_chats:
+        if float(chat[0]) == chatId and chat[2] == 1:
+            return True
+    return False

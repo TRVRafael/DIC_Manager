@@ -13,7 +13,7 @@ class Database:
         """
         Inicilização e configuração inicial de tabelas básicas para testes.
         """
-        self._init_division_table("em_roles")
+        self._init_division_table("em")
         self.create_role('auxiliar', 1, 0, 1, 0, 1, 0)
         self.create_role('sublider', 1, 1, 1, 0, 1, 0)
         self.create_role('vicelider', 1, 1, 1, 1, 1, 1)
@@ -38,7 +38,8 @@ class Database:
             self.cursor.execute(f"""
                 CREATE TABLE IF NOT EXISTS chats (
                     chat_id TEXT PRIMARY KEY,
-                    chat_title TEXT
+                    chat_title TEXT,
+                    is_official BOOLEAN
                 )
             """)
             self.conn.commit()
@@ -76,10 +77,17 @@ class Database:
 
     def create_new_chat(self, chat_id: str, chat_title: str):
         try:
-            self.cursor.execute(f"INSERT OR IGNORE INTO chats (chat_id, chat_title) VALUES (?, ?);", (chat_id, chat_title))
+            self.cursor.execute(f"INSERT OR IGNORE INTO chats (chat_id, chat_title, is_official) VALUES (?, ?, ?);", (chat_id, chat_title, False))
             self.conn.commit()
         except Exception as err:
             print(f"Error inserting chat ->\n{err}")
+
+    def set_chat_as_official(self, chat_id: str):
+        try:
+            self.cursor.execute(f"UPDATE chats SET is_official=true WHERE chat_id=?;", (chat_id,))
+            self.conn.commit()
+        except Exception as err:
+            print(f"Error updating chat ->\n{err}")
 
     def delete_chat_by_id(self, chat_id: str):
         try:
@@ -90,12 +98,20 @@ class Database:
 
     def get_all_chats(self):
         try:
-            self.cursor.execute("SELECT chat_id, chat_title FROM chats;")
+            self.cursor.execute("SELECT chat_id, chat_title, is_official FROM chats;")
             result = self.cursor.fetchall()
             return result
         except Exception as err:
             print(f"Error fetching all chats ->\n{err}")
             return []
+        
+    def get_chat_by_id(self, chat_id: str):
+        try:
+            self.cursor.execute(f"SELECT chat_id, chat_title, is_official FROM chats WHERE chat_id=?;", (chat_id,))
+            result = self.cursor.fetchone()
+            return result
+        except Exception as err:
+            print(f"Error getting chat ->\n{err}")
         
     def _init_division_table(self, table_name : str) -> None:
         try:
