@@ -1,4 +1,5 @@
 import logging
+from itertools import groupby
 
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import CallbackContext, CallbackQueryHandler
@@ -10,7 +11,8 @@ from data.database import Database
 # Configuração do controlador da base de dados
 db_controller = Database()
 
-async def handle_new_user(update : Update, context : CallbackContext) -> None:
+
+async def handle_new_user(update: Update, context: CallbackContext) -> None:
     """
     Verifica se o novo usuário é ou não o próprio bot, se for, adiciona o chat na lista de chat, se não, adiciona um novo usuário na tabela de usuários.
     
@@ -35,6 +37,7 @@ async def handle_new_user(update : Update, context : CallbackContext) -> None:
         else:
             db_controller.create_new_user(new_member.id, new_member.username)
 
+
 async def handle_user_removed(update: Update, context: CallbackContext) -> None:
     """
     Realiza a remoção do chat da lista de chats do bot quando ele é removido.
@@ -56,6 +59,7 @@ async def handle_user_removed(update: Update, context: CallbackContext) -> None:
         chat_data = db_controller.get_all_chats()
         logging.info(f"Lista de chats do bot atualizada: {chat_data}")
 
+
 async def apelidar(update: Update, context: CallbackContext) -> None:
     """
     Dá o administrador com nome personalizado ao usuário especificado.
@@ -76,26 +80,28 @@ async def apelidar(update: Update, context: CallbackContext) -> None:
         await update.message.reply_text(f"Você não possui permissão para utilizar esse comando.\n\n<i>Caso isso seja um erro, contate a Equipe de Desenvolvedores, através da liderança da divisão.</i>", parse_mode="HTML")
         logging.info(f"Usuário @{update.effective_user.username} utilizou, sem permissão, o comando /apelidar | Chat: {format_chat_object(update)}")
         return
-        
+
     bot = context.bot
-        
+
     if len(context.args) < 2:
-        await update.message.reply_text("Uso correto: /set @usuario nickname")
-        logging.info(f"Usuário @{update.effective_user.username} utilizou o comando /apelidar sem todos argumentos ({update.message.text}) | Chat: {format_chat_object(update)}")
+        await update.message.reply_text("Uso correto: /apelidar @usuario nickname")
+        logging.info(
+            f"Usuário {update.effective_user.username} utilizou o comando /apelidar sem todos argumentos ({update.message.text}) | Chat: {format_chat_object(update)}")
         return
-        
+
     username = context.args[0]
     custom_title = " ".join(context.args[1:])
-        
+
     username = context.args[0]
-    
+
     if not username.startswith("@"):
         await update.message.reply_text("Por favor, mencione o usuário com @.")
-        logging.info(f"Usuário @{update.effective_user.username} utilizou o comando /apelidar sem @ no username ({update.message.text}) | Chat: {format_chat_object(update)}")
+        logging.info(
+            f"Usuário {update.effective_user.username} utilizou o comando /apelidar sem @ no username ({update.message.text}) | Chat: {format_chat_object(update)}")
         return
-        
+
     user_id = db_controller.get_user_id_by_username(username=username[1:])
-        
+
     if not user_id:
         await update.message.reply_text("O usuário especificado não existe. (Tratar erro: nome passado errado ou nome correto, mas bot não reconheceu.)")
     
@@ -123,33 +129,59 @@ async def apelidar(update: Update, context: CallbackContext) -> None:
     await update.message.reply_text(f"✏️ Apelido <b>{custom_title}</b> atribuido ao usuário <b>{username}</b>.", parse_mode="HTML")
     logging.info(f"Apelido {custom_title} atribuido ao usuário @{username} > Responsável: @{update.effective_user.username} | Chat: {format_chat_object(update)}")   
 
-async def cargo(update : Update, context : CallbackContext):
+    await update.message.reply_text(f"✏️ Apelido <b>{custom_title}</b> atribuido ao usuário <b>{username}</b>.",
+                                    parse_mode="HTML")
+    logging.info(
+        f"Apelido {custom_title} atribuido ao usuário {username} > Responsável: @{update.effective_user.username} | Chat: {format_chat_object(update)}")
+
+
+async def listar_integrantes(update: Update, context: CallbackContext) -> None:
+    """
+    Lista os integrantes do chat no qual o comando foi executado.
+
+    Args:
+        update (Update): Objeto de Update do pacote 'telegram'.
+        context (CallbackContext): Objeto de CallbackContext do pacote 'telegram'.
+    """
     CHAT_ID = update.effective_chat.id
+
     if not message_is_on_group(CHAT_ID):
-        await update.message.reply_text(f"Comandos só podem ser usados em grupos autorizados.\n\n<i>Caso isso seja um erro, contate a Equipe de Desenvolvedores, através da liderança da divisão.</i>", parse_mode="HTML")
-        logging.info(f"Usuário @{update.effective_user.username} tentou utilizar o comando /cargo fora de um grupo autorizado | Chat: {format_chat_object(update)}")
-        return
-    
+    await update.message.reply_text(f"Comandos só podem ser usados em grupos autorizados.\n\n<i>Caso isso seja um erro, contate a Equipe de Desenvolvedores, através da liderança da divisão.</i>", parse_mode="HTML")
+    logging.info(f"Usuário @{update.effective_user.username} tentou utilizar o comando /cargo fora de um grupo autorizado | Chat: {format_chat_object(update)}")
+    return
+
+# Adicionando a checagem de admin da versão "main"
     if not await user_is_group_admin(update):
         await update.message.reply_text(f"Você não possui permissão para utilizar esse comando.\n\n<i>Caso isso seja um erro, contate a Equipe de Desenvolvedores, através da liderança da divisão.</i>", parse_mode="HTML")
         logging.info(f"Usuário @{update.effective_user.username} utilizou, sem permissão, o comando /cargo | Chat: {format_chat_object(update)}")
         return
 
+# Mantendo a funcionalidade de listar integrantes
+    integrantes = obter_integrantes()
+    mensagem = formatar_mensagem_integrantes(integrantes)
+
+    await update.message.reply_text(mensagem, parse_mode="HTML")
+    logging.info(f"Usuário {update.effective_user.username} utilizou o comando /listar_integrantes | Chat: {format_chat_object(update)}")
+
+# Melhorando o tratamento do nome do cargo
     username = context.args[0]
     role_name_input = " ".join(context.args[1:])
     role_name = sanitize_role_name(role_name_input)
 
+
     bot = context.bot
-    
+
     if not username.startswith("@"):
         await update.message.reply_text("Por favor, mencione o usuário com @.")
-        logging.info(f"Usuário @{update.effective_user.username} utilizou o comando /cargo sem @ no username ({update.message.text}) | Chat: {format_chat_object(update)}")
+        logging.info(
+            f"Usuário {update.effective_user.username} utilizou o comando /cargo sem @ no username ({update.message.text}) | Chat: {format_chat_object(update)}")
         return
-        
+
     user_id = db_controller.get_user_id_by_username(username=username[1:])
-        
+
     if not user_id:
-        await update.message.reply_text("O usuário especificado não existe. (Tratar erro: nome passado errado ou nome correto, mas bot não reconheceu.)")
+        await update.message.reply_text(
+            "O usuário especificado não existe. (Tratar erro: nome passado errado ou nome correto, mas bot não reconheceu.)")
 
     role_permissions = db_controller.get_role_permissions(role_name)
 
@@ -212,3 +244,82 @@ def is_core_user(update: Update) -> bool:
     if not username in ACCOUNTS_CORE:
         return False
     return True
+  
+ def obter_integrantes():
+    """
+    Obter o dicionário de integrantes e seus cargos.
+
+    Returns:
+        list[tuple[str, int, str]]: Lista de todos os integrantes do chat, no formato (nick, cargo_id, cargo_nome).
+    """
+
+    integrantes = [
+        ("Esring", 1, "Membro"),
+        ("Bolus", 1, "Membro"),
+        ("Bogrgoso", 7, "Presidência"),
+        ("Finwidir", 3, "Sub-Líder"),
+        ("Ledeon", 3, "Sub-Líder"),
+        ("Meinbao", 3, "Sub-Líder"),
+        ("Dyelo", 2, "Auxiliar"),
+        ("Uspok", 4, "Vice/Líder"),
+        ("Rendîr", 4, "Vice/Líder"),
+        ("Glanir", 1, "Membro"),
+        ("Harro", 2, "Auxiliar"),
+    ]
+    integrantes.sort(key=lambda x: x[1])
+
+    return integrantes
+
+
+def obter_cargo_nome(cargo_id):
+    """
+    Obter o nome do cargo a partir do contador.
+
+    Args:
+        cargo_id (int): Id do cargo.
+
+    Returns:
+        str: Nome do cargo.
+    """
+    cargos_dicionario = {
+        1: "Membro",
+        2: "Auxiliar",
+        3: "Sub-Líder",
+        4: "Vice/Líder",
+        5: "CORE",
+        6: "Comando",
+        7: "Presidência"
+    }
+    return cargos_dicionario[cargo_id]
+
+
+def formatar_mensagem_integrantes(integrantes: list[tuple[str, int, str]]) -> str:
+    """
+    Formata a mensagem de integrantes para ser enviada.
+
+    Args: integrantes (list[tuple[str, int, str]]): Lista de todos os integrantes do chat, no formato (nick,
+    cargo_id, cargo_nome).
+
+    Returns:
+        str: Mensagem formatada com os integrantes e seus cargos.
+    """
+    mensagem = "Integrantes do chat:\n"
+
+    #integrantes_agrupados = groupby(integrantes, key=lambda x: x[1])
+    contador = 1
+
+    while contador <= 7:
+        cargo_nome = obter_cargo_nome(contador)
+        vazio = True
+        mensagem += f"<b>\n{cargo_nome}</b>:\n"
+        for integrante in integrantes:
+            if integrante[1] == contador:
+                mensagem += f"    • {integrante[0]}\n"
+                vazio = False
+
+        if vazio:
+            mensagem += "-x-\n"
+
+        contador += 1
+
+    return mensagem
