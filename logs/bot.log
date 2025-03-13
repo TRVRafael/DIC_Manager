@@ -142,3 +142,105 @@ TypeError: '>' not supported between instances of 'str' and 'set'
 2025-03-10 23:52:21,415 - INFO - Cargo auxiliar atribuído a @trvcontrol_bot > Responsável: @torvi_hb | Chat: testedic1 (-1002249630541)
 2025-03-10 23:52:30,677 - INFO - @torvi_hb utilizou um nome de cargo inválido (Líder > lider)| Chat: testedic1 (-1002249630541)
 2025-03-10 23:53:25,060 - INFO - @torvi_hb utilizou um nome de cargo inválido (Sub-Líder > sublider)| Chat: testedic1 (-1002249630541)
+2025-03-12 16:49:02,822 - INFO - Logging do bot iniciado.
+2025-03-12 16:51:01,015 - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "c:\Users\rafae\OneDrive\Desktop\dev\amaer\venv\lib\site-packages\telegram\ext\_application.py", line 1343, in process_update
+    await coroutine
+  File "c:\Users\rafae\OneDrive\Desktop\dev\amaer\venv\lib\site-packages\telegram\ext\_handlers\basehandler.py", line 158, in handle_update
+    return await self.callback(update, context)
+  File "C:\Users\rafae\OneDrive\Desktop\dev\amaer\bot\handlers.py", line 275, in oficializar
+    is_chat_official = current_chat[2]
+TypeError: 'NoneType' object is not subscriptable
+2025-03-12 16:51:09,638 - INFO - Usuário torvi_hb tentou utilizar o comando /cargo fora de um grupo autorizado | Chat: testedic1 (-1002249630541)
+2025-03-12 16:51:50,300 - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "c:\Users\rafae\OneDrive\Desktop\dev\amaer\venv\lib\site-packages\telegram\ext\_application.py", line 1343, in process_update
+    await coroutine
+  File "c:\Users\rafae\OneDrive\Desktop\dev\amaer\venv\lib\site-packages\telegram\ext\_handlers\basehandler.py", line 158, in handle_update
+    return await self.callback(update, context)
+  File "C:\Users\rafae\OneDrive\Desktop\dev\amaer\bot\handlers.py", line 275, in oficializar
+    is_chat_official = current_chat[2]
+TypeError: 'NoneType' object is not subscriptable
+2025-03-12 17:04:18,825 - INFO - Logging do bot iniciado.
+2025-03-12 17:04:24,906 - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "c:\Users\rafae\OneDrive\Desktop\dev\amaer\venv\lib\site-packages\telegram\ext\_application.py", line 1343, in process_update
+    await coroutine
+  File "c:\Users\rafae\OneDrive\Desktop\dev\amaer\venv\lib\site-packages\telegram\ext\_handlers\basehandler.py", line 158, in handle_update
+    return await self.callback(update, context)
+  File "C:\Users\rafae\OneDrive\Desktop\dev\amaer\bot\handlers.py", line 275, in oficializar
+    is_chat_official = current_chat[2]
+TypeError: 'NoneType' object is not subscriptable
+2025-03-12 17:04:34,060 - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "c:\Users\rafae\OneDrive\Desktop\dev\amaer\venv\lib\site-packages\telegram\ext\_application.py", line 1343, in process_update
+    await coroutine
+  File "c:\Users\rafae\OneDrive\Desktop\dev\amaer\venv\lib\site-packages\telegram\ext\_handlers\basehandler.py", line 158, in handle_update
+    return await self.callback(update, context)
+  File "C:\Users\rafae\OneDrive\Desktop\dev\amaer\bot\handlers.py", line 275, in oficializar
+    is_chat_official = current_chat[2]
+TypeError: 'NoneType' object is not subscriptable
+2025-03-12 17:06:42,088 - INFO - Bot removido do chat: testedic1 - -1002249630541
+2025-03-12 17:06:42,088 - INFO - Lista de chats do bot atualizada: []
+2025-03-12 17:06:48,505 - INFO - Bot adicionado ao chat: testedic1 - -1002249630541
+2025-03-12 17:06:48,505 - INFO - Lista de chats do bot atualizada: [('-1002249630541', 'testedic1', 0)]
+2025-03-12 17:08:13,222 - INFO - Chat testedic1 : -1002249630541 definido como oficial. > Responsável: @torvi_hb
+2025-03-12 17:10:13,269 - INFO - Apelido CORE_BOT atribuido ao usuário @@coreauxiliar_bot > Responsável: @torvi_hb | Chat: testedic1 (-1002249630541)
+2025-03-12 17:10:13,628 - INFO - Apelido CORE_BOT atribuido ao usuário @coreauxiliar_bot > Responsável: @torvi_hb | Chat: testedic1 (-1002249630541)
+2025-03-12 17:10:38,496 - INFO - Apelido teste atribuido ao usuário @@trmonitoramento_bot > Responsável: @torvi_hb | Chat: testedic1 (-1002249630541)
+2025-03-12 17:10:38,882 - INFO - Apelido teste atribuido ao usuário @trmonitoramento_bot > Responsável: @torvi_hb | Chat: testedic1 (-1002249630541)
+2025-03-12 17:13:45,836 - INFO - EXCEPTION: Invalid user_id specified
+2025-03-12 17:13:45,836 - INFO - @torvi_hb utilizou um nome de cargo inválido (auxiliar > auxiliar)| Chat: testedic1 (-1002249630541)
+2025-03-12 17:19:50,649 - INFO - Logging do bot iniciado.
+2025-03-12 17:20:00,969 - INFO - Cargo auxiliar atribuído a @trvcontrol_bot > Responsável: @torvi_hb | Chat: testedic1 (-1002249630541)
+2025-03-12 17:24:02,527 - INFO - Cargo sublider atribuído a @trvcontrol_bot > Responsável: @torvi_hb | Chat: testedic1 (-1002249630541)
+2025-03-12 17:31:52,419 - INFO - Logging do bot iniciado.
+2025-03-12 17:38:14,231 - INFO - Cargo auxiliar atribuído a @trmonitoramento_bot > Responsável: @torvi_hb | Chat: testedic1 (-1002249630541)
+2025-03-12 17:43:49,874 - INFO - Logging do bot iniciado.
+2025-03-12 17:44:08,536 - INFO - Cargo sublider atribuído a @trmonitoramento_bot > Responsável: @torvi_hb | Chat: testedic1 (-1002249630541)
+2025-03-12 18:24:28,987 - INFO - Logging do bot iniciado.
+2025-03-12 18:24:30,717 - INFO - Bot removido do chat: testedic1 - -1002249630541
+2025-03-12 18:24:30,718 - INFO - Lista de chats do bot atualizada: []
+2025-03-12 18:24:30,721 - INFO - Bot adicionado ao chat: testedic1 - -1002249630541
+2025-03-12 18:24:30,722 - INFO - Lista de chats do bot atualizada: [('-1002249630541', 'testedic1', 0)]
+2025-03-12 18:24:31,082 - INFO - Chat testedic1 : -1002249630541 definido como oficial. > Responsável: @torvi_hb
+2025-03-12 18:25:39,848 - INFO - Apelido Torvi. atribuido ao usuário @@torvidic_bot > Responsável: @torvi_hb | Chat: testedic1 (-1002249630541)
+2025-03-12 18:25:40,195 - INFO - Apelido Torvi. atribuido ao usuário @torvidic_bot > Responsável: @torvi_hb | Chat: testedic1 (-1002249630541)
+2025-03-12 18:26:28,175 - INFO - Apelido Torvi. atribuido ao usuário @@coredic_bot > Responsável: @torvi_hb | Chat: testedic1 (-1002249630541)
+2025-03-12 18:26:28,537 - INFO - Apelido Torvi. atribuido ao usuário @coredic_bot > Responsável: @torvi_hb | Chat: testedic1 (-1002249630541)
+2025-03-12 18:26:45,582 - INFO - EXCEPTION: Not enough rights
+2025-03-12 18:26:45,583 - INFO - @torvi_hb utilizou um nome de cargo inválido (auxiliar > auxiliar)| Chat: testedic1 (-1002249630541)
+2025-03-12 18:27:05,075 - INFO - EXCEPTION: Not enough rights
+2025-03-12 18:27:05,075 - INFO - @torvi_hb utilizou um nome de cargo inválido (lider > lider)| Chat: testedic1 (-1002249630541)
+2025-03-12 18:35:33,261 - INFO - Logging do bot iniciado.
+2025-03-12 18:36:12,306 - INFO - EXCEPTION: Not enough rights
+2025-03-12 18:36:12,307 - INFO - @torvi_hb utilizou um nome de cargo inválido (auxiliar > auxiliar)| Chat: testedic1 (-1002249630541)
+2025-03-12 18:36:22,434 - INFO - EXCEPTION: Not enough rights
+2025-03-12 18:36:22,434 - INFO - @torvi_hb utilizou um nome de cargo inválido (lider > lider)| Chat: testedic1 (-1002249630541)
+2025-03-12 18:41:40,763 - INFO - Logging do bot iniciado.
+2025-03-12 18:43:52,733 - INFO - Apelido Torvi. atribuido ao usuário @coredic_bot > Responsável: @torvi_hb | Chat: testedic1 (-1002249630541)
+2025-03-12 18:44:07,830 - INFO - EXCEPTION: Not enough rights
+2025-03-12 18:44:07,830 - INFO - @torvi_hb utilizou um nome de cargo inválido (auxiliar > auxiliar)| Chat: testedic1 (-1002249630541)
+2025-03-12 18:46:01,678 - INFO - Logging do bot iniciado.
+2025-03-12 18:46:12,497 - INFO - EXCEPTION: Not enough rights
+2025-03-12 18:46:12,497 - INFO - @torvi_hb utilizou um nome de cargo inválido (auxiliar > auxiliar)| Chat: testedic1 (-1002249630541)
+2025-03-12 18:46:19,652 - INFO - EXCEPTION: Not enough rights
+2025-03-12 18:46:19,653 - INFO - @torvi_hb utilizou um nome de cargo inválido (Auxiliar > auxiliar)| Chat: testedic1 (-1002249630541)
+2025-03-12 18:46:39,595 - INFO - Cargo auxiliar atribuído a @coredic_bot > Responsável: @torvi_hb | Chat: testedic1 (-1002249630541)
+2025-03-12 18:47:33,617 - INFO - Logging do bot iniciado.
+2025-03-12 18:47:45,338 - INFO - Logging do bot iniciado.
+2025-03-12 18:47:50,051 - INFO - Cargo auxiliar atribuído a @coredic_bot > Responsável: @torvi_hb | Chat: testedic1 (-1002249630541)
+2025-03-12 18:47:58,469 - INFO - Cargo lider atribuído a @coredic_bot > Responsável: @torvi_hb | Chat: testedic1 (-1002249630541)
+2025-03-12 18:48:13,450 - INFO - Logging do bot iniciado.
+2025-03-12 18:48:19,461 - INFO - Cargo lider atribuído a @coredic_bot > Responsável: @torvi_hb | Chat: testedic1 (-1002249630541)
+2025-03-12 18:56:35,153 - INFO - Logging do bot iniciado.
+2025-03-12 18:57:04,335 - INFO - Logging do bot iniciado.
+2025-03-12 18:57:26,752 - INFO - Usuário torvi_hb utilizou o comando /apelidar sem todos argumentos (/apelidar) | Chat: testedic1 (-1002249630541)
+2025-03-12 18:57:40,196 - INFO - Logging do bot iniciado.
+2025-03-12 19:00:59,363 - INFO - Logging do bot iniciado.
+2025-03-12 19:01:36,093 - INFO - Logging do bot iniciado.
+2025-03-12 19:02:13,277 - INFO - Logging do bot iniciado.
+2025-03-12 19:12:37,202 - INFO - Logging do bot iniciado.
+2025-03-12 19:15:15,137 - INFO - Logging do bot iniciado.
+2025-03-12 19:16:30,847 - INFO - Logging do bot iniciado.
