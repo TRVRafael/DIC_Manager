@@ -128,6 +128,13 @@ async def cargo(update : Update, context : CallbackContext):
     CHAT_ID = update.effective_chat.id
     if not message_is_on_group(CHAT_ID):
         await update.message.reply_text(f"Comandos só podem ser usados em grupos autorizados.\n\n<i>Caso isso seja um erro, contate a Equipe de Desenvolvedores, através da liderança da divisão.</i>", parse_mode="HTML")
+        logging.info(f"Usuário @{update.effective_user.username} tentou utilizar o comando /cargo fora de um grupo autorizado | Chat: {format_chat_object(update)}")
+        return
+
+# Adicionando a checagem de admin da versão "main"
+    if not await user_is_group_admin(update):
+        await update.message.reply_text(f"Você não possui permissão para utilizar esse comando.\n\n<i>Caso isso seja um erro, contate a Equipe de Desenvolvedores, através da liderança da divisão.</i>", parse_mode="HTML")
+        logging.info(f"Usuário @{update.effective_user.username} utilizou, sem permissão, o comando /cargo | Chat: {format_chat_object(update)}")
         logging.info(f"Usuário {update.effective_user.username} tentou utilizar o comando /cargo fora de um grupo autorizado | Chat: {format_chat_object(update)}")
         return
     username = context.args[0]
@@ -208,21 +215,22 @@ def obter_integrantes():
     Obter o dicionário de integrantes e seus cargos.
 
     Returns:
-        list[tuple[str, int, str]]: Lista de todos os integrantes do chat, no formato (nick, cargo_id, cargo_nome).
+        list[tuple[str, int, str, str]]: Lista de todos os integrantes do chat, no formato (nick, cargo_id, cargo_nome,
+        telegram_username).
     """
 
     integrantes = [
-        ("Esring", 1, "Membro"),
-        ("Bolus", 1, "Membro"),
-        ("Bogrgoso", 7, "Presidência"),
-        ("Finwidir", 3, "Sub-Líder"),
-        ("Ledeon", 3, "Sub-Líder"),
-        ("Meinbao", 3, "Sub-Líder"),
-        ("Dyelo", 2, "Auxiliar"),
-        ("Uspok", 4, "Vice/Líder"),
-        ("Rendîr", 4, "Vice/Líder"),
-        ("Glanir", 1, "Membro"),
-        ("Harro", 2, "Auxiliar"),
+        ("Esring", 1, "Membro", "@esring"),
+        ("Bolus", 1, "Membro", "@bolus"),
+        ("Bogrgoso", 7, "Presidência", "@bogrgoso"),
+        ("Finwidir", 3, "Sub-Líder", "@finwidir"),
+        ("Ledeon", 3, "Sub-Líder", "@ledeon"),
+        ("Meinbao", 3, "Sub-Líder", "@meinbao"),
+        ("Dyelo", 2, "Auxiliar", "@dyelo"),
+        ("Uspok", 4, "Vice/Líder", "@uspo"),
+        ("Rendîr", 4, "Vice/Líder", "@rendir"),
+        ("Glanir", 1, "Membro", "@glanir"),
+        ("Harro", 2, "Auxiliar", "@harro")
     ]
     integrantes.sort(key=lambda x: x[1])
 
@@ -272,7 +280,7 @@ def formatar_mensagem_integrantes(integrantes: list[tuple[str, int, str]]) -> st
         mensagem += f"<b>\n{cargo_nome}</b>:\n"
         for integrante in integrantes:
             if integrante[1] == contador:
-                mensagem += f"    • {integrante[0]}\n"
+                mensagem += f"    • {integrante[0]} - {integrante[3]}\n"
                 vazio = False
 
         if vazio:
