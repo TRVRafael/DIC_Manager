@@ -33,6 +33,7 @@ async def handle_new_user(update : Update, context : CallbackContext) -> None:
             logging.info(f"Lista de chats do bot atualizada: {chat_data}")
         else:
             db_controller.create_new_user(new_member.id, new_member.username)
+            logging.info(f"Novo usuário: {new_member.username}")
 
 async def handle_user_removed(update: Update, context: CallbackContext) -> None:
     """
@@ -174,6 +175,7 @@ async def cargo(update : Update, context : CallbackContext):
         )
         
         db_controller.update_member_role(username, db_controller.get_role_id(role_name))
+        await update_members_message(update.effective_chat.id)
         
         await update.message.reply_text(f"<b>✅ Cargo {role_name} atribuido ao usuário {username} com sucesso.</b>", parse_mode="HTML")
         logging.info(f"Cargo {role_name} atribuído a {username} > Responsável: @{update.effective_user.username} | Chat: {format_chat_object(update)}")
@@ -219,20 +221,22 @@ def obter_integrantes():
         telegram_username).
     """
 
-    integrantes = [
-        ("Esring", 1, "Membro", "@esring"),
-        ("Bolus", 1, "Membro", "@bolus"),
-        ("Bogrgoso", 7, "Presidência", "@bogrgoso"),
-        ("Finwidir", 3, "Sub-Líder", "@finwidir"),
-        ("Ledeon", 3, "Sub-Líder", "@ledeon"),
-        ("Meinbao", 3, "Sub-Líder", "@meinbao"),
-        ("Dyelo", 2, "Auxiliar", "@dyelo"),
-        ("Uspok", 4, "Vice/Líder", "@uspo"),
-        ("Rendîr", 4, "Vice/Líder", "@rendir"),
-        ("Glanir", 1, "Membro", "@glanir"),
-        ("Harro", 2, "Auxiliar", "@harro")
-    ]
-    integrantes.sort(key=lambda x: x[1])
+    # integrantes = [
+    #     ("Esring", 0, "Membro", "@esring"),
+    #     ("Bolus", 0, "Membro", "@bolus"),
+    #     ("Bogrgoso", 6, "Presidência", "@bogrgoso"),
+    #     ("Finwidir", 2, "Sub-Líder", "@finwidir"),
+    #     ("Ledeon", 2, "Sub-Líder", "@ledeon"),
+    #     ("Meinbao", 2, "Sub-Líder", "@meinbao"),
+    #     ("Dyelo", 1, "Auxiliar", "@dyelo"),
+    #     ("Uspok", 3, "Vice/Líder", "@uspo"),
+    #     ("Rendîr", 4, "Vice/Líder", "@rendir"),
+    #     ("Glanir", 0, "Membro", "@glanir"),
+    #     ("Harro", 1, "Auxiliar", "@harro")
+    # ]
+    # integrantes.sort(key=lambda x: x[1])
+    integrantes = db_controller.get_members_list()
+    print(integrantes)
 
     return integrantes
 
@@ -251,10 +255,12 @@ def obter_cargo_nome(cargo_id):
         0: "Membro",
         1: "Auxiliar",
         2: "Sub-Líder",
-        3: "Vice/Líder",
-        4: "CORE",
-        5: "Comando",
-        6: "Presidência"
+        3: "Vice",
+        4: "Líder",
+        5: "CORE",
+        6: "Comando",
+        7: "Comando-Geral",
+        8: "Presidência",
     }
     return cargos_dicionario[cargo_id]
 
@@ -272,9 +278,9 @@ def formatar_mensagem_integrantes(integrantes: list[tuple[str, int, str]]) -> st
     mensagem = "Integrantes do chat:\n"
 
     #integrantes_agrupados = groupby(integrantes, key=lambda x: x[1])
-    contador = 1
+    contador = 0
 
-    while contador <= 7:
+    while contador <= 8:
         cargo_nome = obter_cargo_nome(contador)
         vazio = True
         mensagem += f"<b>\n{cargo_nome}</b>:\n"
@@ -291,10 +297,13 @@ def formatar_mensagem_integrantes(integrantes: list[tuple[str, int, str]]) -> st
     return mensagem
 
 async def update_members_message(chat_id : int):
-    bot = Bot("7843899651:AAGMnEzJ9cAhzzgizgMsiKdjMD8i8Ae6VF0")
+    bot = Bot("7827037297:AAGgeHSy3tZI_tCPpH3ujB4jdgV_L37yvvE")
     
     message = formatar_mensagem_integrantes(obter_integrantes())
     
-    await bot.edit_message_text(message, chat_id, 635, parse_mode="HTML")
+    await bot.edit_message_text(message, chat_id, 10, parse_mode="HTML")
     
+async def teste(update: Update, context: CallbackContext):
+    bot = Bot("7827037297:AAGgeHSy3tZI_tCPpH3ujB4jdgV_L37yvvE")
+    await bot.send_message(-1002440341419, "-", message_thread_id=2)
     

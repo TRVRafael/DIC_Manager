@@ -4,10 +4,6 @@ class Database:
     def __init__(self, db_name = "data/database.db"):
         self.conn = sqlite3.connect(database=db_name, check_same_thread=False)
         self.cursor = self.conn.cursor()
-
-        self._init_user_table()
-        self._init_chats_table()
-        self._init_division_database()
         
     def _init_division_database(self):
         """
@@ -18,6 +14,10 @@ class Database:
         self.create_role('sublider', 1, 1, 1, 0, 1, 0)
         self.create_role('vicelider', 1, 1, 1, 1, 1, 1)
         self.create_role('lider', 1, 1, 1, 1, 1, 1)
+        self.create_role('core', 1, 1, 1, 1, 1, 1)
+        self.create_role('comando', 0, 0, 1, 1, 1, 0)
+        self.create_role('comandogeral', 1, 1, 1, 1, 1, 1)
+        self.create_role('presidencia', 1, 1, 1, 1, 1, 1)
         
     def _init_user_table(self):
         try:
@@ -200,6 +200,14 @@ class Database:
                 return None 
         except Exception as err:
             print(f"Error getting role id ->\n{err}")
+            
+    def get_members_list(self):
+        try:
+            self.cursor.execute(f"SELECT username, role, id, nickname FROM em;")
+            result = self.cursor.fetchall()
+            return result
+        except Exception as err:
+            return []
             
     def close(self):
         self.conn.close()

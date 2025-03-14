@@ -42,7 +42,11 @@ def get_fancy_name(role_name : str) -> str:
         "auxiliar": "Auxiliar",
         "sublider": "Sub-Líder",
         "vicelider": "Vice-Líder",
-        "lider": "Líder"
+        "lider": "Líder",
+        "core": "CORE",
+        "comando": "Comando",
+        "comandogeral": "Comando-Geral",
+        "presidencia": "Presidência"
 
     }
     return roles[role_name]
