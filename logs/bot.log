@@ -553,3 +553,235 @@ TypeError: 'NoneType' object is not subscriptable
 2025-03-13 22:42:52,756 - INFO - @torvi_hb utilizou um nome de cargo inválido (auxiliar > auxiliar)| Chat: [DIC/EM] Membros (-1002440341419)
 2025-03-13 22:43:06,084 - INFO - EXCEPTION: Not enough rights
 2025-03-13 22:43:06,084 - INFO - @torvi_hb utilizou um nome de cargo inválido (sublider > sublider)| Chat: [DIC/EM] Membros (-1002440341419)
+2025-03-13 22:55:12,614 - INFO - Cargo sublider atribuído a @coreauxiliar_bot > Responsável: @torvi_hb | Chat: [DIC/EM] Membros (-1002440341419)
+2025-03-13 22:58:11,251 - INFO - Logging do bot iniciado.
+2025-03-13 22:58:14,663 - INFO - Bot removido do chat: [DIC/EM] Membros - -1002440341419
+2025-03-13 22:58:14,663 - INFO - Lista de chats do bot atualizada: []
+2025-03-13 22:58:14,667 - INFO - Bot adicionado ao chat: [DIC/EM] Membros - -1002440341419
+2025-03-13 22:58:14,667 - INFO - Lista de chats do bot atualizada: [('-1002440341419', '[DIC/EM] Membros', 0)]
+2025-03-13 22:58:15,080 - INFO - Chat [DIC/EM] Membros : -1002440341419 definido como oficial. > Responsável: @torvi_hb
+2025-03-13 23:01:17,273 - INFO - Logging do bot iniciado.
+2025-03-13 23:01:30,887 - INFO - EXCEPTION: Invalid user_id specified
+2025-03-13 23:01:30,887 - INFO - @torvi_hb utilizou um nome de cargo inválido (core > core)| Chat: [DIC/EM] Membros (-1002440341419)
+2025-03-13 23:02:31,444 - INFO - EXCEPTION: Invalid user_id specified
+2025-03-13 23:02:31,445 - INFO - @torvi_hb utilizou um nome de cargo inválido (core > core)| Chat: [DIC/EM] Membros (-1002440341419)
+2025-03-13 23:02:36,415 - INFO - Logging do bot iniciado.
+2025-03-13 23:02:41,881 - INFO - Novo usuário: coreauxiliar_bot
+2025-03-13 23:02:50,647 - INFO - Apelido teste atribuido ao usuário @coreauxiliar_bot > Responsável: @torvi_hb | Chat: [DIC/EM] Membros (-1002440341419)
+2025-03-13 23:04:37,554 - INFO - Logging do bot iniciado.
+2025-03-13 23:04:52,867 - INFO - Bot removido do chat: [DIC/EM] Membros - -1002440341419
+2025-03-13 23:04:52,868 - INFO - Lista de chats do bot atualizada: []
+2025-03-13 23:05:14,490 - INFO - Bot adicionado ao chat: [DIC/EM] Membros - -1002440341419
+2025-03-13 23:05:14,491 - INFO - Lista de chats do bot atualizada: [('-1002440341419', '[DIC/EM] Membros', 0)]
+2025-03-13 23:05:29,790 - INFO - Chat [DIC/EM] Membros : -1002440341419 definido como oficial. > Responsável: @torvi_hb
+2025-03-13 23:06:19,681 - INFO - Logging do bot iniciado.
+2025-03-13 23:06:43,473 - INFO - EXCEPTION: Invalid user_id specified
+2025-03-13 23:06:43,474 - INFO - @torvi_hb utilizou um nome de cargo inválido (core > core)| Chat: [DIC/EM] Membros (-1002440341419)
+2025-03-13 23:07:00,744 - INFO - EXCEPTION: Invalid user_id specified
+2025-03-13 23:07:00,745 - INFO - @torvi_hb utilizou um nome de cargo inválido (core > core)| Chat: [DIC/EM] Membros (-1002440341419)
+2025-03-13 23:07:16,314 - INFO - Novo usuário: coreauxiliar_bot
+2025-03-13 23:07:24,114 - INFO - Apelido core_aux atribuido ao usuário @coreauxiliar_bot > Responsável: @torvi_hb | Chat: [DIC/EM] Membros (-1002440341419)
+2025-03-13 23:07:32,859 - INFO - Cargo core atribuído a @coreauxiliar_bot > Responsável: @torvi_hb | Chat: [DIC/EM] Membros (-1002440341419)
+2025-03-13 23:07:54,870 - INFO - EXCEPTION: Invalid user_id specified
+2025-03-13 23:07:54,871 - INFO - @torvi_hb utilizou um nome de cargo inválido (core > core)| Chat: [DIC/EM] Membros (-1002440341419)
+2025-03-13 23:08:16,803 - INFO - Novo usuário: coredic_bot
+2025-03-13 23:08:26,614 - INFO - Apelido monitoramento atribuido ao usuário @coredic_bot > Responsável: @torvi_hb | Chat: [DIC/EM] Membros (-1002440341419)
+2025-03-13 23:09:19,910 - INFO - Apelido Torvi. atribuido ao usuário @torvi_hb > Responsável: @torvi_hb | Chat: [DIC/EM] Membros (-1002440341419)
+2025-03-13 23:09:32,221 - INFO - EXCEPTION: Invalid user_id specified
+2025-03-13 23:09:32,221 - INFO - @torvi_hb utilizou um nome de cargo inválido (core > core)| Chat: [DIC/EM] Membros (-1002440341419)
+2025-03-13 23:18:30,770 - INFO - Apelido Torvi. atribuido ao usuário @torvi_hb > Responsável: @torvi_hb | Chat: [DIC/EM] Membros (-1002440341419)
+2025-03-13 23:18:43,755 - INFO - EXCEPTION: Invalid user_id specified
+2025-03-13 23:18:43,755 - INFO - @torvi_hb utilizou um nome de cargo inválido (core > core)| Chat: [DIC/EM] Membros (-1002440341419)
+2025-03-13 23:19:53,294 - INFO - Apelido lav!n atribuido ao usuário @kprand > Responsável: @torvi_hb | Chat: [DIC/EM] Membros (-1002440341419)
+2025-03-13 23:19:58,598 - INFO - EXCEPTION: Invalid user_id specified
+2025-03-13 23:19:58,598 - INFO - @torvi_hb utilizou um nome de cargo inválido (core > core)| Chat: [DIC/EM] Membros (-1002440341419)
+2025-03-13 23:22:29,468 - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "c:\Users\rafae\OneDrive\Desktop\dev\amaer\venv\lib\site-packages\telegram\ext\_utils\networkloop.py", line 115, in network_retry_loop
+    if not await do_action():
+  File "c:\Users\rafae\OneDrive\Desktop\dev\amaer\venv\lib\site-packages\telegram\ext\_utils\networkloop.py", line 108, in do_action
+    return action_cb_task.result()
+  File "c:\Users\rafae\OneDrive\Desktop\dev\amaer\venv\lib\site-packages\telegram\ext\_updater.py", line 376, in polling_action_cb
+    updates = await self.bot.get_updates(
+  File "c:\Users\rafae\OneDrive\Desktop\dev\amaer\venv\lib\site-packages\telegram\ext\_extbot.py", line 658, in get_updates
+    updates = await super().get_updates(
+  File "c:\Users\rafae\OneDrive\Desktop\dev\amaer\venv\lib\site-packages\telegram\_bot.py", line 4605, in get_updates
+    await self._post(
+  File "c:\Users\rafae\OneDrive\Desktop\dev\amaer\venv\lib\site-packages\telegram\_bot.py", line 691, in _post
+    return await self._do_post(
+  File "c:\Users\rafae\OneDrive\Desktop\dev\amaer\venv\lib\site-packages\telegram\ext\_extbot.py", line 362, in _do_post
+    return await super()._do_post(
+  File "c:\Users\rafae\OneDrive\Desktop\dev\amaer\venv\lib\site-packages\telegram\_bot.py", line 720, in _do_post
+    result = await request.post(
+  File "c:\Users\rafae\OneDrive\Desktop\dev\amaer\venv\lib\site-packages\telegram\request\_baserequest.py", line 202, in post
+    result = await self._request_wrapper(
+  File "c:\Users\rafae\OneDrive\Desktop\dev\amaer\venv\lib\site-packages\telegram\request\_baserequest.py", line 385, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-03-13 23:23:48,972 - INFO - Logging do bot iniciado.
+2025-03-13 23:24:39,808 - INFO - Logging do bot iniciado.
+2025-03-13 23:24:43,183 - INFO - Bot removido do chat: [DIC/EM] Membros - -1002440341419
+2025-03-13 23:24:43,184 - INFO - Lista de chats do bot atualizada: []
+2025-03-13 23:24:43,187 - INFO - Bot adicionado ao chat: [DIC/EM] Membros - -1002440341419
+2025-03-13 23:24:43,187 - INFO - Lista de chats do bot atualizada: [('-1002440341419', '[DIC/EM] Membros', 0)]
+2025-03-13 23:24:43,560 - INFO - Chat [DIC/EM] Membros : -1002440341419 definido como oficial. > Responsável: @torvi_hb
+2025-03-13 23:25:42,851 - INFO - Logging do bot iniciado.
+2025-03-13 23:26:15,173 - INFO - Bot adicionado ao chat: Tetse - -1002695748985
+2025-03-13 23:26:15,173 - INFO - Lista de chats do bot atualizada: [('-1002440341419', '[DIC/EM] Membros', 1), ('-1002695748985', 'Tetse', 0)]
+2025-03-13 23:26:22,385 - INFO - Novo usuário: trmonitoramento_bot
+2025-03-13 23:26:33,113 - INFO - Apelido monit atribuido ao usuário @trmonitoramento_bot > Responsável: @torvi_hb | Chat: [DIC/EM] Membros (-1002440341419)
+2025-03-13 23:26:43,323 - INFO - Cargo comando atribuído a @trmonitoramento_bot > Responsável: @torvi_hb | Chat: [DIC/EM] Membros (-1002440341419)
+2025-03-13 23:28:29,537 - INFO - Logging do bot iniciado.
+2025-03-13 23:28:43,011 - INFO - Chat Tetse : -1002695748985 definido como oficial. > Responsável: @torvi_hb
+2025-03-13 23:30:27,167 - INFO - Logging do bot iniciado.
+2025-03-13 23:33:27,724 - INFO - Logging do bot iniciado.
+2025-03-13 23:34:06,936 - INFO - Novo usuário: coreauxiliar_bot
+2025-03-13 23:34:17,774 - INFO - Apelido Teste atribuido ao usuário @coreauxiliar_bot > Responsável: @torvi_hb | Chat: Tetse (-1002695748985)
+2025-03-13 23:34:28,010 - INFO - Cargo auxiliar atribuído a @coreauxiliar_bot > Responsável: @torvi_hb | Chat: Tetse (-1002695748985)
+2025-03-13 23:38:39,616 - INFO - Logging do bot iniciado.
+2025-03-13 23:38:47,923 - INFO - Logging do bot iniciado.
+2025-03-13 23:40:45,661 - INFO - Logging do bot iniciado.
+2025-03-13 23:40:59,655 - INFO - Logging do bot iniciado.
+2025-03-14 21:38:48,349 - INFO - Logging do bot iniciado.
+2025-03-14 21:38:52,755 - INFO - EXCEPTION: Invalid user_id specified
+2025-03-14 21:38:52,755 - INFO - @torvi_hb utilizou um nome de cargo inválido (comando > comando)| Chat: [DIC] Equipe de Marketing ®️ (-1002695748985)
+2025-03-14 21:41:42,096 - INFO - Logging do bot iniciado.
+2025-03-14 21:42:55,770 - INFO - Logging do bot iniciado.
+2025-03-14 21:54:47,504 - INFO - Bot adicionado ao chat: [DIC/EM] Teste - -1002620056303
+2025-03-14 21:54:47,505 - INFO - Lista de chats do bot atualizada: [('-1002440341419', '[DIC/EM] Membros', 1), ('-1002695748985', 'Tetse', 1), ('-1002620056303', '[DIC/EM] Teste', 0)]
+2025-03-14 21:57:57,550 - INFO - Chat [DIC/EM] Teste : -1002620056303 definido como oficial. > Responsável: @torvi_hb
+2025-03-14 21:58:58,177 - INFO - Bot removido do chat: [EM] Liderança - -1002688102515
+2025-03-14 21:58:58,177 - INFO - Lista de chats do bot atualizada: [('-1002440341419', '[DIC/EM] Membros', 1), ('-1002695748985', 'Tetse', 1), ('-1002620056303', '[DIC/EM] Teste', 1)]
+2025-03-14 21:59:07,495 - INFO - Bot adicionado ao chat: [EM] Liderança - -1002688102515
+2025-03-14 21:59:07,496 - INFO - Lista de chats do bot atualizada: [('-1002440341419', '[DIC/EM] Membros', 1), ('-1002695748985', 'Tetse', 1), ('-1002620056303', '[DIC/EM] Teste', 1), ('-1002688102515', '[EM] Liderança', 0)]
+2025-03-14 21:59:15,128 - INFO - Chat [EM] Liderança : -1002688102515 definido como oficial. > Responsável: @torvi_hb
+2025-03-14 22:03:50,674 - INFO - Novo usuário: caiofgaius
+2025-03-14 22:04:09,337 - INFO - Apelido Grains atribuido ao usuário @caiofgaius > Responsável: @torvi_hb | Chat: [DIC] Equipe de Marketing ® (-1002695748985)
+2025-03-14 22:04:24,177 - INFO - Cargo lider atribuído a @caiofgaius > Responsável: @torvi_hb | Chat: [DIC] Equipe de Marketing ® (-1002695748985)
+2025-03-14 22:09:26,084 - INFO - Novo usuário: anaxcl
+2025-03-14 22:09:47,736 - INFO - Usuário caiofgaius utilizou o comando /apelidar sem todos argumentos (/apelidar@DEVsManagerEM_bot) | Chat: [DIC] Equipe de Marketing ® (-1002695748985)
+2025-03-14 22:10:35,428 - INFO - Apelido AnaClarah258 atribuido ao usuário @anaxcl > Responsável: @caiofgaius | Chat: [DIC] Equipe de Marketing ® (-1002695748985)
+2025-03-14 22:11:04,380 - INFO - Cargo sublider atribuído a @anaxcl > Responsável: @caiofgaius | Chat: [DIC] Equipe de Marketing ® (-1002695748985)
+2025-03-14 22:11:35,401 - INFO - Novo usuário: ism4rck
+2025-03-14 22:12:16,647 - INFO - Apelido Marck. atribuido ao usuário @ism4rck > Responsável: @caiofgaius | Chat: [DIC] Equipe de Marketing ® (-1002695748985)
+2025-03-14 22:12:33,584 - INFO - Cargo core atribuído a @ism4rck > Responsável: @caiofgaius | Chat: [DIC] Equipe de Marketing ® (-1002695748985)
+2025-03-14 22:14:37,555 - INFO - Novo usuário: caiofgaius
+2025-03-14 22:14:44,412 - INFO - Novo usuário: caiofgaius
+2025-03-14 22:18:07,701 - INFO - Novo usuário: GaretGrinnan
+2025-03-14 22:18:46,730 - INFO - Usuário ism4rck utilizou o comando /apelidar sem todos argumentos (/apelidar@DEVsManagerEM_bot) | Chat: [EM] Liderança ® (-1002688102515)
+2025-03-14 22:19:02,740 - INFO - Apelido Líder atribuido ao usuário @caiofgaius > Responsável: @kprand | Chat: [EM] Liderança ® (-1002688102515)
+2025-03-14 22:19:04,626 - INFO - Apelido Grains atribuido ao usuário @caiofgaius > Responsável: @ism4rck | Chat: [EM] Liderança ® (-1002688102515)
+2025-03-14 22:19:22,952 - INFO - EXCEPTION: Not enough rights
+2025-03-14 22:19:22,952 - INFO - @ism4rck utilizou um nome de cargo inválido (Líder > lider)| Chat: [EM] Liderança ® (-1002688102515)
+2025-03-14 22:19:47,252 - INFO - Novo usuário: Felipematheus17
+2025-03-14 22:19:59,082 - INFO - EXCEPTION: Not enough rights
+2025-03-14 22:19:59,082 - INFO - @ism4rck utilizou um nome de cargo inválido (lider > lider)| Chat: [EM] Liderança ® (-1002688102515)
+2025-03-14 22:20:13,266 - INFO - Apelido Garet22: atribuido ao usuário @GaretGrinnan > Responsável: @caiofgaius | Chat: [DIC] Equipe de Marketing ® (-1002695748985)
+2025-03-14 22:20:17,700 - INFO - EXCEPTION: Not enough rights
+2025-03-14 22:20:17,700 - INFO - @ism4rck utilizou um nome de cargo inválido (líder > lider)| Chat: [EM] Liderança ® (-1002688102515)
+2025-03-14 22:20:24,879 - INFO - Cargo sublider atribuído a @GaretGrinnan > Responsável: @caiofgaius | Chat: [DIC] Equipe de Marketing ® (-1002695748985)
+2025-03-14 22:20:48,406 - INFO - Apelido gurialipiz2.0 atribuido ao usuário @Felipematheus17 > Responsável: @caiofgaius | Chat: [DIC] Equipe de Marketing ® (-1002695748985)
+2025-03-14 22:20:57,983 - INFO - Cargo sublider atribuído a @Felipematheus17 > Responsável: @caiofgaius | Chat: [DIC] Equipe de Marketing ® (-1002695748985)
+2025-03-14 22:21:37,502 - INFO - Apelido Grains atribuido ao usuário @caiofgaius > Responsável: @ism4rck | Chat: [EM] Auxiliares ® (-1002620056303)
+2025-03-14 22:21:48,161 - INFO - EXCEPTION: Message to edit not found
+2025-03-14 22:21:48,161 - INFO - @torvi_hb utilizou um nome de cargo inválido (lider > lider)| Chat: [EM] Auxiliares ® (-1002620056303)
+2025-03-14 22:23:18,288 - INFO - Logging do bot iniciado.
+2025-03-14 22:23:29,769 - INFO - Cargo lider atribuído a @caiofgaius > Responsável: @torvi_hb | Chat: [EM] Auxiliares ® (-1002620056303)
+2025-03-14 22:23:55,323 - INFO - Cargo lider atribuído a @caiofgaius > Responsável: @ism4rck | Chat: [DIC] Equipe de Marketing ® (-1002695748985)
+2025-03-14 22:24:30,217 - INFO - EXCEPTION: Not enough rights
+2025-03-14 22:24:30,217 - INFO - @ism4rck utilizou um nome de cargo inválido (líder > lider)| Chat: [EM] Liderança ® (-1002688102515)
+2025-03-14 22:25:35,457 - INFO - Cargo lider atribuído a @caiofgaius > Responsável: @ism4rck | Chat: [EM] Liderança ® (-1002688102515)
+2025-03-14 22:27:23,123 - INFO - Novo usuário: AugathaHb
+2025-03-14 22:27:36,948 - INFO - Novo usuário: AugathaHb
+2025-03-14 22:27:43,921 - INFO - Novo usuário: AugathaHb
+2025-03-14 22:28:36,499 - INFO - Apelido Augatha atribuido ao usuário @AugathaHb > Responsável: @caiofgaius | Chat: [DIC] Equipe de Marketing ® (-1002695748985)
+2025-03-14 22:28:46,634 - INFO - Cargo sublider atribuído a @AugathaHb > Responsável: @caiofgaius | Chat: [DIC] Equipe de Marketing ® (-1002695748985)
+2025-03-14 22:29:42,547 - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "c:\Users\rafae\OneDrive\Desktop\dev\amaer\venv\lib\site-packages\telegram\ext\_application.py", line 1343, in process_update
+    await coroutine
+  File "c:\Users\rafae\OneDrive\Desktop\dev\amaer\venv\lib\site-packages\telegram\ext\_handlers\basehandler.py", line 158, in handle_update
+    return await self.callback(update, context)
+  File "C:\Users\rafae\OneDrive\Desktop\dev\amaer\bot\handlers.py", line 141, in cargo
+    username = context.args[0]
+IndexError: list index out of range
+2025-03-14 22:29:57,948 - INFO - Cargo sublider atribuído a @AugathaHb > Responsável: @caiofgaius | Chat: [EM] Auxiliares ® (-1002620056303)
+2025-03-14 22:30:34,716 - INFO - Cargo sublider atribuído a @AugathaHb > Responsável: @caiofgaius | Chat: [EM] Liderança ® (-1002688102515)
+2025-03-14 22:32:20,581 - INFO - Novo usuário: lettt91
+2025-03-14 22:32:34,288 - INFO - Apelido lycia3 atribuido ao usuário @lettt91 > Responsável: @ism4rck | Chat: [EM] Liderança ® (-1002688102515)
+2025-03-14 22:33:00,519 - INFO - EXCEPTION: 'NoneType' object is not subscriptable
+2025-03-14 22:33:00,519 - INFO - @ism4rck utilizou um nome de cargo inválido (presidência > presidência)| Chat: [EM] Liderança ® (-1002688102515)
+2025-03-14 22:33:09,693 - INFO - Cargo presidencia atribuído a @lettt91 > Responsável: @ism4rck | Chat: [EM] Liderança ® (-1002688102515)
+2025-03-14 22:34:29,787 - INFO - EXCEPTION: Invalid user_id specified
+2025-03-14 22:34:29,787 - INFO - @ism4rck utilizou um nome de cargo inválido (core > core)| Chat: [EM] Liderança ® (-1002688102515)
+2025-03-14 22:34:48,376 - INFO - Apelido lav!n atribuido ao usuário @kprand > Responsável: @ism4rck | Chat: [EM] Liderança ® (-1002688102515)
+2025-03-14 22:37:12,303 - INFO - Novo usuário: kprand
+2025-03-14 22:37:27,044 - INFO - Apelido lav!n atribuido ao usuário @kprand > Responsável: @ism4rck | Chat: [EM] Liderança ® (-1002688102515)
+2025-03-14 22:37:39,640 - INFO - Cargo core atribuído a @kprand > Responsável: @ism4rck | Chat: [EM] Liderança ® (-1002688102515)
+2025-03-14 22:38:10,070 - INFO - Novo usuário: Felipematheus17
+2025-03-14 22:38:26,877 - INFO - Novo usuário: Felipematheus17
+2025-03-14 22:38:43,238 - INFO - Cargo sublider atribuído a @Felipematheus17 > Responsável: @caiofgaius | Chat: [EM] Auxiliares ® (-1002620056303)
+2025-03-14 22:39:01,865 - INFO - EXCEPTION: 'NoneType' object is not subscriptable
+2025-03-14 22:39:01,865 - INFO - @caiofgaius utilizou um nome de cargo inválido (cargo > cargo)| Chat: [EM] Liderança ® (-1002688102515)
+2025-03-14 22:39:29,590 - INFO - Cargo sublider atribuído a @Felipematheus17 > Responsável: @caiofgaius | Chat: [EM] Liderança ® (-1002688102515)
+2025-03-14 22:40:38,869 - INFO - Novo usuário: miguel99mc
+2025-03-14 22:40:55,291 - INFO - Apelido presidencia atribuido ao usuário @miguel99mc > Responsável: @ism4rck | Chat: [EM] Liderança ® (-1002688102515)
+2025-03-14 22:41:13,085 - INFO - Apelido roc-roc atribuido ao usuário @miguel99mc > Responsável: @ism4rck | Chat: [EM] Liderança ® (-1002688102515)
+2025-03-14 22:41:30,914 - INFO - Cargo presidencia atribuído a @miguel99mc > Responsável: @ism4rck | Chat: [EM] Liderança ® (-1002688102515)
+2025-03-14 22:42:07,720 - INFO - Novo usuário: fcswlfs
+2025-03-14 22:42:13,990 - INFO - Novo usuário: anaxcl
+2025-03-14 22:42:21,441 - INFO - Novo usuário: anaxcl
+2025-03-14 22:42:36,500 - INFO - Apelido fcs123 atribuido ao usuário @fcswlfs > Responsável: @ism4rck | Chat: [EM] Liderança ® (-1002688102515)
+2025-03-14 22:42:42,190 - INFO - Cargo sublider atribuído a @anaxcl > Responsável: @caiofgaius | Chat: [EM] Auxiliares ® (-1002620056303)
+2025-03-14 22:42:50,958 - INFO - Cargo presidencia atribuído a @fcswlfs > Responsável: @ism4rck | Chat: [EM] Liderança ® (-1002688102515)
+2025-03-14 22:43:02,201 - INFO - Cargo sublider atribuído a @anaxcl > Responsável: @caiofgaius | Chat: [EM] Liderança ® (-1002688102515)
+2025-03-14 22:43:28,401 - INFO - Novo usuário: lettt91
+2025-03-14 22:43:28,648 - INFO - Novo usuário: fcswlfs
+2025-03-14 22:43:28,650 - INFO - Novo usuário: miguel99mc
+2025-03-14 22:43:44,548 - INFO - Apelido lycia3 atribuido ao usuário @lettt91 > Responsável: @ism4rck | Chat: [EM] Auxiliares ® (-1002620056303)
+2025-03-14 22:43:56,811 - INFO - Cargo presidencia atribuído a @lettt91 > Responsável: @ism4rck | Chat: [EM] Auxiliares ® (-1002620056303)
+2025-03-14 22:44:05,753 - INFO - Apelido fcs123 atribuido ao usuário @fcswlfs > Responsável: @ism4rck | Chat: [EM] Auxiliares ® (-1002620056303)
+2025-03-14 22:44:19,649 - INFO - Cargo presidencia atribuído a @fcswlfs > Responsável: @ism4rck | Chat: [EM] Auxiliares ® (-1002620056303)
+2025-03-14 22:44:31,145 - INFO - Apelido roc-roc atribuido ao usuário @miguel99mc > Responsável: @ism4rck | Chat: [EM] Auxiliares ® (-1002620056303)
+2025-03-14 22:44:32,021 - INFO - Apelido roc-roc atribuido ao usuário @miguel99mc > Responsável: @kprand | Chat: [EM] Auxiliares ® (-1002620056303)
+2025-03-14 22:45:02,203 - INFO - Cargo presidencia atribuído a @miguel99mc > Responsável: @ism4rck | Chat: [EM] Auxiliares ® (-1002620056303)
+2025-03-14 22:45:04,504 - INFO - Novo usuário: miguel99mc
+2025-03-14 22:45:04,506 - INFO - Novo usuário: fcswlfs
+2025-03-14 22:45:13,227 - INFO - Novo usuário: lettt91
+2025-03-14 22:45:28,943 - INFO - Apelido lycia3 atribuido ao usuário @lettt91 > Responsável: @kprand | Chat: [DIC] Equipe de Marketing ® (-1002695748985)
+2025-03-14 22:45:29,707 - INFO - Apelido lycia3 atribuido ao usuário @lettt91 > Responsável: @ism4rck | Chat: [DIC] Equipe de Marketing ® (-1002695748985)
+2025-03-14 22:45:34,838 - INFO - Apelido roc-roc atribuido ao usuário @miguel99mc > Responsável: @kprand | Chat: [DIC] Equipe de Marketing ® (-1002695748985)
+2025-03-14 22:45:41,940 - INFO - Apelido fcs123 atribuido ao usuário @fcswlfs > Responsável: @kprand | Chat: [DIC] Equipe de Marketing ® (-1002695748985)
+2025-03-14 22:45:45,430 - INFO - Cargo presidencia atribuído a @lettt91 > Responsável: @ism4rck | Chat: [DIC] Equipe de Marketing ® (-1002695748985)
+2025-03-14 22:45:52,724 - INFO - Cargo presidencia atribuído a @fcswlfs > Responsável: @kprand | Chat: [DIC] Equipe de Marketing ® (-1002695748985)
+2025-03-14 22:45:58,657 - INFO - Cargo presidencia atribuído a @lettt91 > Responsável: @kprand | Chat: [DIC] Equipe de Marketing ® (-1002695748985)
+2025-03-14 22:46:01,111 - INFO - Apelido fcs123 atribuido ao usuário @fcswlfs > Responsável: @ism4rck | Chat: [DIC] Equipe de Marketing ® (-1002695748985)
+2025-03-14 22:46:05,458 - INFO - Cargo presidencia atribuído a @miguel99mc > Responsável: @kprand | Chat: [DIC] Equipe de Marketing ® (-1002695748985)
+2025-03-14 22:46:14,640 - INFO - Cargo presidencia atribuído a @fcswlfs > Responsável: @ism4rck | Chat: [DIC] Equipe de Marketing ® (-1002695748985)
+2025-03-14 22:48:10,486 - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "c:\Users\rafae\OneDrive\Desktop\dev\amaer\venv\lib\site-packages\telegram\ext\_application.py", line 1343, in process_update
+    await coroutine
+  File "c:\Users\rafae\OneDrive\Desktop\dev\amaer\venv\lib\site-packages\telegram\ext\_handlers\basehandler.py", line 158, in handle_update
+    return await self.callback(update, context)
+  File "C:\Users\rafae\OneDrive\Desktop\dev\amaer\bot\handlers.py", line 312, in force_control_message_update
+    await update_members_message(-1002695748985)
+  File "C:\Users\rafae\OneDrive\Desktop\dev\amaer\bot\handlers.py", line 307, in update_members_message
+    await bot.edit_message_text(message, chat_id, 10, parse_mode="HTML")
+  File "c:\Users\rafae\OneDrive\Desktop\dev\amaer\venv\lib\site-packages\telegram\_bot.py", line 4285, in edit_message_text
+    return await self._send_message(
+  File "c:\Users\rafae\OneDrive\Desktop\dev\amaer\venv\lib\site-packages\telegram\_bot.py", line 803, in _send_message
+    result = await self._post(
+  File "c:\Users\rafae\OneDrive\Desktop\dev\amaer\venv\lib\site-packages\telegram\_bot.py", line 691, in _post
+    return await self._do_post(
+  File "c:\Users\rafae\OneDrive\Desktop\dev\amaer\venv\lib\site-packages\telegram\_bot.py", line 720, in _do_post
+    result = await request.post(
+  File "c:\Users\rafae\OneDrive\Desktop\dev\amaer\venv\lib\site-packages\telegram\request\_baserequest.py", line 202, in post
+    result = await self._request_wrapper(
+  File "c:\Users\rafae\OneDrive\Desktop\dev\amaer\venv\lib\site-packages\telegram\request\_baserequest.py", line 383, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+2025-03-14 22:53:44,573 - INFO - Apelido roc-roc atribuido ao usuário @miguel99mc > Responsável: @kprand | Chat: [DIC] Equipe de Marketing ® (-1002695748985)
+2025-03-14 22:53:59,127 - INFO - Cargo presidencia atribuído a @miguel99mc > Responsável: @kprand | Chat: [DIC] Equipe de Marketing ® (-1002695748985)
+2025-03-14 22:56:09,030 - INFO - EXCEPTION: Invalid user_id specified
+2025-03-14 22:56:09,030 - INFO - @ism4rck utilizou um nome de cargo inválido (presidencia > presidencia)| Chat: [DIC] Equipe de Marketing ® (-1002695748985)

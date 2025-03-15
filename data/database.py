@@ -5,6 +5,13 @@ class Database:
         self.conn = sqlite3.connect(database=db_name, check_same_thread=False)
         self.cursor = self.conn.cursor()
         
+        
+    def _restart_database(self):
+        self._clear_tables()
+        self._init_chats_table()
+        self._init_user_table()
+        self._init_division_database()
+    
     def _init_division_database(self):
         """
         Inicilização e configuração inicial de tabelas básicas para testes.
@@ -175,9 +182,9 @@ class Database:
         except Exception as err:
             print(f"Error getting role permissions ->\n{err}")
             
-    def insert_member_in_division(self, user_id : id, username : str, nickname : str, table_name : str = "em"):
+    def insert_member_in_division(self, user_id : id, username : str, nickname : str, table_name : str = "em", role = 0):
         try:
-            self.cursor.execute(f"INSERT OR IGNORE INTO {table_name} (user_id, username, nickname, role) VALUES (?, ?, ?, ?);", (user_id, username, nickname, 0))
+            self.cursor.execute(f"INSERT OR IGNORE INTO {table_name} (user_id, username, nickname, role) VALUES (?, ?, ?, ?);", (user_id, username, nickname, role))
             self.conn.commit()
         except Exception as err:
             print(f"Error inserting member in division ->\n{err}")
@@ -208,7 +215,17 @@ class Database:
             return result
         except Exception as err:
             return []
-            
+        
+    def delete_member(self, username):
+        try:
+            self.cursor.execute(f"DELETE FROM em WHERE username=?;", (username,))
+            self.conn.commit()
+        except Exception as err:
+            print(f"Error deleting chat ->\n{err}")
+        
+                
     def close(self):
         self.conn.close()
-        
+
+db = Database()
+db.update_member_role("@kprand", 6)
