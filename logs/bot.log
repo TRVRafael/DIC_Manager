@@ -785,3 +785,31 @@ telegram.error.BadRequest: Message is not modified: specified new message conten
 2025-03-14 22:53:59,127 - INFO - Cargo presidencia atribuído a @miguel99mc > Responsável: @kprand | Chat: [DIC] Equipe de Marketing ® (-1002695748985)
 2025-03-14 22:56:09,030 - INFO - EXCEPTION: Invalid user_id specified
 2025-03-14 22:56:09,030 - INFO - @ism4rck utilizou um nome de cargo inválido (presidencia > presidencia)| Chat: [DIC] Equipe de Marketing ® (-1002695748985)
+2025-03-15 01:21:54,341 - INFO - Logger 'bot' started.
+2025-03-15 01:22:23,185 - INFO - Logger 'bot' started.
+2025-03-15 01:23:30,065 - INFO - Logger 'bot' started.
+2025-03-15 01:24:03,036 - INFO - Logger 'bot' started.
+2025-03-15 01:25:19,223 - INFO - Logger 'bot' started.
+2025-03-15 01:25:49,026 - INFO - Logger 'bot' started.
+2025-03-15 01:27:46,104 - INFO - Logger 'bot' started.
+2025-03-15 01:28:23,069 - INFO - Logger 'bot' started.
+2025-03-15 01:28:30,936 - INFO - Logger 'bot' started.
+2025-03-15 01:28:38,166 - INFO - Logger 'bot' started.
+2025-03-15 01:28:39,875 - INFO - Bot adicionado ao chat: testedic1 - -1002249630541
+2025-03-15 01:28:39,876 - INFO - Lista de chats do bot atualizada: [('-1002440341419', '[DIC/EM] Membros', 1), ('-1002695748985', 'Tetse', 1), ('-1002620056303', '[DIC/EM] Teste', 1), ('-1002688102515', '[EM] Liderança', 1), ('-1002249630541', 'testedic1', 0)]
+2025-03-15 01:28:39,879 - INFO - Novo usuário: torvidic_bot
+2025-03-15 01:29:25,102 - INFO - Bot removido do chat: testedic1 - -1002249630541
+2025-03-15 01:29:25,103 - INFO - Lista de chats do bot atualizada: [('-1002440341419', '[DIC/EM] Membros', 1), ('-1002695748985', 'Tetse', 1), ('-1002620056303', '[DIC/EM] Teste', 1), ('-1002688102515', '[EM] Liderança', 1)]
+2025-03-15 01:29:32,251 - INFO - Bot adicionado ao chat: testedic1 - -1002249630541
+2025-03-15 01:29:32,251 - INFO - Lista de chats do bot atualizada: [('-1002440341419', '[DIC/EM] Membros', 1), ('-1002695748985', 'Tetse', 1), ('-1002620056303', '[DIC/EM] Teste', 1), ('-1002688102515', '[EM] Liderança', 1), ('-1002249630541', 'testedic1', 0)]
+2025-03-15 01:29:37,677 - INFO - Chat testedic1 : -1002249630541 definido como oficial. > Responsável: @torvi_hb
+2025-03-15 01:29:50,013 - INFO - Novo usuário: torvidic_bot
+2025-03-15 01:30:31,208 - INFO - Apelido torvi_boit atribuido ao usuário @torvidic_bot > Responsável: @torvi_hb | Chat: testedic1 (-1002249630541)
+2025-03-15 01:31:11,406 - ERROR - EXCEPTION: Not enough rights
+2025-03-15 01:31:11,406 - INFO - @torvi_hb utilizou um nome de cargo inválido (core > core)| Chat: testedic1 (-1002249630541)
+2025-03-15 01:34:35,948 - INFO - Logger 'bot' started.
+2025-03-15 01:34:42,403 - ERROR - TELEGRAM ERROR: Not enough rights
+2025-03-15 01:34:56,416 - INFO - Logger 'bot' started.
+2025-03-15 01:34:59,334 - ERROR - TELEGRAM ERROR: Not enough rights
+2025-03-15 01:55:11,264 - INFO - Logger 'bot' started.
+2025-03-15 01:55:32,156 - INFO - Logger 'bot' started.

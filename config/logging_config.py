@@ -1,33 +1,28 @@
 import logging
 from logging.handlers import RotatingFileHandler
 
-from os import makedirs
-from os.path import exists
+import os
 
 
 class FilterHTTPLogs(logging.Filter):
     def filter(self, record):
-        # Ignorar registros que contenham "HTTP Request" no nome do logger
         if "HTTP Request" in record.getMessage():
             return False
         return True
-
-
-def setup_logging() -> None:
+    
+    
+def setup_logging(name: str, log_file: str) -> logging.Logger:
     """
     Configura o logging do bot para armazenar logs em um arquivo rotacionado.
     """
     
-    # Cria o diretório de logs, caso não exista.
-    if not exists('logs'):
-        makedirs('logs')
-    
-    # Ajusta o logger do pacote 'telegram' para capturar apenas WARNINGS e erros mais graves
-    logging.getLogger('telegram').setLevel(logging.WARNING)
+    # Make sure dir exists
+    log_dir = os.path.dirname(log_file)
+    os.makedirs(log_dir, exist_ok=True)
     
     # Definição de um manipulador de arquivo rotacionado
     handler = RotatingFileHandler(
-        'logs/bot.log', 
+        log_file,
         maxBytes=5*1024*1024, 
         backupCount=5,
         encoding="utf-8"
@@ -39,8 +34,13 @@ def setup_logging() -> None:
     handler.addFilter(FilterHTTPLogs())
 
     # Configuração do logger
-    logger = logging.getLogger()
+    logger = logging.getLogger(name)
     logger.setLevel(logging.INFO)
-    logger.addHandler(handler)
+    
+    if not logger.hasHandlers():
+        logger.addHandler(handler)
 
-    logger.info("Logging do bot iniciado.")
+    logger.info(f"Logger '{name}' started.")
+    return logger
+
+bot_logger = setup_logging("bot", "logs/bot.log")
