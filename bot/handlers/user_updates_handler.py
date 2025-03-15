@@ -51,4 +51,4 @@ async def handle_user_removed(update: Update, context: CallbackContext) -> None:
         chat_data = db_controller.get_all_chats()
         bot_logger.info(f"Lista de chats do bot atualizada: {chat_data}")
     else:
-        print(left_member.id)
+        logging.info(f"O usuário {left_member.username} : {left_member.id} saiu do grupo.")

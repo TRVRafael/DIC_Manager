@@ -36,3 +36,33 @@ async def oficializar(update : Update, context: CallbackContext):
         bot_logger.info(f"Chat {current_chat[1]} : {current_chat[0]} definido como oficial. > Responsável: @{update.effective_user.username}")
     else:
         await update.message.reply_text(f"<b>Esse chat já é oficial.</b>\n\n<i>Caso isso seja um erro, contate a Equipe de Desenvolvedores, através da liderança da divisão.</i>", parse_mode="HTML")
+        
+async def kick(update: Update, context: CallbackContext):
+    CHAT_ID = update.effective_chat.id
+    message = update.message
+
+    if not message_is_on_group(CHAT_ID):
+        await message.reply_text(f"Comandos só podem ser usados em grupos autorizados.\n\n<i>Caso isso seja um erro, contate a Equipe de Desenvolvedores, através da liderança da divisão.</i>", parse_mode="HTML")
+        bot_logger.info(f"Usuário @{update.effective_user.username} tentou utilizar o comando /cargo fora de um grupo autorizado | Chat: {format_chat_object(update)}")
+        return
+    
+    if not await user_is_group_admin(update):
+        await message.reply_text(f"Você não possui permissão para utilizar esse comando.\n\n<i>Caso isso seja um erro, contate a Equipe de Desenvolvedores, através da liderança da divisão.</i>", parse_mode="HTML")
+        bot_logger.info(f"Usuário {update.effective_user.username} utilizou, sem permissão, o comando /kick | Chat: {format_chat_object(update)}")
+        return
+    
+    username = context.args[0]
+
+    try:
+        if username.startswith('@'):
+            username = username[1:]
+
+        user_id = db_controller.get_user_id_by_username(username)
+
+        await message.chat.ban_member(user_id)
+
+        await message.reply_text(f"<b>✅ Usuário @{username} foi expulso do grupo.</b>", parse_mode="HTML")
+        bot_logger.info(f"Usuário {username} foi expulso do grupo. > Responsável: {update.effective_user.username}")
+    except Exception as err:
+        await message.reply_text(f"<b>✅ Algum erro ocorreu durante a execução do comando, contate a equipe de desenvolvedores.</b>", parse_mode="HTML")
+        bot_logger.info(f"Erro ao remover usuário do grupo: {err}")
