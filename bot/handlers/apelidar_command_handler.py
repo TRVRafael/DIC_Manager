@@ -7,7 +7,7 @@ from bot.handlers import message_is_on_group, user_is_group_admin, update_member
 from bot.handlers.error_handler import not_official_chat_handler, not_chat_admin_handler, not_at_char_handler, error_default_handler
 from bot.utils import format_chat_object, sanitize_role_name, get_fancy_name
 
-async def cargo(update : Update, context : CallbackContext):
+async def apelidar(update : Update, context : CallbackContext):
     CHAT_ID = update.effective_chat.id
     if not message_is_on_group(CHAT_ID):
         not_official_chat_handler(update)
