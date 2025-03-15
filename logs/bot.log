@@ -813,3 +813,4 @@ telegram.error.BadRequest: Message is not modified: specified new message conten
 2025-03-15 01:34:59,334 - ERROR - TELEGRAM ERROR: Not enough rights
 2025-03-15 01:55:11,264 - INFO - Logger 'bot' started.
 2025-03-15 01:55:32,156 - INFO - Logger 'bot' started.
+2025-03-15 02:04:03,177 - INFO - Logger 'bot' started.

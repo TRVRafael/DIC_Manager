@@ -3,6 +3,8 @@ from telegram.ext import CallbackContext
 
 from data import db_controller
 from config import bot_logger
+from bot.utils import format_chat_object
+from bot.handlers.error_handler import not_chat_admin_handler, not_official_chat_handler, not_at_char_handler
 
 def message_is_on_group(chatId: float) -> bool:
     all_chats = db_controller.get_all_chats()
@@ -42,20 +44,20 @@ async def kick(update: Update, context: CallbackContext):
     message = update.message
 
     if not message_is_on_group(CHAT_ID):
-        await message.reply_text(f"Comandos só podem ser usados em grupos autorizados.\n\n<i>Caso isso seja um erro, contate a Equipe de Desenvolvedores, através da liderança da divisão.</i>", parse_mode="HTML")
-        bot_logger.info(f"Usuário @{update.effective_user.username} tentou utilizar o comando /cargo fora de um grupo autorizado | Chat: {format_chat_object(update)}")
+        await not_official_chat_handler(update)
         return
     
     if not await user_is_group_admin(update):
-        await message.reply_text(f"Você não possui permissão para utilizar esse comando.\n\n<i>Caso isso seja um erro, contate a Equipe de Desenvolvedores, através da liderança da divisão.</i>", parse_mode="HTML")
-        bot_logger.info(f"Usuário {update.effective_user.username} utilizou, sem permissão, o comando /kick | Chat: {format_chat_object(update)}")
+        await not_chat_admin_handler(update, "/kick")
         return
     
     username = context.args[0]
 
     try:
-        if username.startswith('@'):
-            username = username[1:]
+        if not username.startswith('@'):
+            not_at_char_handler(update)
+            return
+        username = username[1:]
 
         user_id = db_controller.get_user_id_by_username(username)
 
