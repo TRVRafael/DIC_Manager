@@ -56,7 +56,7 @@ async def handle_user_removed(update: Update, context: CallbackContext) -> None:
         chat_data = db_controller.get_all_chats()
         logging.info(f"Lista de chats do bot atualizada: {chat_data}")
     else:
-        print(left_member.id)
+        logging.info(f"O usuário {left_member.username} : {left_member.id} saiu do grupo.")
 
 async def apelidar(update: Update, context: CallbackContext) -> None:
     """
@@ -183,6 +183,37 @@ async def cargo(update : Update, context : CallbackContext):
         await update.message.reply_text(f"<b>❌ Cargo inserido é inválido. Tente novamente.</b>\n<i>Caso isso seja um erro, contate a Equipe de Desenvolvedores, através da liderança da divisão.</i>", parse_mode="HTML")
         logging.info(f"EXCEPTION: {err}")
         logging.info(f"@{update.effective_user.username} utilizou um nome de cargo inválido ({role_name_input} > {role_name})| Chat: {format_chat_object(update)}")
+
+async def kick(update: Update, context: CallbackContext):
+    CHAT_ID = update.effective_chat.id
+    message = update.message
+
+    if not message_is_on_group(CHAT_ID):
+        await message.reply_text(f"Comandos só podem ser usados em grupos autorizados.\n\n<i>Caso isso seja um erro, contate a Equipe de Desenvolvedores, através da liderança da divisão.</i>", parse_mode="HTML")
+        logging.info(f"Usuário @{update.effective_user.username} tentou utilizar o comando /cargo fora de um grupo autorizado | Chat: {format_chat_object(update)}")
+        return
+    
+    if not await user_is_group_admin(update):
+        await message.reply_text(f"Você não possui permissão para utilizar esse comando.\n\n<i>Caso isso seja um erro, contate a Equipe de Desenvolvedores, através da liderança da divisão.</i>", parse_mode="HTML")
+        logging.info(f"Usuário {update.effective_user.username} utilizou, sem permissão, o comando /kick | Chat: {format_chat_object(update)}")
+        return
+    
+    username = context.args[0]
+
+    try:
+        if username.startswith('@'):
+            username = username[1:]
+
+        user_id = db_controller.get_user_id_by_username(username)
+
+        await message.chat.ban_member(user_id)
+
+        await message.reply_text(f"<b>✅ Usuário @{username} foi expulso do grupo.</b>", parse_mode="HTML")
+        logging.info(f"Usuário {username} foi expulso do grupo. > Responsável: {update.effective_user.username}")
+    except Exception as err:
+        await message.reply_text(f"<b>✅ Algum erro ocorreu durante a execução do comando, contate a equipe de desenvolvedores.</b>", parse_mode="HTML")
+        logging.info(f"Erro ao remover usuário do grupo: {err}")
+
 
 async def oficializar(update : Update, context: CallbackContext):
     CHAT_ID = update.effective_chat.id
