@@ -46,7 +46,8 @@ async def verificar(update: Update, context: CallbackContext) -> None:
         
     if not user_id:
         await update.message.reply_text("O usuário especificado não existe. (Tratar erro: nome passado errado ou nome correto, mas bot não reconheceu.)")
-    
+        bot_logger.info(f"O ID do usuário {username[1:]} não foi encontrado na base de dados.")
+        return
     
     # Waiting for the complete procedure definition
 
