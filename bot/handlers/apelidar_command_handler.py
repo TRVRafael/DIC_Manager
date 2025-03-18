@@ -28,15 +28,21 @@ async def apelidar(update : Update, context : CallbackContext):
         not_at_char_handler(update)
         return
         
-    user_id, nickname_from_db = db_controller.get_user_id_by_username(username=username[1:])
+    user_id = db_controller.get_user_id_by_username(f"@{username[1:]}")[0]
+    nickname_from_db = db_controller.get_user_id_by_username(f"@{username[1:]}")[1]
+     
     role_permissions = db_controller.get_role_permissions(role_name)
+    
     
     if not nickname_from_db:
         await error_default_handler("Utilize o comando /verificar antes de atribuir o apelido.", update=update)
+        return
     elif not user_id:
         await error_default_handler("A conta informada não existe no chat.", update=update)
+        return
     elif not role_permissions:
         await error_default_handler("O cargo informado é inválido.", update=update)
+        return
 
     try:
         await bot.promote_chat_member(

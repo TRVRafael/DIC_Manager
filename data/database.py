@@ -74,13 +74,13 @@ class Database:
     
     def get_user_id_by_username(self, username : str) -> int | None:
         try:
-            self.cursor.execute(f"SELECT user_id, nickname FROM users WHERE username=?", (username,))
+            self.cursor.execute("SELECT user_id, nickname FROM em WHERE username=?;", (username,))
             result = self.cursor.fetchone()
-        
+            
             if result:
-                return result[0], result[1]  
+                return result
             else:
-                return []
+                return None
         except Exception as err:
             bot_logger.info(f"DB - Error getting User id by username ({username}) ->\n{err}")
 

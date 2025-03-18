@@ -92,8 +92,10 @@ async def update_members_message(chat_id : int):
     bot = Bot("7827037297:AAGgeHSy3tZI_tCPpH3ujB4jdgV_L37yvvE")
     
     message = formatar_mensagem_integrantes(obter_integrantes())
-    
-    await bot.edit_message_text(message, chat_id, 10, parse_mode="HTML")
+    try:
+        await bot.edit_message_text(message, chat_id, 10, parse_mode="HTML")
+    except Exception:
+        pass
     
 async def force_members_message_update(update: Update, context = CallbackContext):
     await update_members_message(update.effective_chat.id)

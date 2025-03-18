@@ -2,7 +2,6 @@ from telegram.ext import CommandHandler, Application, MessageHandler, filters
 
 from bot.config import BOT_TOKEN
 from bot.handlers import verificar, apelidar, handle_new_user, handle_user_removed, oficializar, force_members_message_update, kick
-from config.logging_config import setup_logging
 
 
 def start_bot() -> None:
