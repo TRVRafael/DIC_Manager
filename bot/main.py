@@ -4,7 +4,6 @@ from bot.config import BOT_TOKEN
 from bot.handlers import verificar, apelidar, handle_new_user, handle_user_removed, oficializar, force_members_message_update, kick, remover_apelido
 
 
-
 def start_bot() -> None:
     """
     Ponto de execução principal do bot.
