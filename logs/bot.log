@@ -847,3 +847,259 @@ telegram.error.BadRequest: Message is not modified: specified new message conten
 2025-03-15 10:13:12,730 - INFO - Logger 'bot' started.
 2025-03-15 10:13:15,078 - WARNING - O cargo informado é inválido. | Message: /apelidar @torvidic_bot teste | Chat: testedic1 (-1002249630541)
 2025-03-15 10:13:43,513 - INFO - Cargo sublider atribuído a @GaretGrinnan > Responsável: @torvi_hb | Chat: [EM] Liderança ® (-1002688102515)
+2025-03-19 19:35:54,983 - INFO - Logger 'bot' started.
+2025-03-19 19:37:44,499 - INFO - Logger 'bot' started.
+2025-03-19 20:24:57,805 - INFO - Erro ao remover usuário do grupo: Invalid user_id specified
+2025-03-19 20:25:03,645 - INFO - Erro ao remover usuário do grupo: Invalid user_id specified
+2025-03-19 20:25:32,307 - INFO - Usuário torvidic_bot foi expulso do grupo. > Responsável: torvi_hb
+2025-03-19 20:25:32,307 - INFO - O usuário torvidic_bot : 7466939287 saiu do grupo.
+2025-03-19 20:29:04,410 - INFO - Novo usuário: torvidic_bot
+2025-03-19 20:30:12,258 - INFO - Logger 'bot' started.
+2025-03-19 20:30:23,813 - INFO - Apelido torvi_bot atribuido ao usuário @torvidic_bot > Responsável: @torvi_hb | Chat: testedic1 (-1002249630541)
+2025-03-19 20:40:08,224 - INFO - Logger 'bot' started.
+2025-03-19 20:40:26,361 - INFO - Cargo auxiliar atribuído a @torvidic_bot > Responsável: @torvi_hb | Chat: testedic1 (-1002249630541)
+2025-03-19 20:40:43,792 - INFO - Usuário torvi_hb tentou remover apelido de um usuário inexistente (/remover_apelido @torvidic_bot) | Chat: testedic1 (-1002249630541)
+2025-03-19 20:44:37,296 - INFO - Logger 'bot' started.
+2025-03-19 20:45:04,192 - INFO - Logger 'bot' started.
+2025-03-19 20:52:17,194 - INFO - Logger 'bot' started.
+2025-03-19 20:52:45,049 - INFO - Logger 'bot' started.
+2025-03-19 20:55:39,144 - INFO - Logger 'bot' started.
+2025-03-19 20:57:17,377 - INFO - Logger 'bot' started.
+2025-03-19 21:03:44,388 - INFO - Logger 'bot' started.
+2025-03-19 21:06:49,523 - INFO - Logger 'bot' started.
+2025-03-19 21:07:30,483 - INFO - Logger 'bot' started.
+2025-03-19 21:08:56,028 - INFO - Logger 'bot' started.
+2025-03-19 21:09:47,310 - INFO - Logger 'bot' started.
+2025-03-19 21:11:16,497 - INFO - Logger 'bot' started.
+2025-03-19 21:12:54,570 - INFO - Logger 'bot' started.
+2025-03-19 21:13:41,975 - INFO - Logger 'bot' started.
+2025-03-19 21:14:05,280 - INFO - Logger 'bot' started.
+2025-03-19 21:15:10,264 - INFO - Logger 'bot' started.
+2025-03-19 21:15:25,692 - INFO - Cargo auxiliar atribuído a @torvidic_bot > Responsável: @torvi_hb | Chat: testedic1 (-1002249630541)
+2025-03-19 21:15:42,812 - INFO - Logger 'bot' started.
+2025-03-19 21:16:00,465 - INFO - Logger 'bot' started.
+2025-03-19 21:16:25,562 - INFO - Logger 'bot' started.
+2025-03-19 21:16:30,079 - INFO - Logger 'bot' started.
+2025-03-19 21:21:01,192 - INFO - Logger 'bot' started.
+2025-03-19 21:21:10,803 - INFO - Cargo auxiliar atribuído a @torvidic_bot > Responsável: @torvi_hb | Chat: testedic1 (-1002249630541)
+2025-03-19 21:21:38,861 - INFO - Novo usuário: kprand
+2025-03-19 21:21:51,352 - INFO - Cargo auxiliar atribuído a @kprand > Responsável: @torvi_hb | Chat: testedic1 (-1002249630541)
+2025-03-19 21:28:11,577 - INFO - Logger 'bot' started.
+2025-03-19 21:28:24,893 - INFO - Apelido removido do usuário @torvidic_bot > Responsável: @torvi_hb | Chat: testedic1 (-1002249630541)
+2025-03-19 21:30:00,427 - INFO - Logger 'bot' started.
+2025-03-19 21:30:23,563 - INFO - Novo usuário: torvidic_bot
+2025-03-19 21:30:34,412 - WARNING - O cargo informado é inválido. | Message: /apelidar@DEVsManagerEM_bot @torvidic_bot TORVI_BOT | Chat: [DIC/EM] Membros ® (-1002695748985)
+2025-03-19 21:30:58,852 - WARNING - O cargo informado é inválido. | Message: /apelidar @torvidic_bot torvi | Chat: [DIC/EM] Membros ® (-1002695748985)
+2025-03-19 21:31:39,446 - INFO - O ID do usuário torvidic_bot não foi encontrado na base de dados.
+2025-03-19 21:32:17,981 - INFO - O ID do usuário torvidic_bot não foi encontrado na base de dados.
+2025-03-19 21:32:23,779 - INFO - Logger 'bot' started.
+2025-03-19 21:32:47,179 - INFO - O ID do usuário torvidic_bot não foi encontrado na base de dados.
+2025-03-19 21:33:26,308 - INFO - Logger 'bot' started.
+2025-03-19 21:33:38,304 - INFO - Logger 'bot' started.
+2025-03-19 21:33:46,113 - INFO - Apelido torviii atribuido ao usuário @torvidic_bot > Responsável: @torvi_hb | Chat: testedic1 (-1002249630541)
+2025-03-19 21:33:54,885 - INFO - Apelido torviii atribuido ao usuário @torvidic_bot > Responsável: @torvi_hb | Chat: [DIC/EM] Membros ® (-1002695748985)
+2025-03-19 21:35:27,463 - INFO - Logger 'bot' started.
+2025-03-19 21:35:39,633 - INFO - Erro ao remover usuário do grupo: Invalid user_id specified
+2025-03-19 21:36:20,288 - INFO - Logger 'bot' started.
+2025-03-19 21:36:26,241 - INFO - Erro ao remover usuário do grupo: 'NoneType' object is not subscriptable
+2025-03-19 21:38:52,723 - INFO - Logger 'bot' started.
+2025-03-19 21:39:00,440 - INFO - Erro ao remover usuário do grupo: 'NoneType' object is not subscriptable
+2025-03-19 21:39:27,724 - INFO - Logger 'bot' started.
+2025-03-19 21:39:41,068 - INFO - Erro ao remover usuário do grupo: Invalid user_id specified
+2025-03-19 21:40:02,528 - INFO - Logger 'bot' started.
+2025-03-19 21:40:05,848 - INFO - Usuário torvidic_bot foi expulso do grupo. > Responsável: torvi_hb
+2025-03-19 21:40:05,849 - INFO - O usuário torvidic_bot : 7466939287 saiu do grupo.
+2025-03-19 21:40:18,771 - INFO - Novo usuário: torvidic_bot
+2025-03-19 21:40:51,840 - INFO - Logger 'bot' started.
+2025-03-19 21:40:55,473 - INFO - Erro ao remover usuário do grupo: 'NoneType' object is not subscriptable
+2025-03-19 21:41:22,372 - INFO - Logger 'bot' started.
+2025-03-19 21:41:26,600 - INFO - Usuário torvidic_bot foi expulso do grupo. > Responsável: torvi_hb
+2025-03-19 21:41:26,601 - INFO - O usuário torvidic_bot : 7466939287 saiu do grupo.
+2025-03-19 21:41:34,979 - INFO - Logger 'bot' started.
+2025-03-19 21:41:44,786 - INFO - Usuário torvidic_bot foi expulso do grupo. > Responsável: torvi_hb
+2025-03-19 21:41:44,787 - INFO - O usuário torvidic_bot : 7466939287 saiu do grupo.
+2025-03-19 21:44:20,383 - INFO - Logger 'bot' started.
+2025-03-19 21:46:06,427 - INFO - Logger 'bot' started.
+2025-03-19 21:46:59,784 - INFO - Logger 'bot' started.
+2025-03-19 21:47:43,194 - INFO - Logger 'bot' started.
+2025-03-19 21:51:44,414 - INFO - Logger 'bot' started.
+2025-03-19 21:52:34,751 - INFO - Logger 'bot' started.
+2025-03-19 21:53:22,992 - INFO - Logger 'bot' started.
+2025-03-19 21:53:30,394 - INFO - Novo usuário: torvidic_bot
+2025-03-19 21:53:38,189 - INFO - Usuário torvidic_bot foi expulso do grupo. > Responsável: torvi_hb
+2025-03-19 21:53:38,189 - INFO - O usuário torvidic_bot : 7466939287 saiu do grupo.
+2025-03-19 21:53:55,246 - INFO - Novo usuário: torvidic_bot
+2025-03-19 21:55:18,255 - INFO - Logger 'bot' started.
+2025-03-19 21:55:46,743 - INFO - Logger 'bot' started.
+2025-03-19 21:56:07,833 - INFO - Logger 'bot' started.
+2025-03-19 21:56:31,163 - INFO - Novo usuário: torvidic_bot
+2025-03-19 21:58:06,664 - INFO - Logger 'bot' started.
+2025-03-19 21:58:28,475 - INFO - Logger 'bot' started.
+2025-03-19 21:59:00,828 - INFO - Logger 'bot' started.
+2025-03-19 21:59:35,856 - INFO - Logger 'bot' started.
+2025-03-19 21:59:50,816 - INFO - Logger 'bot' started.
+2025-03-19 22:04:08,006 - INFO - Logger 'bot' started.
+2025-03-19 22:04:19,600 - INFO - O usuário torvidic_bot : 7466939287 saiu do grupo.
+2025-03-19 22:04:25,245 - INFO - Novo usuário: torvidic_bot
+2025-03-19 22:04:32,678 - INFO - O ID do usuário torvidic_bot não foi encontrado na base de dados.
+2025-03-19 22:06:55,787 - INFO - Logger 'bot' started.
+2025-03-19 22:07:06,983 - INFO - O ID do usuário torvidic_bot não foi encontrado na base de dados.
+2025-03-19 22:08:45,240 - INFO - Logger 'bot' started.
+2025-03-19 22:08:56,184 - INFO - O ID do usuário torvidic_bot não foi encontrado na base de dados.
+2025-03-19 22:09:47,920 - INFO - Logger 'bot' started.
+2025-03-19 22:09:51,331 - INFO - O ID do usuário torvidic_bot não foi encontrado na base de dados.
+2025-03-19 22:11:08,252 - INFO - Logger 'bot' started.
+2025-03-19 22:11:21,719 - INFO - Logger 'bot' started.
+2025-03-19 22:11:24,186 - INFO - O ID do usuário torvidic_bot não foi encontrado na base de dados.
+2025-03-19 22:11:26,176 - INFO - O ID do usuário torvidic_bot não foi encontrado na base de dados.
+2025-03-19 22:11:37,980 - INFO - Logger 'bot' started.
+2025-03-19 22:11:40,149 - WARNING - Error inserting or updating member in division ->
+Error binding parameter 0 - probably unsupported type.
+2025-03-19 22:11:40,516 - INFO - Apelido torviii atribuido ao usuário @torvidic_bot > Responsável: @torvi_hb | Chat: testedic1 (-1002249630541)
+2025-03-19 22:11:48,385 - INFO - Logger 'bot' started.
+2025-03-19 22:12:03,841 - INFO - Logger 'bot' started.
+2025-03-19 22:12:06,441 - INFO - O ID do usuário torvidic_bot não foi encontrado na base de dados.
+2025-03-19 22:12:16,735 - INFO - Logger 'bot' started.
+2025-03-19 22:12:19,332 - INFO - O ID do usuário torvidic_bot não foi encontrado na base de dados.
+2025-03-19 22:12:31,295 - INFO - Logger 'bot' started.
+2025-03-19 22:12:33,384 - WARNING - Error inserting or updating member in division ->
+Error binding parameter 0 - probably unsupported type.
+2025-03-19 22:12:33,733 - INFO - Apelido torviii atribuido ao usuário @torvidic_bot > Responsável: @torvi_hb | Chat: testedic1 (-1002249630541)
+2025-03-19 22:13:55,623 - INFO - Logger 'bot' started.
+2025-03-19 22:13:57,687 - WARNING - Error inserting or updating member in division ->
+Error binding parameter 0 - probably unsupported type.
+2025-03-19 22:13:58,083 - INFO - Apelido torviii atribuido ao usuário @torvidic_bot > Responsável: @torvi_hb | Chat: testedic1 (-1002249630541)
+2025-03-19 22:14:41,902 - INFO - Logger 'bot' started.
+2025-03-19 22:14:49,900 - INFO - Apelido torviii atribuido ao usuário @torvidic_bot > Responsável: @torvi_hb | Chat: testedic1 (-1002249630541)
+2025-03-19 22:15:15,181 - INFO - Apelido torvilindo atribuido ao usuário @torvidic_bot > Responsável: @torvi_hb | Chat: [DIC/EM] Membros ® (-1002695748985)
+2025-03-19 22:15:42,272 - INFO - Apelido torvi atribuido ao usuário @torvidic_bot > Responsável: @torvi_hb | Chat: [DIC/EM] Membros ® (-1002695748985)
+2025-03-19 22:15:56,136 - INFO - Logger 'bot' started.
+2025-03-19 22:16:12,487 - INFO - Apelido torvilindo atribuido ao usuário @torvidic_bot > Responsável: @torvi_hb | Chat: [DIC/EM] Membros ® (-1002695748985)
+2025-03-19 22:16:39,382 - INFO - Usuário torvidic_bot foi expulso do grupo. > Responsável: torvi_hb
+2025-03-19 22:16:39,382 - INFO - O usuário torvidic_bot : 7466939287 saiu do grupo.
+2025-03-19 22:16:51,668 - INFO - Novo usuário: torvidic_bot
+2025-03-19 22:17:00,166 - INFO - Apelido torvilindomaximo atribuido ao usuário @torvidic_bot > Responsável: @torvi_hb | Chat: [DIC/EM] Membros ® (-1002695748985)
+2025-03-19 22:17:11,484 - INFO - Usuário torvi_hb utilizou o comando /remover_apelido sem todos argumentos (/remover_apelido@DEVsManagerEM_bot) | Chat: [DIC/EM] Membros ® (-1002695748985)
+2025-03-19 22:17:24,600 - INFO - Cargo auxiliar atribuído a @torvidic_bot > Responsável: @torvi_hb | Chat: [DIC/EM] Membros ® (-1002695748985)
+2025-03-19 22:17:37,409 - INFO - Apelido removido do usuário @torvidic_bot > Responsável: @torvi_hb | Chat: [DIC/EM] Membros ® (-1002695748985)
+2025-03-19 22:18:28,598 - INFO - Logger 'bot' started.
+2025-03-19 22:18:41,286 - INFO - Cargo auxiliar atribuído a @torvidic_bot > Responsável: @torvi_hb | Chat: [DIC/EM] Membros ® (-1002695748985)
+2025-03-19 22:18:52,527 - INFO - Apelido removido do usuário @torvidic_bot > Responsável: @torvi_hb | Chat: [DIC/EM] Membros ® (-1002695748985)
+2025-03-19 22:25:16,104 - INFO - Logger 'bot' started.
+2025-03-19 22:25:30,899 - INFO - O ID do usuário NicolePereira15 não foi encontrado na base de dados.
+2025-03-19 22:26:16,269 - INFO - Logger 'bot' started.
+2025-03-19 22:26:45,186 - INFO - O ID do usuário NicolePereira15 não foi encontrado na base de dados.
+2025-03-19 22:26:52,889 - INFO - Novo usuário: lulubrgh
+2025-03-19 22:27:10,187 - INFO - Novo usuário: lulubrgh
+2025-03-19 22:28:06,084 - INFO - Novo usuário: MallyNanica
+2025-03-19 22:28:21,304 - INFO - Novo usuário: MallyNanica
+2025-03-19 22:28:22,971 - INFO - Novo usuário: oAlemaoo
+2025-03-19 22:28:30,918 - INFO - O ID do usuário NicolePereira15 não foi encontrado na base de dados.
+2025-03-19 22:31:33,864 - INFO - Logger 'bot' started.
+2025-03-19 22:32:08,314 - INFO - Logger 'bot' started.
+2025-03-19 22:32:20,901 - INFO - Apelido MeEsquece: atribuido ao usuário @NicolePereira15 > Responsável: @torvi_hb | Chat: [DIC/EM] Membros ® (-1002695748985)
+2025-03-19 22:32:39,156 - INFO - Cargo comando atribuído a @NicolePereira15 > Responsável: @torvi_hb | Chat: [DIC/EM] Membros ® (-1002695748985)
+2025-03-19 22:32:44,070 - INFO - Novo usuário: arcanjo887
+2025-03-19 22:33:35,970 - INFO - Logger 'bot' started.
+2025-03-19 22:33:56,315 - INFO - Apelido roc-roc atribuido ao usuário @miguel99mc > Responsável: @kprand | Chat: [DIC/EM] Membros ® (-1002695748985)
+2025-03-19 22:34:12,750 - INFO - Cargo presidencia atribuído a @miguel99mc > Responsável: @kprand | Chat: [DIC/EM] Membros ® (-1002695748985)
+2025-03-19 22:35:03,035 - INFO - Novo usuário: ggPedrosa
+2025-03-19 22:35:18,213 - INFO - Novo usuário: carlosfavaleca
+2025-03-19 22:35:20,669 - INFO - Novo usuário: Thainan464
+2025-03-19 22:37:42,241 - INFO - Logger 'bot' started.
+2025-03-19 22:42:21,493 - INFO - Logger 'bot' started.
+2025-03-19 22:43:38,205 - INFO - Logger 'bot' started.
+2025-03-19 22:43:59,430 - INFO - Logger 'bot' started.
+2025-03-19 22:44:51,868 - INFO - Logger 'bot' started.
+2025-03-19 22:46:08,070 - INFO - Logger 'bot' started.
+2025-03-19 22:46:24,646 - INFO - Logger 'bot' started.
+2025-03-19 22:46:39,772 - INFO - Logger 'bot' started.
+2025-03-19 22:47:40,993 - INFO - Logger 'bot' started.
+2025-03-19 22:48:04,365 - INFO - Logger 'bot' started.
+2025-03-19 22:48:27,353 - INFO - Logger 'bot' started.
+2025-03-19 22:48:43,341 - INFO - O usuário arcanjo887 : 5619915659 saiu do grupo.
+2025-03-19 22:50:46,539 - INFO - Novo usuário: arcanjo887
+2025-03-19 22:51:47,171 - INFO - Novo usuário: golerobom196
+2025-03-19 22:52:18,954 - INFO - Apelido golerobom196 atribuido ao usuário @golerobom196 > Responsável: @torvi_hb | Chat: [DIC/EM] Membros ® (-1002695748985)
+2025-03-19 22:52:26,047 - INFO - Cargo core atribuído a @golerobom196 > Responsável: @torvi_hb | Chat: [DIC/EM] Membros ® (-1002695748985)
+2025-03-19 22:52:36,314 - INFO - Apelido -Valente atribuido ao usuário @valenteb1 > Responsável: @torvi_hb | Chat: [DIC/EM] Membros ® (-1002695748985)
+2025-03-19 22:52:50,352 - INFO - Cargo core atribuído a @valenteb1 > Responsável: @torvi_hb | Chat: [DIC/EM] Membros ® (-1002695748985)
+2025-03-19 22:53:05,189 - INFO - Apelido ::-Arcanjo-:: atribuido ao usuário @arcanjo887 > Responsável: @kprand | Chat: [DIC/EM] Membros ® (-1002695748985)
+2025-03-19 22:53:15,771 - INFO - Apelido GuiYard atribuido ao usuário @ggPedrosa > Responsável: @torvi_hb | Chat: [DIC/EM] Membros ® (-1002695748985)
+2025-03-19 22:53:19,221 - WARNING - O cargo informado é inválido. | Message: /apelidar @arcanjo887 comandogral | Chat: [DIC/EM] Membros ® (-1002695748985)
+2025-03-19 22:53:24,703 - INFO - Cargo core atribuído a @ggPedrosa > Responsável: @torvi_hb | Chat: [DIC/EM] Membros ® (-1002695748985)
+2025-03-19 22:53:30,095 - INFO - Cargo comandogeral atribuído a @arcanjo887 > Responsável: @kprand | Chat: [DIC/EM] Membros ® (-1002695748985)
+2025-03-19 22:54:03,143 - INFO - Apelido roc-roc atribuido ao usuário @miguel99mc > Responsável: @kprand | Chat: [DIC/EM] Membros ® (-1002695748985)
+2025-03-19 22:54:07,503 - INFO - Cargo presidencia atribuído a @miguel99mc > Responsável: @kprand | Chat: [DIC/EM] Membros ® (-1002695748985)
+2025-03-19 22:54:56,188 - INFO - Logger 'bot' started.
+2025-03-19 22:55:04,418 - INFO - Novo usuário: StilverL
+2025-03-19 22:55:19,457 - INFO - Apelido roc-roc atribuido ao usuário @miguel99mc > Responsável: @kprand | Chat: [DIC/EM] Membros ® (-1002695748985)
+2025-03-19 22:55:23,080 - INFO - Cargo presidencia atribuído a @miguel99mc > Responsável: @kprand | Chat: [DIC/EM] Membros ® (-1002695748985)
+2025-03-19 22:56:12,949 - INFO - Usuário caiofgaius utilizou o comando /verificar sem todos argumentos (/verificar@DEVsManagerEM_bot) | Chat: [DIC/EM] Membros ® (-1002695748985)
+2025-03-19 22:56:25,550 - INFO - O ID do usuário mallynanica não foi encontrado na base de dados.
+2025-03-19 22:57:48,827 - INFO - Apelido MallyNanica atribuido ao usuário @MallyNanica > Responsável: @caiofgaius | Chat: [DIC/EM] Membros ® (-1002695748985)
+2025-03-19 22:58:18,564 - INFO - Cargo auxiliar atribuído a @MallyNanica > Responsável: @caiofgaius | Chat: [DIC/EM] Membros ® (-1002695748985)
+2025-03-19 22:58:34,795 - INFO - Apelido luiza41418 atribuido ao usuário @luizaflores14 > Responsável: @caiofgaius | Chat: [DIC/EM] Membros ® (-1002695748985)
+2025-03-19 22:58:46,860 - INFO - Cargo auxiliar atribuído a @luizaflores14 > Responsável: @caiofgaius | Chat: [DIC/EM] Membros ® (-1002695748985)
+2025-03-19 22:58:58,096 - INFO - Apelido joaovit5012 atribuido ao usuário @henriichs > Responsável: @caiofgaius | Chat: [DIC/EM] Membros ® (-1002695748985)
+2025-03-19 22:59:07,707 - INFO - Cargo auxiliar atribuído a @henriichs > Responsável: @caiofgaius | Chat: [DIC/EM] Membros ® (-1002695748985)
+2025-03-19 22:59:16,266 - INFO - Apelido luluzetesf atribuido ao usuário @lulubrgh > Responsável: @caiofgaius | Chat: [DIC/EM] Membros ® (-1002695748985)
+2025-03-19 22:59:24,603 - INFO - Cargo auxiliar atribuído a @lulubrgh > Responsável: @caiofgaius | Chat: [DIC/EM] Membros ® (-1002695748985)
+2025-03-19 22:59:46,045 - INFO - Apelido MrStilver atribuido ao usuário @StilverL > Responsável: @torvi_hb | Chat: [DIC/EM] Membros ® (-1002695748985)
+2025-03-19 22:59:54,437 - INFO - Cargo core atribuído a @StilverL > Responsável: @torvi_hb | Chat: [DIC/EM] Membros ® (-1002695748985)
+2025-03-19 23:00:32,839 - INFO - Apelido MeEsquece: atribuido ao usuário @NicolePereira15 > Responsável: @kprand | Chat: [DIC/EM] Membros ® (-1002695748985)
+2025-03-19 23:01:34,535 - INFO - Logger 'bot' started.
+2025-03-19 23:01:38,532 - INFO - Cargo comando atribuído a @NicolePereira15 > Responsável: @kprand | Chat: [DIC/EM] Membros ® (-1002695748985)
+2025-03-19 23:03:00,511 - INFO - O ID do usuário Thainan464 não foi encontrado na base de dados.
+2025-03-19 23:04:02,848 - INFO - Apelido Heil. atribuido ao usuário @carlosfavaleca > Responsável: @caiofgaius | Chat: [DIC/EM] Membros ® (-1002695748985)
+2025-03-19 23:04:28,241 - INFO - Novo usuário: ysetheus
+2025-03-19 23:04:37,841 - INFO - Cargo comandogeral atribuído a @carlosfavaleca > Responsável: @caiofgaius | Chat: [DIC/EM] Membros ® (-1002695748985)
+2025-03-19 23:04:45,320 - INFO - Apelido -yse atribuido ao usuário @ysetheus > Responsável: @kprand | Chat: [DIC/EM] Membros ® (-1002695748985)
+2025-03-19 23:04:50,005 - INFO - Cargo core atribuído a @ysetheus > Responsável: @kprand | Chat: [DIC/EM] Membros ® (-1002695748985)
+2025-03-19 23:05:30,289 - INFO - Apelido -oAlemao atribuido ao usuário @oAlemaoo > Responsável: @caiofgaius | Chat: [DIC/EM] Membros ® (-1002695748985)
+2025-03-19 23:05:44,580 - INFO - Cargo comandogeral atribuído a @oAlemaoo > Responsável: @caiofgaius | Chat: [DIC/EM] Membros ® (-1002695748985)
+2025-03-19 23:08:31,923 - INFO - Novo usuário: Lyftz
+2025-03-19 23:08:31,923 - INFO - Novo usuário: dryluv
+2025-03-19 23:08:31,923 - INFO - Novo usuário: schmutz77
+2025-03-19 23:08:31,929 - INFO - Novo usuário: iisabelaa
+2025-03-19 23:08:49,032 - INFO - Apelido Lyftz atribuido ao usuário @Lyftz > Responsável: @kprand | Chat: [DIC/EM] Membros ® (-1002695748985)
+2025-03-19 23:09:00,141 - INFO - Cargo comando atribuído a @Lyftz > Responsável: @kprand | Chat: [DIC/EM] Membros ® (-1002695748985)
+2025-03-19 23:09:37,952 - INFO - Apelido Sxic atribuido ao usuário @dryluv > Responsável: @kprand | Chat: [DIC/EM] Membros ® (-1002695748985)
+2025-03-19 23:09:44,340 - INFO - Cargo comando atribuído a @dryluv > Responsável: @kprand | Chat: [DIC/EM] Membros ® (-1002695748985)
+2025-03-19 23:10:19,182 - INFO - Apelido Schmutz77 atribuido ao usuário @schmutz77 > Responsável: @kprand | Chat: [DIC/EM] Membros ® (-1002695748985)
+2025-03-19 23:10:28,721 - INFO - Cargo comando atribuído a @schmutz77 > Responsável: @kprand | Chat: [DIC/EM] Membros ® (-1002695748985)
+2025-03-19 23:11:01,188 - INFO - Apelido belaisaa_ atribuido ao usuário @iisabelaa > Responsável: @kprand | Chat: [DIC/EM] Membros ® (-1002695748985)
+2025-03-19 23:11:11,054 - INFO - Cargo comandogeral atribuído a @iisabelaa > Responsável: @kprand | Chat: [DIC/EM] Membros ® (-1002695748985)
+2025-03-19 23:16:21,450 - INFO - Novo usuário: iisabelaa
+2025-03-19 23:16:21,456 - INFO - Novo usuário: carlosfavaleca
+2025-03-19 23:16:21,456 - INFO - Novo usuário: oAlemaoo
+2025-03-19 23:16:21,456 - INFO - Novo usuário: arcanjo887
+2025-03-19 23:17:00,013 - INFO - Novo usuário: iisabelaa
+2025-03-19 23:17:00,013 - INFO - Novo usuário: arcanjo887
+2025-03-19 23:17:00,013 - INFO - Novo usuário: carlosfavaleca
+2025-03-19 23:17:00,020 - INFO - Novo usuário: oAlemaoo
+2025-03-19 23:32:54,577 - INFO - Novo usuário: Felibeto
+2025-03-19 23:32:54,577 - INFO - Novo usuário: mari_louzz
+2025-03-19 23:32:54,583 - INFO - Novo usuário: arthurcds
+2025-03-19 23:32:54,583 - INFO - Novo usuário: SrSonoNy
+2025-03-19 23:32:54,589 - INFO - Novo usuário: RobsonGOD
+2025-03-19 23:32:54,589 - INFO - Novo usuário: venusigx
+2025-03-19 23:32:54,589 - INFO - Novo usuário: saturnhb
+2025-03-19 23:32:54,595 - INFO - Novo usuário: Jrhb5
+2025-03-19 23:34:23,461 - INFO - Apelido Felibeto atribuido ao usuário @Felibeto > Responsável: @caiofgaius | Chat: [DIC/EM] Membros ® (-1002695748985)
+2025-03-19 23:34:29,836 - INFO - Apelido Infrunami atribuido ao usuário @mari_louzz > Responsável: @caiofgaius | Chat: [DIC/EM] Membros ® (-1002695748985)
+2025-03-19 23:34:36,054 - INFO - Apelido .-Toxz. atribuido ao usuário @arthurcds > Responsável: @caiofgaius | Chat: [DIC/EM] Membros ® (-1002695748985)
+2025-03-19 23:34:41,878 - INFO - Apelido SansGaster atribuido ao usuário @SrSonoNy > Responsável: @caiofgaius | Chat: [DIC/EM] Membros ® (-1002695748985)
+2025-03-19 23:34:49,593 - INFO - Apelido GODfOrbs atribuido ao usuário @RobsonGOD > Responsável: @caiofgaius | Chat: [DIC/EM] Membros ® (-1002695748985)
+2025-03-19 23:34:52,963 - INFO - Usuário kprand utilizou o comando /remover_apelido sem todos argumentos (/remover_apelido@DEVsManagerEM_bot) | Chat: [EM] Liderança ® (-1002688102515)
+2025-03-19 23:34:56,993 - INFO - Apelido Rzin17 atribuido ao usuário @venusigx > Responsável: @caiofgaius | Chat: [DIC/EM] Membros ® (-1002695748985)
+2025-03-19 23:35:03,114 - INFO - Apelido SaturnoSenhor atribuido ao usuário @saturnhb > Responsável: @caiofgaius | Chat: [DIC/EM] Membros ® (-1002695748985)
+2025-03-19 23:35:08,702 - INFO - Apelido -=Junior=-. atribuido ao usuário @Jrhb5 > Responsável: @caiofgaius | Chat: [DIC/EM] Membros ® (-1002695748985)
+2025-03-19 23:42:18,242 - INFO - Cargo comandogeral atribuído a @carlosfavaleca > Responsável: @kprand | Chat: [EM] Liderança ® (-1002688102515)
+2025-03-19 23:42:23,818 - INFO - Cargo comandogeral atribuído a @iisabelaa > Responsável: @kprand | Chat: [EM] Liderança ® (-1002688102515)
+2025-03-19 23:42:28,812 - INFO - Cargo comandogeral atribuído a @arcanjo887 > Responsável: @kprand | Chat: [EM] Liderança ® (-1002688102515)
+2025-03-19 23:42:45,036 - INFO - Cargo comandogeral atribuído a @oAlemaoo > Responsável: @kprand | Chat: [EM] Liderança ® (-1002688102515)
+2025-03-19 23:57:46,163 - INFO - Cargo comandogeral atribuído a @carlosfavaleca > Responsável: @kprand | Chat: [EM] Auxiliares ® (-1002620056303)
+2025-03-19 23:57:51,713 - INFO - Cargo comandogeral atribuído a @arcanjo887 > Responsável: @kprand | Chat: [EM] Auxiliares ® (-1002620056303)
+2025-03-19 23:58:00,806 - INFO - Cargo comandogeral atribuído a @iisabelaa > Responsável: @kprand | Chat: [EM] Auxiliares ® (-1002620056303)
+2025-03-19 23:58:10,309 - INFO - Cargo comandogeral atribuído a @oAlemaoo > Responsável: @kprand | Chat: [EM] Auxiliares ® (-1002620056303)

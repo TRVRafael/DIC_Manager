@@ -40,6 +40,7 @@ async def oficializar(update : Update, context: CallbackContext):
         await update.message.reply_text(f"<b>Esse chat já é oficial.</b>\n\n<i>Caso isso seja um erro, contate a Equipe de Desenvolvedores, através da liderança da divisão.</i>", parse_mode="HTML")
         
 async def kick(update: Update, context: CallbackContext):
+    from bot.handlers import update_members_message
     CHAT_ID = update.effective_chat.id
     message = update.message
 
@@ -53,16 +54,18 @@ async def kick(update: Update, context: CallbackContext):
     
     username = context.args[0]
 
+    user_id = db_controller.get_user_id_by_username(f"@{username[1:]}")[0]
+    print(user_id)
+    
     try:
         if not username.startswith('@'):
             not_at_char_handler(update)
             return
         username = username[1:]
 
-        user_id = db_controller.get_user_id_by_username(username)
-
         await message.chat.ban_member(user_id)
-
+        db_controller.delete_member(f"@{username}")
+        await update_members_message(CHAT_ID)
         await message.reply_text(f"<b>✅ Usuário @{username} foi expulso do grupo.</b>", parse_mode="HTML")
         bot_logger.info(f"Usuário {username} foi expulso do grupo. > Responsável: {update.effective_user.username}")
     except Exception as err:

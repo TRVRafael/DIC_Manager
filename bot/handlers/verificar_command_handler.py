@@ -1,8 +1,8 @@
-from telegram import Update
+from telegram import Update, ChatPermissions
 from telegram.ext import CallbackContext
 
 from bot.utils import format_chat_object
-from bot.handlers import message_is_on_group, user_is_group_admin
+from bot.handlers import message_is_on_group, user_is_group_admin, update_members_message
 from config import bot_logger
 from data import db_controller
 
@@ -41,8 +41,10 @@ async def verificar(update: Update, context: CallbackContext) -> None:
         await update.message.reply_text("Por favor, mencione o usuário com @.")
         bot_logger.info(f"Usuário {update.effective_user.username} utilizou o comando /verificar sem @ no username ({update.message.text}) | Chat: {format_chat_object(update)}")
         return
-        
-    user_id = db_controller.get_user_id_by_username(username=username[1:])
+    
+    print(username[:1])
+    user_id = db_controller.get_user_id_from_users_table(username[1:])
+    print(user_id)
         
     if not user_id:
         await update.message.reply_text("O usuário especificado não existe. (Tratar erro: nome passado errado ou nome correto, mas bot não reconheceu.)")
@@ -67,10 +69,11 @@ async def verificar(update: Update, context: CallbackContext) -> None:
     #     user_id=user_id,
     #     custom_title=custom_title
     # )
-    
-    db_controller.insert_member_in_division(user_id, username, custom_title)
+    print(custom_title)
+    db_controller.insert_member_in_division(user_id[0], username, custom_title)
+    await update_members_message(CHAT_ID)
     await update.message.reply_text(f"✏️ Apelido <b>{custom_title}</b> atribuido ao usuário <b>{username}</b>.", parse_mode="HTML")
-    bot_logger.info(f"Apelido {custom_title} atribuido ao usuário {username} > Responsável: @{update.effective_user.username} | Chat: {format_chat_object(update)}")  
+    bot_logger.info(f"Apelido {custom_title} atribuido ao usuário {username} > Responsável: @{update.effective_user.username} | Chat: {format_chat_object(update)}") 
 
 async def remover_apelido(update: Update, context: CallbackContext) -> None:
     """
@@ -105,31 +108,33 @@ async def remover_apelido(update: Update, context: CallbackContext) -> None:
         bot_logger.info(f"Usuário {update.effective_user.username} utilizou o comando /remover_apelido sem @ no username ({update.message.text}) | Chat: {format_chat_object(update)}")
         return
         
-    user_id = db_controller.get_user_id_by_username(username=username[1:])
+    user_id = db_controller.get_user_id_by_username(f"@{username[1:]}")[0]
         
     if not user_id:
         await update.message.reply_text("O usuário especificado não existe. (Tratar erro: nome passado errado ou nome correto, mas bot não reconheceu.)")
         bot_logger.info(f"Usuário {update.effective_user.username} tentou remover apelido de um usuário inexistente ({update.message.text}) | Chat: {format_chat_object(update)}")
         return
+    
 
     # Remove the custom title from the user
-    await context.bot.promote_chat_member(
+    await context.bot.restrict_chat_member(
         chat_id=CHAT_ID,
         user_id=user_id,
-        can_change_info=False,
-        can_delete_messages=False,
-        can_invite_users=False,
-        can_restrict_members=False,
-        can_pin_messages=False,
-        can_promote_members=False
-    )
+        permissions=ChatPermissions(
+            can_send_messages=True,
+            can_send_audios=True,
+            can_send_documents=True,
+            can_send_photos= True,
+            can_send_other_messages=True,
+            can_send_polls=True,
+            can_send_video_notes=True,
+            can_send_videos=True,
+            can_send_voice_notes=True
+            )
+        )
 
-    await context.bot.set_chat_administrator_custom_title(
-        chat_id=CHAT_ID,
-        user_id=user_id,
-        custom_title=""
-    )
 
     db_controller.remove_member_from_division(user_id)
+    await update_members_message(CHAT_ID)
     await update.message.reply_text(f"✏️ Apelido removido do usuário <b>{username}</b>.", parse_mode="HTML")
     bot_logger.info(f"Apelido removido do usuário {username} > Responsável: @{update.effective_user.username} | Chat: {format_chat_object(update)}")
