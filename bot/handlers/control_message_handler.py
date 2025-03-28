@@ -3,7 +3,6 @@ from telegram.ext import CallbackContext
 
 from data import db_controller
 
-
 def obter_integrantes():
     """
     Obter o dicionário de integrantes e seus cargos.
