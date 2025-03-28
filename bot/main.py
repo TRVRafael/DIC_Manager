@@ -2,7 +2,7 @@ from telegram.ext import CommandHandler, Application, MessageHandler, CallbackQu
 
 from bot.config import BOT_TOKEN
 from bot.handlers import verificar, apelidar, handle_new_user, handle_user_removed, oficializar, force_members_message_update, kick, remover_apelido
-from bot.handlers.funcoes_command_handler import editar_permissoes, mudar_permissao, funcoes, exibir_permissoes_funcao, finalizar, log
+from bot.handlers.funcoes_command_handler import editar_permissoes, mudar_permissao, funcoes, exibir_permissoes_funcao, finalizar
 
 from data import db_controller
 
@@ -19,7 +19,6 @@ def start_bot() -> None:
     app.add_handler(CommandHandler("kick", kick))
     app.add_handler(CommandHandler("remover_apelido", remover_apelido))
     app.add_handler(CommandHandler("funcoes", funcoes))
-    app.add_handler(CommandHandler("logroles", log))
     app.add_handler(CallbackQueryHandler(editar_permissoes, pattern='^editar_permissoes$'))
     app.add_handler(CallbackQueryHandler(finalizar, pattern='^finalizar$'))
     

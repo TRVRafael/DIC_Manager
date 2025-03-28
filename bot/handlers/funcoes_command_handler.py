@@ -2,6 +2,8 @@ from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update
 from telegram.ext import CallbackContext
 from data import db_controller
 from config import bot_logger
+from bot.handlers.error_handler import not_chat_admin_handler, not_official_chat_handler
+from bot.handlers import message_is_on_group, user_is_group_admin
 
 from bot.utils import get_fancy_name
 
@@ -38,9 +40,6 @@ def get_role_permissions_from_db(role_name):
         return {}
     
     return permissions
-
-async def log(update: Update, context: CallbackContext):
-    await db_controller.log_roles_with_permissions()
 
 async def mudar_permissao(update: Update, context: CallbackContext, permissao: str):
     current_role = context.user_data.get('selected_role', None)
@@ -90,30 +89,34 @@ async def finalizar(update: Update, context: CallbackContext):
     await update.callback_query.edit_message_text(text="Alterações concluídas!")
 
 async def exibir_permissoes_funcao(update: Update, context: CallbackContext, role_name: str):
-    # Get the permissions from the database
     permissions = get_role_permissions_from_db(role_name)
 
-    # Create the keyboard dynamically based on the permissions
     keyboard = [
         [InlineKeyboardButton(f"{label} {'✅' if permissions.get(key) else '❌'}", callback_data=f'permissao_{i}')]
         for i, (key, label) in enumerate(permission_labels.items(), 1)
     ]
     
-    # Add the Voltar and Finalizar buttons
     keyboard.append([InlineKeyboardButton("Voltar", callback_data='editar_permissoes'), 
                      InlineKeyboardButton("Finalizar", callback_data='finalizar')])
 
     reply_markup = InlineKeyboardMarkup(keyboard)
     
-    # Get the current role based on role_name
     current_role = funcoes_disponiveis[int(role_name.split('_')[1])]
     context.user_data['selected_role'] = current_role
 
-    # Send the message with the permission buttons
     await update.callback_query.answer()
     await update.callback_query.edit_message_text(text=f"Editando permissões para: {get_fancy_name(current_role)}", reply_markup=reply_markup)
 
 async def funcoes(update: Update, context: CallbackContext):
+    CHAT_ID = update.effective_chat.id
+    if not message_is_on_group(CHAT_ID):
+        not_official_chat_handler(update)
+        return
+
+    if not await user_is_group_admin(update):
+        not_chat_admin_handler(update, "/apelidar")
+        return
+    
     keyboard = [
         [InlineKeyboardButton("Editar permissões", callback_data='editar_permissoes')]
     ]
