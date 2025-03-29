@@ -5,8 +5,8 @@ from data import db_controller
 from config import bot_logger
 
 role_names = {
-    0: "Membros",
-    1: "Auxiliares",
+    1: "Membros",
+    2: "Auxiliares",
     5: "CORE",
     6: "Comando",
     7: "Comando-Geral",
