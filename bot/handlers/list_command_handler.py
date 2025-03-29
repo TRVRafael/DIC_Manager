@@ -2,7 +2,6 @@ from telegram import Update
 from telegram.ext import CallbackContext
 
 from data import db_controller
-from config import bot_logger
 
 role_names = {
     1: "Membros",
@@ -45,7 +44,7 @@ async def log_lideres(update: Update, context: CallbackContext):
         if members:
             message_lines.append(title)
             for telegram_handle, username in members:
-                message_lines.append(f" • {telegram_handle} - {username}")
+                message_lines.append(f"{telegram_handle} - {username}")
             message_lines.append("") 
 
     message_text = "\n".join(message_lines) if message_lines else "Nenhum líder encontrado."
