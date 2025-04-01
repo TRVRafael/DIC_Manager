@@ -296,6 +296,14 @@ class Database:
         except Exception as err:
             return []
         
+    def get_members_by_role(self, role_id):
+        try:
+            self.cursor.execute(f"SELECT username, nickname FROM em WHERE role=?;", (role_id,))
+            result = self.cursor.fetchall()
+            return result
+        except Exception as err:
+            return []
+        
     def delete_member(self, username):
         try:
             self.cursor.execute(f"DELETE FROM em WHERE username=?;", (username,))
