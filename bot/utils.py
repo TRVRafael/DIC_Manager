@@ -26,6 +26,8 @@ def sanitize_role_name(role_name_input : str) -> str:
 
 def get_fancy_name(role_name : str) -> str:
     roles = {
+        "membro": "Membro",
+        "fiscal": "Fiscal",
         "auxiliar": "Auxiliar",
         "sublider": "Sub-Líder",
         "vicelider": "Vice-Líder",
