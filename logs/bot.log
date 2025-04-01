@@ -1208,3 +1208,28 @@ Error binding parameter 0 - probably unsupported type.
 2025-03-31 15:00:09,295 - INFO - O ID do usuário Uri_Oake não foi encontrado na base de dados.
 2025-03-31 15:00:39,509 - INFO - Usuário torvi_hb utilizou o comando /verificar sem @ no username (/verificar@DEVsManagerEM_bot OOAKE Uri_Oake) | Chat: testedic1 (-1002249630541)
 2025-03-31 15:00:51,269 - INFO - Apelido Uri_Oake atribuido ao usuário @OOAKE > Responsável: @torvi_hb | Chat: testedic1 (-1002249630541)
+2025-04-01 18:55:11,904 - INFO - Logger 'bot' started.
+2025-04-01 18:55:26,842 - INFO - Usuário @torvi_hb tentou utilizar o comando /cargo fora de um grupo autorizado | Chat: None (1761647464)
+2025-04-01 18:56:13,734 - INFO - ROLE: auxiliar / PERMISSION: can_restrict_members / VALUE: True / TABLE NAME: em
+2025-04-01 18:56:28,922 - INFO - ROLE: auxiliar / PERMISSION: can_restrict_members / VALUE: False / TABLE NAME: em
+2025-04-01 18:57:00,268 - INFO - ROLE: auxiliar / PERMISSION: can_restrict_members / VALUE: True / TABLE NAME: em
+2025-04-01 18:57:11,415 - INFO - ROLE: auxiliar / PERMISSION: can_restrict_members / VALUE: False / TABLE NAME: em
+2025-04-01 18:59:38,150 - INFO - Apelido monitoramento atribuido ao usuário @trmonitoramento_bot > Responsável: @torvi_hb | Chat: testedic1 (-1002249630541)
+2025-04-01 18:59:57,498 - INFO - Apelido teste atribuido ao usuário @trmonitoramento_bot > Responsável: @torvi_hb | Chat: testedic1 (-1002249630541)
+2025-04-01 19:01:00,502 - WARNING - O cargo informado é inválido. | Message: /apelidar@DICTranscripter_bot @trmonitoramento_bot ainda | Chat: testedic1 (-1002249630541)
+2025-04-01 19:01:37,270 - INFO - O usuário DEVsManagerEM_bot : 7827037297 saiu do grupo.
+2025-04-01 19:01:44,143 - INFO - Apelido aaa atribuido ao usuário @trmonitoramento_bot > Responsável: @torvi_hb | Chat: testedic1 (-1002249630541)
+2025-04-01 19:02:01,783 - INFO - Cargo auxiliar atribuído a @trmonitoramento_bot > Responsável: @torvi_hb | Chat: testedic1 (-1002249630541)
+2025-04-01 19:02:31,901 - INFO - ROLE: auxiliar / PERMISSION: can_delete_messages / VALUE: True / TABLE NAME: em
+2025-04-01 19:02:43,899 - INFO - Cargo auxiliar atribuído a @trmonitoramento_bot > Responsável: @torvi_hb | Chat: testedic1 (-1002249630541)
+2025-04-01 19:15:34,735 - INFO - Logger 'bot' started.
+2025-04-01 19:16:46,674 - INFO - Logger 'bot' started.
+2025-04-01 19:21:00,915 - INFO - Logger 'bot' started.
+2025-04-01 19:21:22,669 - INFO - Novo usuário: DEVsManagerEM_bot
+2025-04-01 19:27:11,334 - INFO - Logger 'bot' started.
+2025-04-01 19:27:11,339 - WARNING - Error updating member role ->
+execute expected at most 2 arguments, got 3
+2025-04-01 19:28:15,145 - INFO - Logger 'bot' started.
+2025-04-01 19:28:15,149 - WARNING - Error updating member role ->
+no such table: user
+2025-04-01 19:28:34,153 - INFO - Logger 'bot' started.

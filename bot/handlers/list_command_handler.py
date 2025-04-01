@@ -32,7 +32,8 @@ async def log_role(update : Update, context : CallbackContext, role_id : int):
 
 async def log_lideres(update: Update, context: CallbackContext):
     roles = {
-        "🏅 <b>Sub-Líderes:</b>\n": 3,
+        "🏅 <b>Sub-Líderes:</b>\n": 2,
+        "👑 <b>Vice-Liderança</b>\n": 3,
         "👑 <b>Liderança</b>\n": 4,
     }
 

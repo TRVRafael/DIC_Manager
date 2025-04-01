@@ -5,8 +5,8 @@ from bot.handlers import verificar, apelidar, handle_new_user, handle_user_remov
 from bot.handlers.list_command_handler import log_role, log_lideres
 
 roles = {
-    "membros": 1,
-    "auxiliares": 2,
+    "membros": 0,
+    "auxiliares": 1,
     "core": 5,
     "comando": 6,
     "comandogeral": 7,
