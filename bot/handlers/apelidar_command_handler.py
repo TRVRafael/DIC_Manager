@@ -10,12 +10,12 @@ from bot.utils import format_chat_object, sanitize_role_name, get_fancy_name
 async def apelidar(update : Update, context : CallbackContext):
     CHAT_ID = update.effective_chat.id
     if not message_is_on_group(CHAT_ID):
-        not_official_chat_handler(update)
+        await not_official_chat_handler(update)
         return
 
     # Adicionando a checagem de admin da versão "main"
     if not await user_is_group_admin(update):
-        not_chat_admin_handler(update, "/apelidar")
+        await not_chat_admin_handler(update, "/apelidar")
         return
     
     username = context.args[0]
