@@ -1103,3 +1103,108 @@ Error binding parameter 0 - probably unsupported type.
 2025-03-19 23:57:51,713 - INFO - Cargo comandogeral atribuído a @arcanjo887 > Responsável: @kprand | Chat: [EM] Auxiliares ® (-1002620056303)
 2025-03-19 23:58:00,806 - INFO - Cargo comandogeral atribuído a @iisabelaa > Responsável: @kprand | Chat: [EM] Auxiliares ® (-1002620056303)
 2025-03-19 23:58:10,309 - INFO - Cargo comandogeral atribuído a @oAlemaoo > Responsável: @kprand | Chat: [EM] Auxiliares ® (-1002620056303)
+2025-03-20 11:29:45,915 - INFO - Logger 'bot' started.
+2025-03-20 11:29:58,599 - INFO - Logger 'bot' started.
+2025-03-20 13:42:15,305 - INFO - Logger 'bot' started.
+2025-03-20 18:10:05,904 - INFO - Novo usuário: brendo164
+2025-03-20 18:10:33,398 - INFO - Novo usuário: brendo164
+2025-03-20 20:54:49,638 - INFO - Apelido .Chaves atribuido ao usuário @brendo164 > Responsável: @kprand | Chat: [EM] Auxiliares ® (-1002620056303)
+2025-03-20 20:55:05,432 - WARNING - O cargo informado é inválido. | Message: /apelidar @brendo164 presidência | Chat: [EM] Auxiliares ® (-1002620056303)
+2025-03-20 20:55:16,022 - INFO - Cargo presidencia atribuído a @brendo164 > Responsável: @kprand | Chat: [EM] Auxiliares ® (-1002620056303)
+2025-03-20 20:55:54,246 - INFO - Cargo presidencia atribuído a @brendo164 > Responsável: @kprand | Chat: [EM] Liderança ® (-1002688102515)
+2025-03-20 20:56:19,563 - INFO - Apelido .Chaves atribuido ao usuário @brendo164 > Responsável: @kprand | Chat: [DIC/EM] Membros ® (-1002695748985)
+2025-03-20 23:01:29,466 - INFO - Usuário brendo164 utilizou o comando /verificar sem todos argumentos (/verificar@DEVsManagerEM_bot) | Chat: [EM] Liderança ® (-1002688102515)
+2025-03-21 00:18:06,234 - INFO - Novo usuário: robertowelll
+2025-03-21 00:19:25,397 - INFO - Apelido robertowell atribuido ao usuário @robertowelll > Responsável: @caiofgaius | Chat: [DIC/EM] Membros ® (-1002695748985)
+2025-03-21 03:41:28,655 - INFO - O ID do usuário Thainan464 não foi encontrado na base de dados.
+2025-03-21 03:41:49,999 - INFO - Apelido Lyftz atribuido ao usuário @Lyftz > Responsável: @kprand | Chat: [DIC/EM] Membros ® (-1002695748985)
+2025-03-21 03:42:07,932 - INFO - Cargo comando atribuído a @Lyftz > Responsável: @kprand | Chat: [DIC/EM] Membros ® (-1002695748985)
+2025-03-21 17:49:03,233 - INFO - Novo usuário: CRATOWS
+2025-03-21 17:51:19,165 - INFO - O ID do usuário (dele) não foi encontrado na base de dados.
+2025-03-21 17:52:28,217 - INFO - Apelido CRATOWS atribuido ao usuário @CRATOWS > Responsável: @anaxcl | Chat: [DIC/EM] Membros ® (-1002695748985)
+2025-03-21 18:35:27,344 - INFO - Novo usuário: NegraHB
+2025-03-21 18:36:24,160 - INFO - Apelido weporwave atribuido ao usuário @NegraHB > Responsável: @anaxcl | Chat: [DIC/EM] Membros ® (-1002695748985)
+2025-03-21 18:37:46,052 - INFO - Usuário anaxcl utilizou o comando /verificar sem todos argumentos (/verificar@DEVsManagerEM_bot) | Chat: [DIC/EM] Membros ® (-1002695748985)
+2025-03-21 18:38:09,859 - INFO - Apelido waporwave atribuido ao usuário @NegraHB > Responsável: @anaxcl | Chat: [DIC/EM] Membros ® (-1002695748985)
+2025-03-22 22:28:53,876 - INFO - Novo usuário: arthurcds
+2025-03-22 22:30:04,964 - INFO - Novo usuário: henriichs
+2025-03-22 22:30:10,419 - INFO - Cargo auxiliar atribuído a @arthurcds > Responsável: @caiofgaius | Chat: [DIC/EM] Membros ® (-1002695748985)
+2025-03-22 22:30:26,484 - INFO - Cargo sublider atribuído a @henriichs > Responsável: @caiofgaius | Chat: [DIC/EM] Membros ® (-1002695748985)
+2025-03-22 22:31:58,646 - INFO - Cargo sublider atribuído a @henriichs > Responsável: @caiofgaius | Chat: [EM] Auxiliares ® (-1002620056303)
+2025-03-23 13:42:31,650 - INFO - O ID do usuário Thainan464 não foi encontrado na base de dados.
+2025-03-23 20:14:35,301 - INFO - Novo usuário: Plikkik
+2025-03-23 20:21:25,161 - INFO - Apelido 5duckswentout atribuido ao usuário @Plikkik > Responsável: @henriichs | Chat: [DIC/EM] Membros ® (-1002695748985)
+2025-03-24 02:09:18,349 - INFO - Novo usuário: None
+2025-03-24 02:11:36,729 - INFO - Usuário Felipematheus17 utilizou o comando /verificar sem @ no username (/verificar Yuri  Uri_Oake) | Chat: [DIC/EM] Membros ® (-1002695748985)
+2025-03-24 02:12:16,610 - INFO - Usuário None utilizou, sem permissão, o comando /verificar | Chat: [DIC/EM] Membros ® (-1002695748985)
+2025-03-24 02:14:08,034 - INFO - Usuário Felipematheus17 utilizou o comando /verificar sem todos argumentos (/verificar@DEVsManagerEM_bot) | Chat: [DIC/EM] Membros ® (-1002695748985)
+2025-03-24 02:19:48,138 - INFO - O ID do usuário Uri_Oake não foi encontrado na base de dados.
+2025-03-24 02:21:43,773 - INFO - O ID do usuário Uri_Oake não foi encontrado na base de dados.
+2025-03-24 02:25:14,381 - INFO - O ID do usuário UriOake não foi encontrado na base de dados.
+2025-03-24 02:27:25,839 - INFO - O ID do usuário Uri_Oake não foi encontrado na base de dados.
+2025-03-24 02:32:06,456 - INFO - O ID do usuário Uri_Oake não foi encontrado na base de dados.
+2025-03-24 02:32:51,062 - INFO - O usuário Uri_Oake : 7908743070 saiu do grupo.
+2025-03-24 02:33:25,757 - INFO - Novo usuário: Uri_Oake
+2025-03-24 02:33:47,152 - INFO - O ID do usuário Uri_Oake não foi encontrado na base de dados.
+2025-03-24 06:06:58,841 - INFO - O ID do usuário Uri_Oake não foi encontrado na base de dados.
+2025-03-24 23:41:17,517 - INFO - Novo usuário: yas_proenca
+2025-03-24 23:41:49,212 - INFO - Apelido euamoocelibato atribuido ao usuário @yas_proenca > Responsável: @caiofgaius | Chat: [DIC/EM] Membros ® (-1002695748985)
+2025-03-24 23:42:03,238 - INFO - Cargo comando atribuído a @yas_proenca > Responsável: @caiofgaius | Chat: [DIC/EM] Membros ® (-1002695748985)
+2025-03-25 20:09:20,683 - INFO - Novo usuário: lavinsck
+2025-03-25 20:23:18,149 - INFO - Apelido LuisaLavinsck atribuido ao usuário @lavinsck > Responsável: @caiofgaius | Chat: [DIC/EM] Membros ® (-1002695748985)
+2025-03-25 20:24:27,408 - INFO - Apelido roc-roc atribuido ao usuário @miguel99mc > Responsável: @caiofgaius | Chat: [DIC/EM] Membros ® (-1002695748985)
+2025-03-25 23:55:42,635 - INFO - Novo usuário: renankreusch
+2025-03-26 05:44:53,257 - INFO - Apelido Screnn.Capita atribuido ao usuário @renankreusch > Responsável: @caiofgaius | Chat: [DIC/EM] Membros ® (-1002695748985)
+2025-03-26 10:46:35,034 - INFO - Novo usuário: Mands_t
+2025-03-26 10:47:54,819 - INFO - Apelido Mandiis atribuido ao usuário @Mands_t > Responsável: @anaxcl | Chat: [DIC/EM] Membros ® (-1002695748985)
+2025-03-26 18:21:18,038 - INFO - Novo usuário: helpier011
+2025-03-27 19:11:09,293 - INFO - O usuário dryluv : 7197657457 saiu do grupo.
+2025-03-28 00:50:29,103 - INFO - Logger 'bot' started.
+2025-03-28 01:51:46,809 - INFO - O usuário mari_louzz : 6005629648 saiu do grupo.
+2025-03-28 04:34:08,957 - INFO - Usuário kprand utilizou o comando /remover_apelido sem todos argumentos (/remover_apelido@DEVsManagerEM_bot) | Chat: [DIC/EM] Membros ® (-1002695748985)
+2025-03-28 04:34:31,897 - INFO - Usuário kprand utilizou o comando /remover_apelido sem todos argumentos (/remover_apelido@DEVsManagerEM_bot) | Chat: [DIC/EM] Membros ® (-1002695748985)
+2025-03-30 00:11:18,974 - INFO - Usuário RobsonGOD foi expulso do grupo. > Responsável: ism4rck
+2025-03-30 00:11:18,975 - INFO - O usuário RobsonGOD : 6948778909 saiu do grupo.
+2025-03-30 00:14:20,445 - INFO - Novo usuário: RobsonGOD
+2025-03-30 01:29:18,801 - INFO - Novo usuário: Jrhb5
+2025-03-30 01:30:13,612 - INFO - Cargo auxiliar atribuído a @Jrhb5 > Responsável: @anaxcl | Chat: [DIC/EM] Membros ® (-1002695748985)
+2025-03-30 19:15:07,025 - INFO - O usuário kprand : 5485251168 saiu do grupo.
+2025-03-30 19:15:20,436 - INFO - O usuário kprand : 5485251168 saiu do grupo.
+2025-03-30 19:18:51,663 - INFO - Usuário robertowelll foi expulso do grupo. > Responsável: caiofgaius
+2025-03-30 19:18:51,663 - INFO - O usuário robertowelll : 6656035432 saiu do grupo.
+2025-03-31 01:44:18,762 - INFO - O usuário GaretGrinnan : 6703281233 saiu do grupo.
+2025-03-31 01:44:29,428 - INFO - O usuário GaretGrinnan : 6703281233 saiu do grupo.
+2025-03-31 01:45:07,381 - INFO - O usuário GaretGrinnan : 6703281233 saiu do grupo.
+2025-03-31 16:36:49,114 - INFO - O usuário CRATOWS : 1906556752 saiu do grupo.
+2025-03-31 14:25:20,036 - INFO - Logger 'bot' started.
+2025-03-31 14:25:30,580 - INFO - Usuário torvi_hb tentou remover apelido de um usuário inexistente (/remover_apelido@DEVsManagerEM_bot @trvcontrol_bot) | Chat: testedic1 (-1002249630541)
+2025-03-31 14:26:06,394 - INFO - O ID do usuário trvcontrol_bot não foi encontrado na base de dados.
+2025-03-31 14:26:13,572 - INFO - O usuário trvcontrol_bot : 7944952948 saiu do grupo.
+2025-03-31 14:26:17,861 - INFO - Novo usuário: trvcontrol_bot
+2025-03-31 14:26:28,378 - INFO - Apelido TRV-Control atribuido ao usuário @trvcontrol_bot > Responsável: @torvi_hb | Chat: testedic1 (-1002249630541)
+2025-03-31 14:26:39,333 - INFO - Cargo auxiliar atribuído a @trvcontrol_bot > Responsável: @torvi_hb | Chat: testedic1 (-1002249630541)
+2025-03-31 14:27:47,131 - INFO - Logger 'bot' started.
+2025-03-31 14:29:02,165 - INFO - Logger 'bot' started.
+2025-03-31 14:29:06,571 - INFO - Apelido removido do usuário @trvcontrol_bot > Responsável: @torvi_hb | Chat: testedic1 (-1002249630541)
+2025-03-31 14:40:28,444 - INFO - Logger 'bot' started.
+2025-03-31 14:40:56,963 - INFO - Apelido Roc-roc atribuido ao usuário @miguel99mc > Responsável: @torvi_hb | Chat: testedic1 (-1002249630541)
+2025-03-31 14:41:19,942 - INFO - Apelido roc-roc atribuido ao usuário @miguel99mc > Responsável: @torvi_hb | Chat: testedic1 (-1002249630541)
+2025-03-31 14:41:57,205 - INFO - Logger 'bot' started.
+2025-03-31 14:42:03,289 - INFO - Apelido roc-roc atribuido ao usuário @miguel99mc > Responsável: @torvi_hb | Chat: testedic1 (-1002249630541)
+2025-03-31 14:50:57,305 - INFO - Logger 'bot' started.
+2025-03-31 14:51:15,048 - INFO - Usuário torvi_hb utilizou o comando /remover_apelido sem @ no username (/remover_apelido@DEVsManagerEM_bot 7087216127) | Chat: testedic1 (-1002249630541)
+2025-03-31 14:51:54,279 - INFO - Logger 'bot' started.
+2025-03-31 14:53:04,631 - INFO - Logger 'bot' started.
+2025-03-31 14:54:09,751 - INFO - Apelido @Thainan464 atribuido ao usuário @Thainan464 > Responsável: @torvi_hb | Chat: testedic1 (-1002249630541)
+2025-03-31 14:54:23,143 - INFO - Cargo comando atribuído a @Thainan464 > Responsável: @torvi_hb | Chat: [DIC/EM] Membros ® (-1002695748985)
+2025-03-31 14:54:52,328 - INFO - Apelido AnjinhoThaainan atribuido ao usuário @Thainan464 > Responsável: @torvi_hb | Chat: [DIC/EM] Membros ® (-1002695748985)
+2025-03-31 14:55:05,530 - INFO - Cargo comando atribuído a @Thainan464 > Responsável: @torvi_hb | Chat: [DIC/EM] Membros ® (-1002695748985)
+2025-03-31 14:56:14,506 - INFO - O ID do usuário Uri_Oake não foi encontrado na base de dados.
+2025-03-31 14:56:49,178 - INFO - Apelido roc-roc atribuido ao usuário @miguel99mc > Responsável: @kprand | Chat: [DIC/EM] Membros ® (-1002695748985)
+2025-03-31 14:57:00,659 - INFO - Cargo presidencia atribuído a @miguel99mc > Responsável: @kprand | Chat: [DIC/EM] Membros ® (-1002695748985)
+2025-03-31 14:58:35,114 - INFO - Logger 'bot' started.
+2025-03-31 14:58:45,086 - INFO - O ID do usuário Uri_Oake não foi encontrado na base de dados.
+2025-03-31 15:00:04,406 - INFO - Logger 'bot' started.
+2025-03-31 15:00:09,295 - INFO - O ID do usuário Uri_Oake não foi encontrado na base de dados.
+2025-03-31 15:00:39,509 - INFO - Usuário torvi_hb utilizou o comando /verificar sem @ no username (/verificar@DEVsManagerEM_bot OOAKE Uri_Oake) | Chat: testedic1 (-1002249630541)
+2025-03-31 15:00:51,269 - INFO - Apelido Uri_Oake atribuido ao usuário @OOAKE > Responsável: @torvi_hb | Chat: testedic1 (-1002249630541)

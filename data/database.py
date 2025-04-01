@@ -186,10 +186,18 @@ class Database:
             
     def insert_member_in_division(self, user_id : id, username : str, nickname : str, table_name : str = "em", role = 0):
         try:
-            self.cursor.execute(f"INSERT OR IGNORE INTO {table_name} (user_id, username, nickname, role) VALUES (?, ?, ?, ?);", (user_id, username, nickname, role))
+            self.cursor.execute(f"SELECT nickname FROM {table_name} WHERE user_id = ?", (user_id,))
+            has_nickname = self.cursor.fetchone()
+
+            if has_nickname:
+                self.cursor.execute(f"UPDATE {table_name} SET nickname = ?, role = ? WHERE user_id = ?", (nickname, role, user_id,))
+            else:
+                self.cursor.execute(f"INSERT OR IGNORE INTO {table_name} (user_id, username, nickname, role) VALUES (?, ?, ?, ?);", (user_id, username, nickname, role,))
+            
             self.conn.commit()
+
         except Exception as err:
-            bot_logger.warn(f"Error inserting member in division ->\n{err}")
+            bot_logger.warning(f"Error inserting or updating member in division ->\n{err}")
             
     def update_member_role(self, username : str, new_role_id : int, table_name : str = "em"):
         try:
@@ -218,9 +226,9 @@ class Database:
         except Exception as err:
             return []
         
-    def delete_member(self, username):
+    def delete_member(self, user_id):
         try:
-            self.cursor.execute(f"DELETE FROM em WHERE username=?;", (username,))
+            self.cursor.execute(f"DELETE FROM em WHERE user_id=?;", (user_id,))
             self.conn.commit()
         except Exception as err:
             bot_logger.warn(f"Error deleting chat ->\n{err}")

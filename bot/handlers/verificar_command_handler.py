@@ -108,8 +108,15 @@ async def remover_apelido(update: Update, context: CallbackContext) -> None:
         bot_logger.info(f"Usuário {update.effective_user.username} utilizou o comando /remover_apelido sem @ no username ({update.message.text}) | Chat: {format_chat_object(update)}")
         return
         
-    user_id = db_controller.get_user_id_by_username(f"@{username[1:]}")[0]
-        
+    user_data = db_controller.get_user_id_by_username(f"@{username[1:]}")
+
+    if not user_data:
+        await update.message.reply_text("O usuário especificado não existe. (Tratar erro: nome passado errado ou nome correto, mas bot não reconheceu.)")
+        bot_logger.info(f"Usuário {update.effective_user.username} tentou remover apelido de um usuário inexistente ({update.message.text}) | Chat: {format_chat_object(update)}")
+        return
+
+    user_id = user_data[0]  # Agora temos certeza de que user_data contém um valor válido
+            
     if not user_id:
         await update.message.reply_text("O usuário especificado não existe. (Tratar erro: nome passado errado ou nome correto, mas bot não reconheceu.)")
         bot_logger.info(f"Usuário {update.effective_user.username} tentou remover apelido de um usuário inexistente ({update.message.text}) | Chat: {format_chat_object(update)}")
@@ -134,7 +141,7 @@ async def remover_apelido(update: Update, context: CallbackContext) -> None:
         )
 
 
-    db_controller.remove_member_from_division(user_id)
+    db_controller.delete_member(user_id)
     await update_members_message(CHAT_ID)
     await update.message.reply_text(f"✏️ Apelido removido do usuário <b>{username}</b>.", parse_mode="HTML")
     bot_logger.info(f"Apelido removido do usuário {username} > Responsável: @{update.effective_user.username} | Chat: {format_chat_object(update)}")
