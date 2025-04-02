@@ -4,8 +4,8 @@ from telegram.ext import CallbackContext
 from data import db_controller
 
 role_names = {
-    1: "Membros",
-    2: "Auxiliares",
+    0: "Membros",
+    1: "Auxiliares",
     5: "CORE",
     6: "Comando",
     7: "Comando-Geral",
