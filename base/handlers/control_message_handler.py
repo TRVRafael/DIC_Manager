@@ -2,8 +2,9 @@ from telegram import Bot, Update
 from telegram.ext import CallbackContext
 
 from data import db_controller
+from base.config import MEMBERS_CONTROL_MESSAGES
 
-def obter_integrantes():
+def obter_integrantes(context):
     """
     Obter o dicionário de integrantes e seus cargos.
 
@@ -11,6 +12,8 @@ def obter_integrantes():
         list[tuple[str, int, str, str]]: Lista de todos os integrantes do chat, no formato (nick, cargo_id, cargo_nome,
         telegram_username).
     """
+
+    div_name = context.bot_data['div']
 
     # integrantes = [
     #     ("Esring", 0, "Membro", "@esring"),
@@ -26,7 +29,7 @@ def obter_integrantes():
     #     ("Harro", 1, "Auxiliar", "@harro")
     # ]
     # integrantes.sort(key=lambda x: x[1])
-    integrantes = db_controller.get_members_list()
+    integrantes = db_controller.get_members_list(div_name)
     print(integrantes)
 
     return integrantes
@@ -87,14 +90,17 @@ def formatar_mensagem_integrantes(integrantes: list[tuple[str, int, str]]) -> st
 
     return mensagem
 
-async def update_members_message(chat_id : int):
-    bot = Bot("7827037297:AAGgeHSy3tZI_tCPpH3ujB4jdgV_L37yvvE")
+async def update_members_message(chat_id : int, context):
+    bot = Bot(context.bot.token)
+    div_name = context.bot_data['div']
     
-    message = formatar_mensagem_integrantes(obter_integrantes())
+    message = formatar_mensagem_integrantes(obter_integrantes(context))
     try:
-        await bot.edit_message_text(message, chat_id, 10, parse_mode="HTML")
+        chat_id = MEMBERS_CONTROL_MESSAGES[div_name]["chat_id"]
+        message_id = MEMBERS_CONTROL_MESSAGES[div_name]["message_id"]
+        await bot.edit_message_text(message, chat_id, message_id, parse_mode="HTML")
     except Exception:
         pass
     
 async def force_members_message_update(update: Update, context = CallbackContext):
-    await update_members_message(update.effective_chat.id)
+    await update_members_message(update.effective_chat.id, context)

@@ -1,10 +1,12 @@
 from telegram import Update, ChatPermissions
 from telegram.ext import CallbackContext
 
-from bot.utils import format_chat_object
-from bot.handlers import message_is_on_group, user_is_group_admin, update_members_message
+from base.shared_modules import format_chat_object
+from base.handlers import message_is_on_group, user_is_group_admin, update_members_message
 from config import bot_logger
 from data import db_controller
+
+
 
 async def verificar(update: Update, context: CallbackContext) -> None:
     """
@@ -16,6 +18,7 @@ async def verificar(update: Update, context: CallbackContext) -> None:
 
     """
     CHAT_ID = update.effective_chat.id
+    div_name = context.bot_data['div']
 
     if not message_is_on_group(CHAT_ID):
         await update.message.reply_text(f"Comandos só podem ser usados em grupos autorizados.\n\n<i>Caso isso seja um erro, contate a Equipe de Desenvolvedores, através da liderança da divisão.</i>", parse_mode="HTML")
@@ -51,27 +54,8 @@ async def verificar(update: Update, context: CallbackContext) -> None:
         bot_logger.info(f"O ID do usuário {username[1:]} não foi encontrado na base de dados.")
         return
     
-    # Waiting for the complete procedure definition
-
-    # await bot.promote_chat_member(
-    #     chat_id=CHAT_ID,
-    #     user_id=user_id,
-    #     can_change_info=True,
-    #     can_delete_messages=False,
-    #     can_invite_users=False,
-    #     can_restrict_members=False,
-    #     can_pin_messages=False,
-    #     can_promote_members=False
-    # )
-
-    # await bot.set_chat_administrator_custom_title(
-    #     chat_id=CHAT_ID,
-    #     user_id=user_id,
-    #     custom_title=custom_title
-    # )
-    print(custom_title)
-    db_controller.insert_member_in_division(user_id[0], username, custom_title)
-    await update_members_message(CHAT_ID)
+    db_controller.insert_member_in_division(user_id[0], username, custom_title, table_name=div_name)
+    await update_members_message(CHAT_ID, context)
     await update.message.reply_text(f"✏️ Apelido <b>{custom_title}</b> atribuido ao usuário <b>{username}</b>.", parse_mode="HTML")
     bot_logger.info(f"Apelido {custom_title} atribuido ao usuário {username} > Responsável: @{update.effective_user.username} | Chat: {format_chat_object(update)}") 
 
@@ -85,6 +69,7 @@ async def remover_apelido(update: Update, context: CallbackContext) -> None:
 
     """
     CHAT_ID = update.effective_chat.id
+    div_name = context.bot_data['div']
 
     if not message_is_on_group(CHAT_ID):
         await update.message.reply_text(f"Comandos só podem ser usados em grupos autorizados.\n\n<i>Caso isso seja um erro, contate a Equipe de Desenvolvedores, através da liderança da divisão.</i>", parse_mode="HTML")
@@ -108,7 +93,7 @@ async def remover_apelido(update: Update, context: CallbackContext) -> None:
         bot_logger.info(f"Usuário {update.effective_user.username} utilizou o comando /remover_apelido sem @ no username ({update.message.text}) | Chat: {format_chat_object(update)}")
         return
         
-    user_data = db_controller.get_user_id_by_username(f"@{username[1:]}")
+    user_data = db_controller.get_user_id_by_username(f"@{username[1:]}", div_name)
 
     if not user_data:
         await update.message.reply_text("O usuário especificado não existe. (Tratar erro: nome passado errado ou nome correto, mas bot não reconheceu.)")
@@ -141,7 +126,7 @@ async def remover_apelido(update: Update, context: CallbackContext) -> None:
         )
 
 
-    db_controller.delete_member(user_id)
+    db_controller.delete_member(user_id, div_name)
     await update_members_message(CHAT_ID)
     await update.message.reply_text(f"✏️ Apelido removido do usuário <b>{username}</b>.", parse_mode="HTML")
     bot_logger.info(f"Apelido removido do usuário {username} > Responsável: @{update.effective_user.username} | Chat: {format_chat_object(update)}")

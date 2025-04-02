@@ -2,10 +2,15 @@ from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update
 from telegram.ext import CallbackContext
 from data import db_controller
 from config import bot_logger
-from bot.handlers.error_handler import not_chat_admin_handler, not_official_chat_handler
-from bot.handlers import message_is_on_group, user_is_group_admin
-
-from bot.utils import get_fancy_name
+from base.shared_modules import (
+    not_official_chat_handler,
+    not_chat_admin_handler,
+    not_at_char_handler,
+    error_default_handler,
+    format_chat_object, 
+    sanitize_role_name, 
+    get_fancy_name
+)
 
 funcoes_disponiveis = {
     1: 'auxiliar',
@@ -32,9 +37,10 @@ permission_labels = {
     'can_promote_members': 'Promover membros',
 }
 
-def get_role_permissions_from_db(role_name):
+def get_role_permissions_from_db(role_name, context):
+    div_name = context.bot_data['div']
     current_role = funcoes_disponiveis[int(role_name.split('_')[1])]
-    permissions = db_controller.get_role_permissions(current_role)
+    permissions = db_controller.get_role_permissions(current_role, div_name)
     if permissions is None:
         bot_logger.warning(f"Permissions for role '{current_role}' not found.")
         return {}
@@ -43,17 +49,18 @@ def get_role_permissions_from_db(role_name):
 
 async def mudar_permissao(update: Update, context: CallbackContext, permissao: str):
     current_role = context.user_data.get('selected_role', None)
+    div_name = context.bot_data['div']
 
     for key, role in funcoes_disponiveis.items():
         if role == current_role:
             role_key = f'editar_{key}'
             break
 
-    permissions = get_role_permissions_from_db(role_key)
+    permissions = get_role_permissions_from_db(role_key, context)
     permission_slug = permission_slug_list[permissao]
     permissions[permission_slug] = not permissions[permission_slug]
 
-    db_controller.update_role_permission(current_role, permission_slug, permissions[permission_slug])
+    db_controller.update_role_permission(current_role, permission_slug, permissions[permission_slug], table_name=div_name)
 
     keyboard = [
         [InlineKeyboardButton(f"Alterar informações {'✅' if permissions[permission_slug_list['permissao_1']] else '❌'}", callback_data=f'permissao_1')],

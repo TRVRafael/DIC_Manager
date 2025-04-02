@@ -1,13 +1,13 @@
 import sqlite3
 
 from config import bot_logger
-from bot.utils import get_fancy_name
+from base.shared_modules import get_fancy_name
 
 class Database:
     def __init__(self, db_name = "data/database.db"):
         self.conn = sqlite3.connect(database=db_name, check_same_thread=False)
         self.cursor = self.conn.cursor()
-        self.update_username("GualterHB", "NegraHB")
+        
         
         
     def _restart_database(self):
@@ -16,19 +16,19 @@ class Database:
         self._init_user_table()
         self._init_division_database()
     
-    def _init_division_database(self):
+    def _init_division_database(self, div):
         """
         Inicilização e configuração inicial de tabelas básicas para testes.
         """
-        self._init_division_table("em")
-        self.create_role('auxiliar', 1, 0, 1, 0, 1, 0)
-        self.create_role('sublider', 1, 1, 1, 0, 1, 0)
-        self.create_role('vicelider', 1, 1, 1, 1, 1, 1)
-        self.create_role('lider', 1, 1, 1, 1, 1, 1)
-        self.create_role('core', 1, 1, 1, 1, 1, 1)
-        self.create_role('comando', 0, 0, 1, 1, 1, 0)
-        self.create_role('comandogeral', 1, 1, 1, 1, 1, 1)
-        self.create_role('presidencia', 1, 1, 1, 1, 1, 1)
+        self._init_division_table("sp")
+        self.create_role(div, 'auxiliar', 1, 0, 1, 0, 1, 0)
+        self.create_role(div, 'sublider', 1, 1, 1, 0, 1, 0)
+        self.create_role(div, 'vicelider', 1, 1, 1, 1, 1, 1)
+        self.create_role(div, 'lider', 1, 1, 1, 1, 1, 1)
+        self.create_role(div, 'core', 1, 1, 1, 1, 1, 1)
+        self.create_role(div, 'comando', 0, 0, 1, 1, 1, 0)
+        self.create_role(div, 'comandogeral', 1, 1, 1, 1, 1, 1)
+        self.create_role(div, 'presidencia', 1, 1, 1, 1, 1, 1)
         
     def _init_user_table(self):
         try:
@@ -74,9 +74,9 @@ class Database:
         except Exception as err:
             bot_logger.warning(f"Error inserting user ->\n{err}")
     
-    def get_user_id_by_username(self, username : str) -> int | None:
+    def get_user_id_by_username(self, username : str, table_div_name: str) -> int | None:
         try:
-            self.cursor.execute("SELECT user_id, nickname FROM em WHERE username=?;", (username,))
+            self.cursor.execute(f"SELECT user_id, nickname FROM {table_div_name} WHERE username=?;", (username,))
             result = self.cursor.fetchone()
             
             if result:
@@ -156,14 +156,14 @@ class Database:
         except Exception as err:
             bot_logger.warning(f"Error creating division role table ->\n{err}")
             
-    def create_role(self, role_name, info, delete, invite, rescrict, pin, promote):
+    def create_role(self, div, role_name, info, delete, invite, rescrict, pin, promote):
         try:
-            self.cursor.execute(f"INSERT OR IGNORE INTO em_roles (role_name, can_change_info, can_delete_messages, can_invite_users, can_restrict_members, can_pin_messages, can_promote_members) VALUES (?, ?, ?, ?, ?, ?, ?);", (role_name, info, delete, invite, rescrict, pin, promote))
+            self.cursor.execute(f"INSERT OR IGNORE INTO {div}_roles (role_name, can_change_info, can_delete_messages, can_invite_users, can_restrict_members, can_pin_messages, can_promote_members) VALUES (?, ?, ?, ?, ?, ?, ?);", (role_name, info, delete, invite, rescrict, pin, promote))
             self.conn.commit()
         except Exception as err:
             bot_logger.warning(f"Error creating role ->\n{err}")
             
-    def get_role_permissions(self, role_name, table_name="em"):
+    def get_role_permissions(self, role_name: str, table_name: str):
         try:
             self.cursor.execute(f"""
                 SELECT can_change_info, can_delete_messages, can_invite_users, 
@@ -195,11 +195,11 @@ class Database:
             bot_logger.warninging(f"Error updating role permission ({permission}) ->\n{err}")
             return False
 
-    async def get_all_roles(self):
-        query = """
+    async def get_all_roles(self, table_div_name):
+        query = f"""
         SELECT role_name, can_change_info, can_delete_messages, can_invite_users,
             can_restrict_members, can_pin_messages, can_promote_members
-        FROM em_roles
+        FROM {table_div_name}_roles
         """
         try:
             # Execute the query to fetch all the roles and their permissions
@@ -263,7 +263,7 @@ class Database:
         except Exception as err:
             bot_logger.error(f"Error fetching roles and permissions: {err}")
     
-    def insert_member_in_division(self, user_id : id, username : str, nickname : str, table_name : str = "em", role = 0):
+    def insert_member_in_division(self, user_id : id, username : str, nickname : str, table_name : str, role = 0):
         try:
             self.cursor.execute(f"SELECT nickname FROM {table_name} WHERE user_id = ?", (user_id,))
             has_nickname = self.cursor.fetchone()
@@ -278,9 +278,9 @@ class Database:
         except Exception as err:
             bot_logger.warninging(f"Error inserting or updating member in division ->\n{err}")
             
-    def update_member_role(self, username : str, new_role_id : int, table_name : str = "em"):
+    def update_member_role(self, username : str, new_role_id : int, table_div_name : str):
         try:
-            self.cursor.execute(f"UPDATE {table_name} SET role = ? WHERE username = ?", (new_role_id, username))
+            self.cursor.execute(f"UPDATE {table_div_name} SET role = ? WHERE username = ?", (new_role_id, username))
             self.conn.commit()
         except Exception as err:
             bot_logger.warning(f"Error updating member role ->\n{err}")
@@ -297,25 +297,25 @@ class Database:
         except Exception as err:
             bot_logger.warning(f"Error getting role id ->\n{err}")
             
-    def get_members_list(self):
+    def get_members_list(self, table_name):
         try:
-            self.cursor.execute(f"SELECT username, role, id, nickname FROM em;")
+            self.cursor.execute(f"SELECT username, role, id, nickname FROM {table_name};")
             result = self.cursor.fetchall()
             return result
         except Exception as err:
             return []
         
-    def get_members_by_role(self, role_id):
+    def get_members_by_role(self, role_id, table_div_name):
         try:
-            self.cursor.execute(f"SELECT username, nickname FROM em WHERE role=?;", (role_id,))
+            self.cursor.execute(f"SELECT username, nickname FROM {table_div_name} WHERE role=?;", (role_id,))
             result = self.cursor.fetchall()
             return result
         except Exception as err:
             return []
         
-    def delete_member(self, user_id):
+    def delete_member(self, user_id, table_div_name):
         try:
-            self.cursor.execute(f"DELETE FROM em WHERE user_id=?;", (user_id,))
+            self.cursor.execute(f"DELETE FROM {table_div_name} WHERE user_id=?;", (user_id,))
             self.conn.commit()
         except Exception as err:
             bot_logger.warning(f"Error deleting chat ->\n{err}")

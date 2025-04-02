@@ -1,1 +1,1 @@
-from .database import db_controller
+from.database import db_controller

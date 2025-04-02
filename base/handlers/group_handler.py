@@ -1,10 +1,10 @@
-from telegram import Update
+from telegram import Update, Bot
 from telegram.ext import CallbackContext
+import time
 
 from data import db_controller
 from config import bot_logger
-from bot.utils import format_chat_object
-from bot.handlers.error_handler import not_chat_admin_handler, not_official_chat_handler, not_at_char_handler
+from base.shared_modules import not_chat_admin_handler, not_official_chat_handler, not_at_char_handler
 
 def message_is_on_group(chatId: float) -> bool:
     all_chats = db_controller.get_all_chats()
@@ -40,9 +40,10 @@ async def oficializar(update : Update, context: CallbackContext):
         await update.message.reply_text(f"<b>Esse chat já é oficial.</b>\n\n<i>Caso isso seja um erro, contate a Equipe de Desenvolvedores, através da liderança da divisão.</i>", parse_mode="HTML")
         
 async def kick(update: Update, context: CallbackContext):
-    from bot.handlers import update_members_message
+    from base.handlers import update_members_message
     CHAT_ID = update.effective_chat.id
     message = update.message
+    div_name = context.bot_data['div']
 
     if not message_is_on_group(CHAT_ID):
         await not_official_chat_handler(update)
@@ -53,19 +54,29 @@ async def kick(update: Update, context: CallbackContext):
         return
     
     username = context.args[0]
-
-    user_id = db_controller.get_user_id_by_username(f"@{username[1:]}")[0]
-    print(user_id)
+    
+    user_data = db_controller.get_user_id_by_username(f"@{username[1:]}", div_name)
+    if not user_data:
+        await message.reply_text("❌ Usuário não encontrado no banco de dados")
+        return
+    user_id = user_data[0]
     
     try:
         if not username.startswith('@'):
             not_at_char_handler(update)
             return
         username = username[1:]
+        
+        bot = Bot(context.bot.token)
+        div_name = context.bot_data['div']
+        current_unix = int(time.time())
 
-        await message.chat.ban_member(user_id)
-        db_controller.delete_member(f"@{username}")
-        await update_members_message(CHAT_ID)
+        # Timestamp daqui a 1 minuto (60 segundos)
+        future_unix = current_unix + 60
+
+        await bot.ban_chat_member(message.chat.id, user_id, until_date=future_unix)
+        db_controller.delete_member(f"@{username}", div_name)
+        await update_members_message(CHAT_ID, context)
         await message.reply_text(f"<b>✅ Usuário @{username} foi expulso do grupo.</b>", parse_mode="HTML")
         bot_logger.info(f"Usuário {username} foi expulso do grupo. > Responsável: {update.effective_user.username}")
     except Exception as err:

@@ -2,13 +2,26 @@ from telegram import Update, error
 from telegram.ext import CallbackContext
 
 from config import bot_logger
+
 from data import db_controller
-from bot.handlers import message_is_on_group, user_is_group_admin, update_members_message
-from bot.handlers.error_handler import not_official_chat_handler, not_chat_admin_handler, not_at_char_handler, error_default_handler
-from bot.utils import format_chat_object, sanitize_role_name, get_fancy_name
+from base.handlers import message_is_on_group, user_is_group_admin, update_members_message
+from base.shared_modules import (
+    not_official_chat_handler,
+    not_chat_admin_handler,
+    not_at_char_handler,
+    error_default_handler,
+    format_chat_object, 
+    sanitize_role_name, 
+    get_fancy_name
+)
+
+
+
 
 async def apelidar(update : Update, context : CallbackContext):
     CHAT_ID = update.effective_chat.id
+    div_name = context.bot_data['div']
+    
     if not message_is_on_group(CHAT_ID):
         await not_official_chat_handler(update)
         return
@@ -25,13 +38,12 @@ async def apelidar(update : Update, context : CallbackContext):
     bot = context.bot
     
     if not username.startswith("@"):
-        not_at_char_handler(update)
+        await not_at_char_handler(update)
         return
         
-    user_id = db_controller.get_user_id_by_username(f"@{username[1:]}")[0]
-    nickname_from_db = db_controller.get_user_id_by_username(f"@{username[1:]}")[1]
+    (user_id, nickname_from_db) = db_controller.get_user_id_by_username(f"@{username[1:]}", div_name)
      
-    role_permissions = db_controller.get_role_permissions(role_name)
+    role_permissions = db_controller.get_role_permissions(role_name, div_name)
     
     
     if not nickname_from_db:
@@ -62,8 +74,8 @@ async def apelidar(update : Update, context : CallbackContext):
             custom_title=get_fancy_name(role_name)
         )
         
-        db_controller.update_member_role(username, db_controller.get_role_id(role_name))
-        await update_members_message(update.effective_chat.id)
+        db_controller.update_member_role(username, db_controller.get_role_id(role_name, div_name), div_name)
+        await update_members_message(update.effective_chat.id, context)
         
         await update.message.reply_text(f"<b>✅ Cargo {role_name} atribuido ao usuário {username} com sucesso.</b>", parse_mode="HTML")
         bot_logger.info(f"Cargo {role_name} atribuído a {username} > Responsável: @{update.effective_user.username} | Chat: {format_chat_object(update)}")

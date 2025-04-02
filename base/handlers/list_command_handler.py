@@ -13,7 +13,8 @@ role_names = {
 }
 
 async def log_role(update : Update, context : CallbackContext, role_id : int):
-    members = db_controller.get_members_by_role(role_id)
+    div_name = context.bot_data['div']
+    members = db_controller.get_members_by_role(role_id, div_name)
     role_name = role_names.get(role_id, "Lista")
 
     message_lines = [f"📋 <b>{role_name}:</b>\n"]
@@ -31,6 +32,7 @@ async def log_role(update : Update, context : CallbackContext, role_id : int):
     await update.message.reply_text(message_text, parse_mode="HTML")
 
 async def log_lideres(update: Update, context: CallbackContext):
+    div_name = context.bot_data['div']
     roles = {
         "🏅 <b>Sub-Líderes:</b>\n": 2,
         "👑 <b>Vice-Liderança</b>\n": 3,
@@ -40,7 +42,7 @@ async def log_lideres(update: Update, context: CallbackContext):
     message_lines = []
     
     for title, role_id in roles.items():
-        members = db_controller.get_members_by_role(role_id)
+        members = db_controller.get_members_by_role(role_id, div_name)
 
         if members:
             message_lines.append(title)

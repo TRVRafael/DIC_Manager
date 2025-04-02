@@ -1,7 +1,7 @@
 from telegram import Update
 
 from config import bot_logger
-from bot.utils import format_chat_object
+from base.shared_modules import format_chat_object
 
 async def not_official_chat_handler(update: Update) -> None:
     await update.message.reply_text(f"Comandos só podem ser usados em grupos autorizados.\n\n<i>Caso isso seja um erro, contate a Equipe de Desenvolvedores, através da liderança da divisão.</i>", parse_mode="HTML")
