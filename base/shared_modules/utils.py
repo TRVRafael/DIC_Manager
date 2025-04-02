@@ -1,5 +1,5 @@
 from telegram import Update
-
+from data import db_controller
 
 def format_chat_object(update : Update) -> str:
     """Formata as informações do chat de um Update.
@@ -119,3 +119,10 @@ def formatar_mensagem_integrantes(integrantes: list[tuple[str, int, str]]) -> st
 
     return mensagem
 
+def check_minimum_role(minimum_role_id: int, username: str, context):
+    div_name = context.bot_data['div']
+    user_role = db_controller.get_user_role(username, div_name)
+    
+    if user_role < minimum_role_id:
+        return False
+    return True

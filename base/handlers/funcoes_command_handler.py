@@ -96,7 +96,7 @@ async def finalizar(update: Update, context: CallbackContext):
     await update.callback_query.edit_message_text(text="Alterações concluídas!")
 
 async def exibir_permissoes_funcao(update: Update, context: CallbackContext, role_name: str):
-    permissions = get_role_permissions_from_db(role_name)
+    permissions = get_role_permissions_from_db(role_name, context)
 
     keyboard = [
         [InlineKeyboardButton(f"{label} {'✅' if permissions.get(key) else '❌'}", callback_data=f'permissao_{i}')]

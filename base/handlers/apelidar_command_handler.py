@@ -88,3 +88,60 @@ async def apelidar(update : Update, context : CallbackContext):
     except Exception as err:
         await update.message.reply_text(f"<b>❌ Erro atribuindo cargo ao usuário {username}</b>\n<i>Contate a Equipe de Desenvolvedores, através da liderança da divisão.</i>", parse_mode="HTML")
         bot_logger.warning(f"Erro atribuindo cargo ao usuário {username} - ({update.message.text})| Chat: {format_chat_object(update)} -> {err}")
+        
+
+async def update_role_permissions_for_all_members(context: CallbackContext, role_name: str, div_name: str):
+    """Atualiza permissões para todos os membros com um determinado cargo"""
+    try:
+        role_permissions = db_controller.get_role_permissions(role_name, div_name)
+        
+        if not role_permissions:
+            bot_logger.error(f"Cargo {role_name} não encontrado para atualização em massa")
+            return
+        
+        bot = context.bot
+
+        roles_ids = {
+            'membro': 0,
+            'auxiliar': 1,
+            'sublider': 2,
+            'vicelider': 3,
+            'lider': 4
+        }
+        members_with_role = db_controller.get_members_user_id_by_role(roles_ids[role_name], div_name)
+        
+        if not members_with_role:
+            bot_logger.info(f"Nenhum membro com cargo {role_name} para atualizar")
+            return
+
+        # 3. Atualiza cada membro
+        for member in members_with_role:
+            username = member[0]
+            user_id = member[1]
+            
+            try:
+                await bot.promote_chat_member(
+                    chat_id=context.bot_data['chat_id'],
+                    user_id=user_id,
+                    can_change_info=role_permissions['can_change_info'],
+                    can_delete_messages=role_permissions['can_delete_messages'],
+                    can_invite_users=role_permissions['can_invite_users'],
+                    can_restrict_members=role_permissions['can_restrict_members'],
+                    can_pin_messages=role_permissions['can_pin_messages'],
+                    can_promote_members=role_permissions['can_promote_members']
+                )
+                
+                await bot.set_chat_administrator_custom_title(
+                    chat_id=context.bot_data['chat_id'],
+                    user_id=user_id,
+                    custom_title=get_fancy_name(role_name)
+                )
+                
+                bot_logger.info(f"Permissões atualizadas para @{username[1:] if username.startswith('@') else username} ({role_name})")
+                
+            except Exception as e:
+                bot_logger.error(f"Erro ao atualizar permissões para @{username[1:]}: {str(e)}")
+                continue
+
+    except Exception as e:
+        bot_logger.critical(f"Falha na atualização em massa de permissões: {str(e)}")

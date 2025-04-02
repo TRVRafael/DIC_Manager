@@ -7,6 +7,7 @@ class Database:
     def __init__(self, db_name = "data/database.db"):
         self.conn = sqlite3.connect(database=db_name, check_same_thread=False)
         self.cursor = self.conn.cursor()
+
         
         
         
@@ -338,6 +339,18 @@ class Database:
             self.conn.commit()
         except Exception as err:
             bot_logger.warning(f"Error updating member role ->\n{err}")
+            
+    def get_user_role(self, username: str, table_div_name: str):
+        try:
+            self.cursor.execute(f"SELECT role_id FROM {table_div_name} WHERE username=?", (username,))
+            result = self.cursor.fetchone()
+        
+            if result:
+                return result
+            else:
+                return None 
+        except Exception as err:
+            bot_logger.warninging(f"Error getting user role ->\n{err}")
     
                     
     def close(self):

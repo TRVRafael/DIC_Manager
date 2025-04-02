@@ -1421,3 +1421,101 @@ no such table: user
 2025-04-02 14:44:00,721 - INFO - Logger 'bot' started.
 2025-04-02 14:44:47,198 - INFO - Cargo comando atribuído a @ism4rck > Responsável: @torvi_hb | Chat: [Sp] Liderança (-1002539910653)
 2025-04-02 14:44:54,988 - INFO - Cargo core atribuído a @ism4rck > Responsável: @torvi_hb | Chat: [Sp] Liderança (-1002539910653)
+2025-04-02 14:48:12,193 - INFO - Logger 'bot' started.
+2025-04-02 14:48:13,038 - INFO - Logger 'bot' started.
+2025-04-02 14:48:13,038 - INFO - Logger 'bot' started.
+2025-04-02 14:49:16,791 - INFO - Logger 'bot' started.
+2025-04-02 14:49:49,815 - INFO - Logger 'bot' started.
+2025-04-02 14:50:29,182 - INFO - Logger 'bot' started.
+2025-04-02 14:50:30,025 - INFO - Logger 'bot' started.
+2025-04-02 14:50:30,035 - INFO - Logger 'bot' started.
+2025-04-02 14:52:41,775 - INFO - Usuário @torvi_hb tentou utilizar o comando /cargo fora de um grupo autorizado | Chat: [Sp] Membros (-1002557197490)
+2025-04-02 14:52:52,371 - INFO - Bot removido do chat: [Sp] Membros - -1002557197490
+2025-04-02 14:52:52,372 - INFO - Lista de chats do bot atualizada: [('-1002440341419', '[DIC/EM] Membros', 1), ('-1002695748985', 'Tetse', 1), ('-1002620056303', '[DIC/EM] Teste', 1), ('-1002688102515', '[EM] Liderança', 1), ('-1002249630541', 'testedic1', 1)]
+2025-04-02 14:53:02,240 - INFO - Bot adicionado ao chat: [Sp] Membros - -1002557197490
+2025-04-02 14:53:02,241 - INFO - Lista de chats do bot atualizada: [('-1002440341419', '[DIC/EM] Membros', 1), ('-1002695748985', 'Tetse', 1), ('-1002620056303', '[DIC/EM] Teste', 1), ('-1002688102515', '[EM] Liderança', 1), ('-1002249630541', 'testedic1', 1), ('-1002557197490', '[Sp] Membros', 0)]
+2025-04-02 14:53:28,838 - INFO - Usuário @torvi_hb tentou utilizar o comando /cargo fora de um grupo autorizado | Chat: [Sp] Membros (-1002557197490)
+2025-04-02 14:53:36,781 - INFO - Chat [Sp] Membros : -1002557197490 definido como oficial. > Responsável: @torvi_hb
+2025-04-02 14:54:24,637 - INFO - Apelido Marck. atribuido ao usuário @ism4rck > Responsável: @torvi_hb | Chat: [Sp] Membros (-1002557197490)
+2025-04-02 14:54:30,732 - INFO - Cargo core atribuído a @ism4rck > Responsável: @torvi_hb | Chat: [Sp] Membros (-1002557197490)
+2025-04-02 14:54:36,574 - INFO - Apelido lav!n atribuido ao usuário @kprand > Responsável: @torvi_hb | Chat: [Sp] Membros (-1002557197490)
+2025-04-02 14:58:06,821 - INFO - Usuário GroupAnonymousBot utilizou, sem permissão, o comando /verificar | Chat: [Sp] Membros (-1002557197490)
+2025-04-02 15:01:43,626 - INFO - Apelido MrStilver atribuido ao usuário @StilverL > Responsável: @kprand | Chat: [Sp] Membros (-1002557197490)
+2025-04-02 15:02:01,494 - INFO - Cargo core atribuído a @StilverL > Responsável: @kprand | Chat: [Sp] Membros (-1002557197490)
+2025-04-02 15:02:39,332 - INFO - O ID do usuário lettt09 não foi encontrado na base de dados.
+2025-04-02 15:03:09,150 - INFO - Apelido GuiYard atribuido ao usuário @ggPedrosa > Responsável: @kprand | Chat: [Sp] Membros (-1002557197490)
+2025-04-02 15:03:13,193 - INFO - Cargo core atribuído a @ggPedrosa > Responsável: @kprand | Chat: [Sp] Membros (-1002557197490)
+2025-04-02 15:03:21,120 - INFO - Cargo comando atribuído a @kprand > Responsável: @kprand | Chat: [Sp] Membros (-1002557197490)
+2025-04-02 15:03:30,394 - INFO - Apelido -yse atribuido ao usuário @ysetheus > Responsável: @kprand | Chat: [Sp] Membros (-1002557197490)
+2025-04-02 15:03:39,885 - INFO - Cargo comando atribuído a @ysetheus > Responsável: @kprand | Chat: [Sp] Membros (-1002557197490)
+2025-04-02 15:03:50,033 - INFO - Apelido ::-Arcanjo-:: atribuido ao usuário @arcanjo887 > Responsável: @kprand | Chat: [Sp] Membros (-1002557197490)
+2025-04-02 15:03:52,626 - INFO - Usuário kprand utilizou o comando /cargo sem @ no username (/apelidar comando-geral) | Chat: [Sp] Membros (-1002557197490)
+2025-04-02 15:04:01,933 - INFO - Cargo comandogeral atribuído a @arcanjo887 > Responsável: @kprand | Chat: [Sp] Membros (-1002557197490)
+2025-04-02 15:04:12,970 - INFO - Apelido roc-roc atribuido ao usuário @miguel99mc > Responsável: @kprand | Chat: [Sp] Membros (-1002557197490)
+2025-04-02 15:04:24,338 - INFO - Cargo presidencia atribuído a @miguel99mc > Responsável: @kprand | Chat: [Sp] Membros (-1002557197490)
+2025-04-02 15:05:22,917 - INFO - Cargo core atribuído a @ysetheus > Responsável: @ysetheus | Chat: [Sp] Membros (-1002557197490)
+2025-04-02 15:12:39,063 - INFO - Apelido fcs123 atribuido ao usuário @fcswlfs > Responsável: @kprand | Chat: [Sp] Membros (-1002557197490)
+2025-04-02 15:12:47,841 - INFO - Cargo presidencia atribuído a @fcswlfs > Responsável: @kprand | Chat: [Sp] Membros (-1002557197490)
+2025-04-02 15:12:58,421 - INFO - Apelido Heil. atribuido ao usuário @carlosfavaleca > Responsável: @kprand | Chat: [Sp] Membros (-1002557197490)
+2025-04-02 15:13:04,660 - INFO - Cargo presidencia atribuído a @carlosfavaleca > Responsável: @kprand | Chat: [Sp] Membros (-1002557197490)
+2025-04-02 15:13:17,123 - INFO - Apelido -Valente atribuido ao usuário @valenteb1 > Responsável: @kprand | Chat: [Sp] Membros (-1002557197490)
+2025-04-02 15:13:20,014 - INFO - Cargo core atribuído a @valenteb1 > Responsável: @kprand | Chat: [Sp] Membros (-1002557197490)
+2025-04-02 15:13:28,049 - INFO - O ID do usuário crucisx não foi encontrado na base de dados.
+2025-04-02 15:13:48,416 - INFO - Apelido belaisaa_ atribuido ao usuário @iisabelaa > Responsável: @kprand | Chat: [Sp] Membros (-1002557197490)
+2025-04-02 15:13:58,424 - INFO - Cargo comandogeral atribuído a @iisabelaa > Responsável: @kprand | Chat: [Sp] Membros (-1002557197490)
+2025-04-02 15:14:07,677 - INFO - Apelido golerobom196 atribuido ao usuário @golerobom196 > Responsável: @kprand | Chat: [Sp] Membros (-1002557197490)
+2025-04-02 15:14:11,330 - INFO - Cargo core atribuído a @golerobom196 > Responsável: @kprand | Chat: [Sp] Membros (-1002557197490)
+2025-04-02 15:14:26,953 - INFO - Apelido Helpier atribuido ao usuário @helpier011 > Responsável: @kprand | Chat: [Sp] Membros (-1002557197490)
+2025-04-02 15:14:30,720 - INFO - Cargo core atribuído a @helpier011 > Responsável: @kprand | Chat: [Sp] Membros (-1002557197490)
+2025-04-02 15:19:07,525 - INFO - Novo usuário: NicolePereira15
+2025-04-02 15:20:11,052 - INFO - Apelido MeEsquece: atribuido ao usuário @NicolePereira15 > Responsável: @kprand | Chat: [Sp] Membros (-1002557197490)
+2025-04-02 15:20:16,202 - INFO - Cargo lider atribuído a @NicolePereira15 > Responsável: @kprand | Chat: [Sp] Membros (-1002557197490)
+2025-04-02 16:45:49,148 - INFO - Usuário @GroupAnonymousBot tentou utilizar o comando /cargo fora de um grupo autorizado | Chat: [Sp] Liderança (-1002539910653)
+2025-04-02 16:46:01,353 - INFO - Usuário @torvi_hb tentou utilizar o comando /cargo fora de um grupo autorizado | Chat: [Sp] Liderança (-1002539910653)
+2025-04-02 16:46:30,750 - INFO - Logger 'bot' started.
+2025-04-02 16:46:31,622 - INFO - Logger 'bot' started.
+2025-04-02 16:46:31,622 - INFO - Logger 'bot' started.
+2025-04-02 16:46:57,653 - INFO - Bot removido do chat: [Sp] Liderança - -1002539910653
+2025-04-02 16:46:57,653 - INFO - Lista de chats do bot atualizada: [('-1002440341419', '[DIC/EM] Membros', 1), ('-1002695748985', 'Tetse', 1), ('-1002620056303', '[DIC/EM] Teste', 1), ('-1002688102515', '[EM] Liderança', 1), ('-1002249630541', 'testedic1', 1), ('-1002557197490', '[Sp] Membros', 1)]
+2025-04-02 16:47:10,657 - INFO - Bot adicionado ao chat: [Sp] Liderança - -1002539910653
+2025-04-02 16:47:10,657 - INFO - Lista de chats do bot atualizada: [('-1002440341419', '[DIC/EM] Membros', 1), ('-1002695748985', 'Tetse', 1), ('-1002620056303', '[DIC/EM] Teste', 1), ('-1002688102515', '[EM] Liderança', 1), ('-1002249630541', 'testedic1', 1), ('-1002557197490', '[Sp] Membros', 1), ('-1002539910653', '[Sp] Liderança', 0)]
+2025-04-02 16:47:22,640 - INFO - Chat [Sp] Liderança : -1002539910653 definido como oficial. > Responsável: @torvi_hb
+2025-04-02 16:47:31,831 - INFO - Cargo lider atribuído a @NicolePereira15 > Responsável: @kprand | Chat: [Sp] Liderança (-1002539910653)
+2025-04-02 16:47:40,080 - INFO - Cargo presidencia atribuído a @carlosfavaleca > Responsável: @kprand | Chat: [Sp] Liderança (-1002539910653)
+2025-04-02 16:47:47,871 - INFO - Cargo presidencia atribuído a @miguel99mc > Responsável: @kprand | Chat: [Sp] Liderança (-1002539910653)
+2025-04-02 16:48:03,761 - INFO - Cargo presidencia atribuído a @fcswlfs > Responsável: @kprand | Chat: [Sp] Liderança (-1002539910653)
+2025-04-02 16:48:04,260 - INFO - Bot adicionado ao chat: [Sp] Auxiliares - -1002284548329
+2025-04-02 16:48:04,260 - INFO - Lista de chats do bot atualizada: [('-1002440341419', '[DIC/EM] Membros', 1), ('-1002695748985', 'Tetse', 1), ('-1002620056303', '[DIC/EM] Teste', 1), ('-1002688102515', '[EM] Liderança', 1), ('-1002249630541', 'testedic1', 1), ('-1002557197490', '[Sp] Membros', 1), ('-1002539910653', '[Sp] Liderança', 1), ('-1002284548329', '[Sp] Auxiliares', 0)]
+2025-04-02 16:48:08,645 - INFO - Chat [Sp] Auxiliares : -1002284548329 definido como oficial. > Responsável: @torvi_hb
+2025-04-02 16:49:46,578 - INFO - Cargo core atribuído a @ism4rck > Responsável: @torvi_hb | Chat: [Sp] Auxiliares (-1002284548329)
+2025-04-02 16:49:48,671 - INFO - Cargo presidencia atribuído a @miguel99mc > Responsável: @torvi_hb | Chat: [Sp] Auxiliares (-1002284548329)
+2025-04-02 16:49:50,645 - INFO - Cargo presidencia atribuído a @carlosfavaleca > Responsável: @torvi_hb | Chat: [Sp] Auxiliares (-1002284548329)
+2025-04-02 16:49:52,580 - INFO - Cargo presidencia atribuído a @fcswlfs > Responsável: @torvi_hb | Chat: [Sp] Auxiliares (-1002284548329)
+2025-04-02 16:49:54,566 - INFO - Cargo comandogeral atribuído a @iisabelaa > Responsável: @torvi_hb | Chat: [Sp] Auxiliares (-1002284548329)
+2025-04-02 16:49:56,553 - INFO - Cargo comandogeral atribuído a @arcanjo887 > Responsável: @torvi_hb | Chat: [Sp] Auxiliares (-1002284548329)
+2025-04-02 16:49:58,075 - INFO - Apelido lav!n atribuido ao usuário @kprand > Responsável: @torvi_hb | Chat: [Sp] Auxiliares (-1002284548329)
+2025-04-02 16:50:00,315 - INFO - Cargo comando atribuído a @kprand > Responsável: @torvi_hb | Chat: [Sp] Auxiliares (-1002284548329)
+2025-04-02 16:50:01,023 - INFO - O ID do usuário lettt09 não foi encontrado na base de dados.
+2025-04-02 16:58:47,172 - INFO - Logger 'bot' started.
+2025-04-02 16:58:48,010 - INFO - Logger 'bot' started.
+2025-04-02 16:58:48,012 - INFO - Logger 'bot' started.
+2025-04-02 17:00:01,243 - INFO - Apelido lycia3 atribuido ao usuário @lettt09 > Responsável: @torvi_hb | Chat: [Sp] Auxiliares (-1002284548329)
+2025-04-02 17:00:07,631 - INFO - Cargo presidencia atribuído a @lettt09 > Responsável: @torvi_hb | Chat: [Sp] Auxiliares (-1002284548329)
+2025-04-02 17:00:23,990 - INFO - Apelido lycia3 atribuido ao usuário @lettt09 > Responsável: @torvi_hb | Chat: [Sp] Membros (-1002557197490)
+2025-04-02 17:00:26,021 - INFO - Cargo presidencia atribuído a @lettt09 > Responsável: @torvi_hb | Chat: [Sp] Membros (-1002557197490)
+2025-04-02 17:00:35,411 - INFO - Apelido lycia3 atribuido ao usuário @lettt09 > Responsável: @torvi_hb | Chat: [Sp] Liderança (-1002539910653)
+2025-04-02 17:00:37,333 - INFO - Cargo presidencia atribuído a @lettt09 > Responsável: @torvi_hb | Chat: [Sp] Liderança (-1002539910653)
+2025-04-02 17:00:49,036 - INFO - Apelido Torvi. atribuido ao usuário @torvi_hb > Responsável: @torvi_hb | Chat: [Sp] Liderança (-1002539910653)
+2025-04-02 17:01:12,921 - INFO - Apelido Torvi. atribuido ao usuário @torvi_hb > Responsável: @torvi_hb | Chat: [Sp] Auxiliares (-1002284548329)
+2025-04-02 17:01:19,709 - INFO - Apelido Torvi. atribuido ao usuário @torvi_hb > Responsável: @torvi_hb | Chat: [Sp] Membros (-1002557197490)
+2025-04-02 17:19:35,218 - INFO - Novo usuário: iisabelaa
+2025-04-02 17:19:48,829 - INFO - Cargo comandogeral atribuído a @iisabelaa > Responsável: @kprand | Chat: [Sp] Liderança (-1002539910653)
+2025-04-02 17:21:03,939 - INFO - Novo usuário: oAlemaoo
+2025-04-02 17:21:07,321 - INFO - Novo usuário: oAlemaoo
+2025-04-02 17:21:10,739 - INFO - Novo usuário: oAlemaoo
+2025-04-02 17:21:17,565 - INFO - Apelido -oAlemao atribuido ao usuário @oAlemaoo > Responsável: @kprand | Chat: [Sp] Membros (-1002557197490)
+2025-04-02 17:21:48,266 - INFO - Cargo comandogeral atribuído a @oAlemaoo > Responsável: @kprand | Chat: [Sp] Membros (-1002557197490)
+2025-04-02 17:22:48,628 - INFO - Cargo comandogeral atribuído a @oAlemaoo > Responsável: @kprand | Chat: [Sp] Liderança (-1002539910653)
+2025-04-02 17:22:58,778 - INFO - Novo usuário: arcanjo887
+2025-04-02 17:24:14,480 - INFO - Cargo comandogeral atribuído a @arcanjo887 > Responsável: @kprand | Chat: [Sp] Liderança (-1002539910653)
+2025-04-02 17:24:48,972 - INFO - Cargo lider atribuído a @NicolePereira15 > Responsável: @kprand | Chat: [Sp] Auxiliares (-1002284548329)
