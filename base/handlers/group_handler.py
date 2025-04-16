@@ -75,7 +75,7 @@ async def kick(update: Update, context: CallbackContext):
         future_unix = current_unix + 60
 
         await bot.ban_chat_member(message.chat.id, user_id, until_date=future_unix)
-        db_controller.delete_member(f"@{username}", div_name)
+        db_controller.delete_member(user_id, div_name)
         await update_members_message(CHAT_ID, context)
         await message.reply_text(f"<b>✅ Usuário @{username} foi expulso do grupo.</b>", parse_mode="HTML")
         bot_logger.info(f"Usuário {username} foi expulso do grupo. > Responsável: {update.effective_user.username}")

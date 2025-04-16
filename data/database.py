@@ -21,8 +21,9 @@ class Database:
         """
         Inicilização e configuração inicial de tabelas básicas para testes.
         """
-        self._init_division_table("sp")
+        self._init_division_table("sl")
         self.create_role(div, 'auxiliar', 1, 0, 1, 0, 1, 0)
+        self.create_role(div, 'supervisor', 0, 0, 0, 0, 0, 0)
         self.create_role(div, 'sublider', 1, 1, 1, 0, 1, 0)
         self.create_role(div, 'vicelider', 1, 1, 1, 1, 1, 1)
         self.create_role(div, 'lider', 1, 1, 1, 1, 1, 1)

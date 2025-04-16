@@ -19,6 +19,6 @@ ACCOUNTS_CORE = ["torvi_hb", "kprand", "ysetheus", "helpier011", "golerobom196",
 PERMISSIONED_GROUP_ID = getenv("PERMISSIONED_GROUP_ID")
 
 MEMBERS_CONTROL_MESSAGES = {
-    "em": {"chat_id":"-1002440341419", "message_id": "10"},
+    "em": {"chat_id":"-1002695748985", "message_id": "11032"},
     "sp": {"chat_id":"-1002557197490", "message_id": "22"},
 }
