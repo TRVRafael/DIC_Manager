@@ -9,8 +9,9 @@ from base.shared_modules import (
     error_default_handler,
     format_chat_object, 
     sanitize_role_name, 
-    get_fancy_name
+    get_fancy_name,
 )
+from base.handlers.apelidar_command_handler import update_role_permissions_for_all_members
 
 funcoes_disponiveis = {
     1: 'auxiliar',
@@ -37,6 +38,8 @@ permission_labels = {
     'can_promote_members': 'Promover membros',
 }
 
+changed_roles = []
+
 def get_role_permissions_from_db(role_name, context):
     div_name = context.bot_data['div']
     current_role = funcoes_disponiveis[int(role_name.split('_')[1])]
@@ -61,6 +64,9 @@ async def mudar_permissao(update: Update, context: CallbackContext, permissao: s
     permissions[permission_slug] = not permissions[permission_slug]
 
     db_controller.update_role_permission(current_role, permission_slug, permissions[permission_slug], table_name=div_name)
+    
+    if current_role not in changed_roles:
+        changed_roles.append(current_role)
 
     keyboard = [
         [InlineKeyboardButton(f"Alterar informações {'✅' if permissions[permission_slug_list['permissao_1']] else '❌'}", callback_data=f'permissao_1')],
@@ -92,8 +98,20 @@ async def editar_permissoes(update: Update, context: CallbackContext):
     await update.callback_query.edit_message_text(text="Escolha a função para editar as permissões:", reply_markup=reply_markup)
 
 async def finalizar(update: Update, context: CallbackContext):
+    global changed_roles
+
+    current_division = context.bot_data['div']
+
+    await update.callback_query.answer()
+    await update.callback_query.edit_message_text(text="Aplicando alterações...")
+
+    for role in changed_roles:
+        await update_role_permissions_for_all_members(context, role, current_division)
+
     await update.callback_query.answer()
     await update.callback_query.edit_message_text(text="Alterações concluídas!")
+
+    changed_roles = []
 
 async def exibir_permissoes_funcao(update: Update, context: CallbackContext, role_name: str):
     permissions = get_role_permissions_from_db(role_name, context)
